@@ -1,0 +1,353 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/simulation/modelsim
+vBB_SYSTEM
+Z1 !s110 1587552129
+!i10b 1
+!s100 cSg>j0c>RVjg@8UCdf31e2
+I<6zn@m:MNk@RKeH=2@Wo82
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1587551762
+8/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/BB_SYSTEM.v
+F/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/BB_SYSTEM.v
+Z3 L0 21
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1587552129.000000
+!s107 /home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/BB_SYSTEM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1|/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/BB_SYSTEM.v|
+!i113 1
+Z6 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1
+Z7 tCvgOpt 0
+n@b@b_@s@y@s@t@e@m
+vCC_BIN2BCD1
+R1
+!i10b 1
+!s100 QO[[GfEG:_IIZUgJ1o]@b1
+Il:5l?n;MIGBKB2?H>j<Bn3
+R2
+R0
+w1531849172
+8/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_BIN2BCD1.v
+F/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_BIN2BCD1.v
+Z8 L0 19
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_BIN2BCD1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl|/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_BIN2BCD1.v|
+!i113 1
+R6
+Z9 !s92 -vlog01compat -work work +incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl
+R7
+n@c@c_@b@i@n2@b@c@d1
+vCC_BOTTOMSIDECOMPARATOR
+R1
+!i10b 1
+!s100 MjU1Yn;iTX94@TFOlJ7]X3
+IZ3@>>`b^IQoVWk`HnKKfz1
+R2
+R0
+w1572359949
+8/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_BOTTOMSIDECOMPARATOR.v
+F/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_BOTTOMSIDECOMPARATOR.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_BOTTOMSIDECOMPARATOR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl|/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_BOTTOMSIDECOMPARATOR.v|
+!i113 1
+R6
+R9
+R7
+n@c@c_@b@o@t@t@o@m@s@i@d@e@c@o@m@p@a@r@a@t@o@r
+vCC_SEVENSEG1
+R1
+!i10b 1
+!s100 U;OI0BK_N[TU?J^bM9E360
+IdFUc3W@DQb50o6Wh[;RHI2
+R2
+R0
+w1553875284
+8/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_SEVENSEG1.v
+F/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_SEVENSEG1.v
+L0 24
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_SEVENSEG1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl|/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_SEVENSEG1.v|
+!i113 1
+R6
+R9
+R7
+n@c@c_@s@e@v@e@n@s@e@g1
+vCC_SPEEDCOMPARATOR
+R1
+!i10b 1
+!s100 W^gP3c08lBJm;dWZ<?B^W0
+I<aEmP<4RgZ`Mmi:j5NLBZ1
+R2
+R0
+w1587551767
+8/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_SPEEDCOMPARATOR.v
+F/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_SPEEDCOMPARATOR.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_SPEEDCOMPARATOR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl|/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/CC_SPEEDCOMPARATOR.v|
+!i113 1
+R6
+R9
+R7
+n@c@c_@s@p@e@e@d@c@o@m@p@a@r@a@t@o@r
+vmatrix_ctrl
+R1
+!i10b 1
+!s100 e8fJ::8FZhBf=Yo62HC<D0
+I7K;KzmeMT:clbcjG:`Fj22
+R2
+R0
+w1554920989
+8/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/max7219_ctrl.v
+F/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/max7219_ctrl.v
+L0 18
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/max7219_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl|/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/max7219_ctrl.v|
+!i113 1
+R6
+R9
+R7
+vSC_DEBOUNCE1
+R1
+!i10b 1
+!s100 R1A>6;z02mNBGFV[E4kge0
+I3QiIgUG[mJC>CL6j0MfiV3
+R2
+R0
+w1550072613
+8/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_DEBOUNCE1.v
+F/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_DEBOUNCE1.v
+L0 44
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_DEBOUNCE1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl|/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_DEBOUNCE1.v|
+!i113 1
+R6
+R9
+R7
+n@s@c_@d@e@b@o@u@n@c@e1
+vSC_RegBACKGTYPE
+R1
+!i10b 1
+!s100 Mkd6PPC0Td2HGhP3=<T<;0
+ITSl:AD_0Bj<WC^X7n7nl`0
+R2
+R0
+Z10 w1587551228
+8/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_RegBACKGTYPE.v
+F/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_RegBACKGTYPE.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_RegBACKGTYPE.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl|/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_RegBACKGTYPE.v|
+!i113 1
+R6
+R9
+R7
+n@s@c_@reg@b@a@c@k@g@t@y@p@e
+vSC_RegPOINTTYPE
+R1
+!i10b 1
+!s100 4=P8@z0TzlO0L?PM9SZXI1
+Ihj16CX^h`X>Mkoem[M?9L1
+R2
+R0
+w1587549200
+8/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_RegPOINTTYPE.v
+F/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_RegPOINTTYPE.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_RegPOINTTYPE.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl|/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_RegPOINTTYPE.v|
+!i113 1
+R6
+R9
+R7
+n@s@c_@reg@p@o@i@n@t@t@y@p@e
+vSC_STATEMACHINEBACKG
+R1
+!i10b 1
+!s100 O?0LU`BRMnz?6;Xej_?4_3
+I[^DUa@a2i]7]=Sab^?BV80
+R2
+R0
+R10
+8/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_STATEMACHINEBACKG.v
+F/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_STATEMACHINEBACKG.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_STATEMACHINEBACKG.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl|/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_STATEMACHINEBACKG.v|
+!i113 1
+R6
+R9
+R7
+n@s@c_@s@t@a@t@e@m@a@c@h@i@n@e@b@a@c@k@g
+vSC_STATEMACHINEPOINT
+R1
+!i10b 1
+!s100 mMbbjPV[o2BAljCEDHjN70
+IMl3NnVBDS4n4gVGn=TUZ72
+R2
+R0
+w1587549344
+8/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_STATEMACHINEPOINT.v
+F/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_STATEMACHINEPOINT.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_STATEMACHINEPOINT.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl|/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_STATEMACHINEPOINT.v|
+!i113 1
+R6
+R9
+R7
+n@s@c_@s@t@a@t@e@m@a@c@h@i@n@e@p@o@i@n@t
+vSC_upCOUNTER
+R1
+!i10b 1
+!s100 PT49PD5be3bIA@;=]eGhk2
+ITS<iEDnEA^WA_OVmSRWD^3
+R2
+R0
+w1587548580
+8/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_upCOUNTER.v
+F/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_upCOUNTER.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_upCOUNTER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl|/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_upCOUNTER.v|
+!i113 1
+R6
+R9
+R7
+n@s@c_up@c@o@u@n@t@e@r
+vSC_upSPEEDCOUNTER
+R1
+!i10b 1
+!s100 cm=PR6iaGzJLc2NkCh];P0
+IdIimLOUdX`SLg>2Q>B^3Q1
+R2
+R0
+w1554825616
+8/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_upSPEEDCOUNTER.v
+F/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_upSPEEDCOUNTER.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_upSPEEDCOUNTER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl|/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/SC_upSPEEDCOUNTER.v|
+!i113 1
+R6
+R9
+R7
+n@s@c_up@s@p@e@e@d@c@o@u@n@t@e@r
+vshift_reg_start_done
+R1
+!i10b 1
+!s100 P[k=OFn:ZJUAdXXFS>kmX1
+I;LOd^9hPWKgMDCBEXTZf`2
+R2
+R0
+w1554920993
+8/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/shift_reg_start_done.v
+F/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/shift_reg_start_done.v
+L0 34
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/shift_reg_start_done.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl|/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/rtl/shift_reg_start_done.v|
+!i113 1
+R6
+R9
+R7
+vTB_SYSTEM
+R1
+!i10b 1
+!s100 cF`5MQL6B><`P<NTk8j3U0
+ILXlHLd6PEfcL?g=dPjAPd2
+R2
+R0
+w1553807059
+8/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/simulation/modelsim/TB_SYSTEM.vt
+F/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/simulation/modelsim/TB_SYSTEM.vt
+R8
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/simulation/modelsim/TB_SYSTEM.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/simulation/modelsim|/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/simulation/modelsim/TB_SYSTEM.vt|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+/home/fsegura/Downloads/PRJ0_ROADFIGHTER_1/simulation/modelsim
+R7
+n@t@b_@s@y@s@t@e@m

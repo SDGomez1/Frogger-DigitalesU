@@ -1,0 +1,112 @@
+
+
+`timescale 1 ns/ 1 ns
+module TB_SYSTEM();
+// constants                                           
+// ============================================
+// Parameter ( may differ for physical synthesis)
+// ============================================
+	// general purpose registers
+	reg eachvec;
+	parameter TCK = 20; // clock period in ns
+	parameter CLK_FREQ = 1000000000 / TCK; // Frequenzy in HZ
+	parameter DATAWIDTH_BUS = 8;
+	integer ii=0;
+	// test vector input registers
+// ============================================
+// INTERNAL WIRE AND REG DECLARATIONS
+// ============================================
+	// wires (OUTPUTS)
+	wire TB_SYSTEM_display_OutBUS;
+	wire TB_SYSTEM_max7219DIN_Out;
+	wire TB_SYSTEM_max7219NCS_Out;
+	wire TB_SYSTEM_max7219CLK_Out;
+
+	wire TB_SYSTEM_startButton_Out;
+	wire TB_SYSTEM_upButton_Out;
+	wire TB_SYSTEM_downButton_Out;
+	wire TB_SYSTEM_leftButton_Out;
+	wire TB_SYSTEM_rightButton_Out;
+	wire TB_SYSTEM_TEST0;
+	wire TB_SYSTEM_TEST1;
+	wire TB_SYSTEM_TEST2;
+
+	// reg (INPUTS)
+	reg TB_SYSTEM_CLOCK_50;
+	reg TB_SYSTEM_RESET_InHigh;
+	reg TB_SYSTEM_startButton_InLow; 
+	reg	TB_SYSTEM_upButton_InLow;
+	reg TB_SYSTEM_downButton_InLow;
+	reg TB_SYSTEM_leftButton_InLow;
+	reg TB_SYSTEM_rightButton_InLow;	
+	
+	reg[7:0] random1;
+	// assign statements (if any)                          
+	BB_SYSTEM BB_SYSTEM_u0 (
+	// port map - connection between master ports and signals/registers   
+		.BB_SYSTEM_display_OutBUS(TB_SYSTEM_display_OutBUS),
+		.BB_SYSTEM_max7219DIN_Out(TB_SYSTEM_max7219DIN_Out),
+		.BB_SYSTEM_max7219NCS_Out(TB_SYSTEM_max7219NCS_Out),
+		.BB_SYSTEM_max7219CLK_Out(TB_SYSTEM_max7219CLK_Out),
+		.BB_SYSTEM_startButton_Out(TB_SYSTEM_startButton_Out),
+		.BB_SYSTEM_upButton_Out(TB_SYSTEM_upButton_Out),
+		.BB_SYSTEM_downButton_Out(TB_SYSTEM_downButton_Out),
+		.BB_SYSTEM_leftButton_Out(TB_SYSTEM_leftButton_Out),
+		.BB_SYSTEM_rightButton_Out(TB_SYSTEM_rightButton_Out),
+		.BB_SYSTEM_TEST0(TB_SYSTEM_TEST0),
+		.BB_SYSTEM_TEST1(TB_SYSTEM_TEST1),
+		.BB_SYSTEM_TEST2(TB_SYSTEM_TEST2),
+		
+		.BB_SYSTEM_CLOCK_50(TB_SYSTEM_CLOCK_50),
+		.BB_SYSTEM_RESET_InHigh(TB_SYSTEM_RESET_InHigh),
+		.BB_SYSTEM_startButton_InLow(TB_SYSTEM_startButton_InLow),
+		.BB_SYSTEM_upButton_InLow(TB_SYSTEM_upButton_InLow),
+		.BB_SYSTEM_downButton_InLow(TB_SYSTEM_downButton_InLow),
+		.BB_SYSTEM_leftButton_InLow(TB_SYSTEM_leftButton_InLow),
+		.BB_SYSTEM_rightButton_InLow(TB_SYSTEM_rightButton_InLow)
+	);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+	TB_SYSTEM_CLOCK_50 <= 0;
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+	#(TCK/2) TB_SYSTEM_CLOCK_50 <= ~ TB_SYSTEM_CLOCK_50;
+initial begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin     
+	random1 <= $random;
+	#0 			TB_SYSTEM_RESET_InHigh <= 1'b1; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_upButton_InLow <= 1'b0; TB_SYSTEM_downButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_upButton_InLow <= 1'b0; TB_SYSTEM_downButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_upButton_InLow <= 1'b0; TB_SYSTEM_downButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b1; TB_SYSTEM_upButton_InLow <= 1'b0; TB_SYSTEM_downButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_upButton_InLow <= 1'b0; TB_SYSTEM_downButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_upButton_InLow <= 1'b0; TB_SYSTEM_downButton_InLow <= 1'b1; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_upButton_InLow <= 1'b0; TB_SYSTEM_downButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_upButton_InLow <= 1'b0; TB_SYSTEM_downButton_InLow <= 1'b1; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_upButton_InLow <= 1'b0; TB_SYSTEM_downButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_upButton_InLow <= 1'b0; TB_SYSTEM_downButton_InLow <= 1'b1; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_upButton_InLow <= 1'b0; TB_SYSTEM_downButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_upButton_InLow <= 1'b0; TB_SYSTEM_downButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b1; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_upButton_InLow <= 1'b0; TB_SYSTEM_downButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_upButton_InLow <= 1'b0; TB_SYSTEM_downButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b1; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_upButton_InLow <= 1'b0; TB_SYSTEM_downButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	
+	//#(TCK*10000) $finish;	
+@eachvec;
+$finish;                                              
+// --> end                                             
+end                                                    
+endmodule
+
