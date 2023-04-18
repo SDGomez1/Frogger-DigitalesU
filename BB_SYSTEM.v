@@ -42,7 +42,8 @@ module BB_SYSTEM (
  parameter PRESCALER_DATAWIDTH 							= 23;
  parameter DISPLAY_DATAWIDTH								= 12;
  parameter MAIN_STATEMACHINE_STATE_DATAWIDTH			= 2;
- parameter LEVELCOUNTER_DATAWIDTH						= 3;
+ parameter LEVELCOUNTER_DATAWIDTH						= 3; 
+ parameter LEVELPROGRESSCOUNTER_DATAWIDTH				= 5;
 
 
  parameter DATA_FIXED_INITREGPOINT_7 = 8'b00010000;
@@ -106,6 +107,11 @@ wire LEVEL_STATEMACHINE_FinishedGame_Out_cwire;
 //LEVEL_COUNTER
 
 wire [LEVELCOUNTER_DATAWIDTH-1:0]	LEVELCOUNTER_DataOut_cwire;
+
+//LEVEL_PROGRESS_COUNTER
+
+wire [LEVELPROGRESSCOUNTER_DATAWIDTH-1:0] LEVELPROGRESSCOUNTER_DataOut_cwire;
+
 
 //=======================================================
 //  Structural coding
@@ -178,6 +184,23 @@ SC_LEVELCOUNTER SC_LEVELCOUNTER_u0(
 	.SC_LEVELCOUNTER_CLOCK_50(BB_SYSTEM_CLOCK_50),
 	.SC_LEVELCOUNTER_RESET_InHigh(BB_SYSTEM_RESET_InHigh)
 );
+
+//----------------------------------------------------------------------
+//LEVEL_PROGRESS_COUNTER
+//----------------------------------------------------------------------
+SC_LEVELPROGRESSCOUNTER SC_LEVELPROGRESSCOUNTER_u0(
+	.SC_LEVELPROGRESSCOUNTER_Data_OutBus(LEVELPROGRESSCOUNTER_DataOut_cwire),
+	.SC_LEVELPROGRESSCOUNTER_CountSignal_in(),
+	.SC_LEVELPROGRESSCOUNTER_StartCountSignal_in(LEVEL_STATEMACHINE_StartCount_Out_cwire),
+	.SC_LEVELPROGRESSCOUNTER_FinishedGame_in(LEVEL_STATEMACHINE_FinishedGame_Out_cwire),
+	.SC_LEVELPROGRESSCOUNTER_CLOCK_50(BB_SYSTEM_CLOCK_50),
+	.SC_LEVELPROGRESSCOUNTER_RESET_InHigh(BB_SYSTEM_RESET_InHigh)
+);
+
+
+
+
+
 //######################################################################
 //#	TO LED MATRIZ: VISUALIZATION
 //######################################################################
