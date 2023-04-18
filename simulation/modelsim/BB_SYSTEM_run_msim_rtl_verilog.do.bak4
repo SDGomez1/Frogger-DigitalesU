@@ -15,9 +15,6 @@ vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/r
 vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v}
 vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v}
 vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v}
-vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v}
-vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v}
-vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v}
 
 vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim {D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt}
 

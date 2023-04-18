@@ -5,7 +5,7 @@ delete wave *
 #add wave -noupdate /TB_SYSTEM/eachvec
 #
 #add wave  -divider LedMATRIX
-#add wave -noupdate /TB_SYSTEM/TB_SYSTEM_CLOCK_50
+add wave -noupdate /TB_SYSTEM/TB_SYSTEM_CLOCK_50
 #add wave -noupdate /TB_SYSTEM/TB_SYSTEM_RESET_InHigh
 #add wave -noupdate /TB_SYSTEM/TB_SYSTEM_startButton_InLow
 #add wave -noupdate /TB_SYSTEM/TB_SYSTEM_leftButton_InLow
@@ -35,11 +35,47 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_DEBOUNCE1_u0/SC_DEBOUNCE1_button_O
 add wave  -divider SC_MAIN_STATEMACHINE_u0
 add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_MAIN_STATEMACHINE_u0/SC_MAIN_STATEMACHINE_CurrentState_Out
 
+add wave  -divider SC_LEVEL_STATEMACHINE_u0
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_LevelFinished_Out
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_StartCount_Out
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_FinishedGame_Out
+
 add wave  -divider SC_LEVELCOUNTER_u0
 add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVELCOUNTER_u0/SC_LEVELCOUNTER_Data_OutBus
 
+add wave  -divider SC_LEVELPROGRESSCOUNTER_u0
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVELPROGRESSCOUNTER_u0/SC_LEVELPROGRESSCOUNTER_Data_OutBus
+
+add wave  -divider SC_upSPEEDCOUNTER_u0
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_upSPEEDCOUNTER_u0/SC_upSPEEDCOUNTER_data_OutBUS
+
+add wave  -divider CC_SPEEDCOMPARATOR_u0
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_SPEEDCOMPARATOR_u0/CC_SPEEDCOMPARATOR_T0_OutLow
+
+add wave  -divider REGISTER
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u0/SC_RegGENERAL_CAR_data_OutBUS
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u1/SC_RegGENERAL_CAR_data_OutBUS
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u2/SC_RegGENERAL_CAR_data_OutBUS
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u3/SC_RegGENERAL_CAR_data_OutBUS
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u4/SC_RegGENERAL_CAR_data_OutBUS
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u5/SC_RegGENERAL_CAR_data_OutBUS
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u6/SC_RegGENERAL_CAR_data_OutBUS
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u7/SC_RegGENERAL_CAR_data_OutBUS
+
+
+#add wave  -divider DATA_DELAY
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_DATADELAY_u0/CC_DATADELAY_DelayedData_outBus
+##add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_DATADELAY_u1/CC_DATADELAY_DelayedData_outBus
+##add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_DATADELAY_u2/CC_DATADELAY_DelayedData_outBus
+##add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_DATADELAY_u3/CC_DATADELAY_DelayedData_outBus
+##add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_DATADELAY_u4/CC_DATADELAY_DelayedData_outBus
+##add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_DATADELAY_u5/CC_DATADELAY_DelayedData_outBus
+##add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_DATADELAY_u6/CC_DATADELAY_DelayedData_outBus
+
+
+
 restart
-run 1000000ns
+run 10000000ns
 
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {319999492 ps} 0}

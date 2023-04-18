@@ -7,140 +7,324 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim
+Z0 dD:/Documentos/personal/frogger-digitales/simulation/modelsim
 vBB_SYSTEM
-Z1 !s110 1681837006
+Z1 !s110 1681855660
 !i10b 1
-!s100 Sgzg0?L4nCQNRAmL]]MhL0
-IC3kE]a>b>Rb_Tc7[@2o7N2
+!s100 I:QzCJI?jZI?o7OOPiIe;3
+I]6cb0VdkbNA4c03B?3Rcm3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1681836708
-8C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v
-FC:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v
+w1681855356
+8D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v
+FD:/Documentos/personal/frogger-digitales/BB_SYSTEM.v
 Z3 L0 21
 Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1681837006.000000
-!s107 C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU|C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v|
+Z5 !s108 1681855660.000000
+!s107 D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales|D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v|
 !i113 1
 Z6 o-vlog01compat -work work
-!s92 -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU
+!s92 -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales
 Z7 tCvgOpt 0
 n@b@b_@s@y@s@t@e@m
-vmatrix_ctrl
-R1
+vCC_DATADELAY
+Z8 !s110 1681855661
 !i10b 1
-!s100 e8fJ::8FZhBf=Yo62HC<D0
-I9b]FoEnFNWI7PkhH3ZW3g0
+!s100 c8j4jT?6WOa?FJ6@g_VoL3
+I2Y9KT1HLPcLn6?R4lG<1@2
 R2
 R0
-Z8 w1681403557
-8C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/max7219_ctrl.v
-FC:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/max7219_ctrl.v
-L0 18
+w1681853875
+8D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v
+FD:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v
+R3
 R4
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/max7219_ctrl.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl|C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/max7219_ctrl.v|
+Z9 !s108 1681855661.000000
+!s107 D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v|
 !i113 1
 R6
-Z9 !s92 -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl
+Z10 !s92 -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl
 R7
-vSC_DEBOUNCE1
+n@c@c_@d@a@t@a@d@e@l@a@y
+vCC_LEVEL_DATAHANDLER
 R1
 !i10b 1
-!s100 R1A>6;z02mNBGFV[E4kge0
-IUM1D8X6VPW2dh6A@@Rm^a1
+!s100 FhKP7Ski[fK94]^B@fhAW0
+Ile83L:UC[a=T@g7RabA3L1
 R2
 R0
-R8
-8C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_DEBOUNCE1.v
-FC:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_DEBOUNCE1.v
-L0 44
-R4
-r1
-!s85 0
-31
-R5
-!s107 C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_DEBOUNCE1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl|C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_DEBOUNCE1.v|
-!i113 1
-R6
-R9
-R7
-n@s@c_@d@e@b@o@u@n@c@e1
-vSC_MAIN_STATEMACHINE
-R1
-!i10b 1
-!s100 [lQOe<CkS5MA2Nn8^j@R=3
-Igb:N_3MJ49`gJJf1`Bn[00
-R2
-R0
-w1681836317
-8C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_MAIN_STATEMACHINE.v
-FC:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_MAIN_STATEMACHINE.v
+w1681852793
+8D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v
+FD:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v
 R3
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_MAIN_STATEMACHINE.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl|C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_MAIN_STATEMACHINE.v|
+!s107 D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v|
 !i113 1
 R6
-R9
+R10
+R7
+n@c@c_@l@e@v@e@l_@d@a@t@a@h@a@n@d@l@e@r
+vCC_SPEEDCOMPARATOR
+R1
+!i10b 1
+!s100 kQCKK3k0<6feVhEa>MPoR2
+IdJF@^HDeSmKz]@DBdLd@l1
+R2
+R0
+w1681851200
+8D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v
+FD:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v|
+!i113 1
+R6
+R10
+R7
+n@c@c_@s@p@e@e@d@c@o@m@p@a@r@a@t@o@r
+vmatrix_ctrl
+R1
+!i10b 1
+!s100 e8fJ::8FZhBf=Yo62HC<D0
+I1Man5TF]Dhi:K>GYd<mP@2
+R2
+R0
+Z11 w1681339396
+8D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v
+FD:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v
+L0 18
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v|
+!i113 1
+R6
+R10
+R7
+vSC_DEBOUNCE1
+R1
+!i10b 1
+!s100 R1A>6;z02mNBGFV[E4kge0
+I0=2]DAUB[3lfm92?hVJPg2
+R2
+R0
+R11
+8D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v
+FD:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v
+L0 44
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v|
+!i113 1
+R6
+R10
+R7
+n@s@c_@d@e@b@o@u@n@c@e1
+vSC_LEVEL_STATEMACHINE
+R1
+!i10b 1
+!s100 9feKjVm1IdnK1dlO=C=H43
+I`UT9ACdSdM2=N9BWLM0B:2
+R2
+R0
+w1681855654
+8D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v
+FD:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v|
+!i113 1
+R6
+R10
+R7
+n@s@c_@l@e@v@e@l_@s@t@a@t@e@m@a@c@h@i@n@e
+vSC_LEVELCOUNTER
+R1
+!i10b 1
+!s100 X<;Sgc;fajh_Q3R<J@UT_3
+I[egZL`U[5lGR^VI1cL09@1
+R2
+R0
+Z12 w1681851059
+8D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v
+FD:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v|
+!i113 1
+R6
+R10
+R7
+n@s@c_@l@e@v@e@l@c@o@u@n@t@e@r
+vSC_LEVELPROGRESSCOUNTER
+R1
+!i10b 1
+!s100 6_LciJR69G^nGDX`6kKRm2
+ILJ_hJ4``M6BSEm52ANF8C1
+R2
+R0
+R12
+8D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v
+FD:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v|
+!i113 1
+R6
+R10
+R7
+n@s@c_@l@e@v@e@l@p@r@o@g@r@e@s@s@c@o@u@n@t@e@r
+vSC_MAIN_STATEMACHINE
+R1
+!i10b 1
+!s100 [lQOe<CkS5MA2Nn8^j@R=3
+Ime^F@DE9gZ[aNfzm8@^c;3
+R2
+R0
+R12
+8D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v
+FD:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v|
+!i113 1
+R6
+R10
 R7
 n@s@c_@m@a@i@n_@s@t@a@t@e@m@a@c@h@i@n@e
+vSC_RegGENERAL_CAR
+R1
+!i10b 1
+!s100 ?eAQ0=k49[L:cok0P65KV3
+I7k5=HCALQ3U@Gdne1jF]b0
+R2
+R0
+w1681853118
+8D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v
+FD:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v|
+!i113 1
+R6
+R10
+R7
+n@s@c_@reg@g@e@n@e@r@a@l_@c@a@r
+vSC_upSPEEDCOUNTER
+R1
+!i10b 1
+!s100 RSP`JP29F3XjT^NdZH9V?0
+I@UU=1hWA0=:BV=Yc5Nhho1
+R2
+R0
+w1681851162
+8D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v
+FD:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v|
+!i113 1
+R6
+R10
+R7
+n@s@c_up@s@p@e@e@d@c@o@u@n@t@e@r
 vshift_reg_start_done
 R1
 !i10b 1
 !s100 P[k=OFn:ZJUAdXXFS>kmX1
-IhVzTG?c66Bdfn?6EXF<9^1
+I0@Ab>R:;SGLM07am;e9Pk1
 R2
 R0
-R8
-8C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/shift_reg_start_done.v
-FC:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/shift_reg_start_done.v
+R11
+8D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v
+FD:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v
 L0 34
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/shift_reg_start_done.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl|C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/shift_reg_start_done.v|
+!s107 D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v|
 !i113 1
 R6
-R9
+R10
 R7
 vTB_SYSTEM
-R1
+R8
 !i10b 1
 !s100 NHAU<]e[3RhzKQJiEX9h91
-I_4MQ0K@NlZT9bf[bXgI>i0
+ImRQR?lTgn`[IaIIW`_j@Z2
 R2
 R0
-w1681836893
-8C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt
-FC:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt
+R12
+8D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt
+FD:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt
 L0 19
 R4
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim|C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt|
+R9
+!s107 D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim|D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt|
 !i113 1
 R6
-!s92 -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim
+!s92 -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim
 R7
 n@t@b_@s@y@s@t@e@m

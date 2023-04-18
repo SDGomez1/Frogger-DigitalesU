@@ -112,6 +112,33 @@ wire [LEVELCOUNTER_DATAWIDTH-1:0]	LEVELCOUNTER_DataOut_cwire;
 
 wire [LEVELPROGRESSCOUNTER_DATAWIDTH-1:0] LEVELPROGRESSCOUNTER_DataOut_cwire;
 
+//PRESCALER
+
+wire [PRESCALER_DATAWIDTH-1:0]upSPEEDCOUNTER_data_OutBUS_cwire;
+wire SPEEDCOMPARATOR_T0_Out_cwire;
+
+
+//LEVEL_DATAHANDLER
+wire [DATAWIDTH_BUS-1:0] LEVEL_DATAHANDLER_LevelData_OutBus_cwire;
+
+// REG WIRES
+
+wire [DATAWIDTH_BUS-1:0]REG0toReg1_DataBus_out;
+wire [DATAWIDTH_BUS-1:0]REG1toReg2_DataBus_out;
+wire [DATAWIDTH_BUS-1:0]REG2toReg3_DataBus_out;
+wire [DATAWIDTH_BUS-1:0]REG3toReg4_DataBus_out;
+wire [DATAWIDTH_BUS-1:0]REG4toReg5_DataBus_out;
+wire [DATAWIDTH_BUS-1:0]REG5toReg6_DataBus_out;
+wire [DATAWIDTH_BUS-1:0]REG6toReg7_DataBus_out;
+
+//DELAY
+wire [DATAWIDTH_BUS-1:0]REG0toReg1_DelayBus_out;
+wire [DATAWIDTH_BUS-1:0]REG1toReg2_DelayBus_out;
+wire [DATAWIDTH_BUS-1:0]REG2toReg3_DelayBus_out;
+wire [DATAWIDTH_BUS-1:0]REG3toReg4_DelayBus_out;
+wire [DATAWIDTH_BUS-1:0]REG4toReg5_DelayBus_out;
+wire [DATAWIDTH_BUS-1:0]REG5toReg6_DelayBus_out;
+wire [DATAWIDTH_BUS-1:0]REG6toReg7_DelayBus_out;
 
 //=======================================================
 //  Structural coding
@@ -157,7 +184,7 @@ SC_MAIN_STATEMACHINE SC_MAIN_STATEMACHINE_u0 (
 	.SC_MAIN_STATEMACHINE_CLOCK_50(BB_SYSTEM_CLOCK_50),
 	.SC_MAIN_STATEMACHINE_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
 	.SC_MAIN_STATEMACHINE_StartSignal_InLow(BB_SYSTEM_startButton_InLow_cwire),
-	.SC_MAIN_STATEMACHINE_EndGameSignal_InLow()
+	.SC_MAIN_STATEMACHINE_EndGameSignal_InLow(LEVEL_STATEMACHINE_FinishedGame_Out_cwire)
 );
 
 //----------------------------------------------------------------------
@@ -169,7 +196,7 @@ SC_LEVEL_STATEMACHINE SC_LEVEL_STATEMACHINE_u0(
 	.SC_LEVEL_STATEMACHINE_StartCount_Out(LEVEL_STATEMACHINE_StartCount_Out_cwire),
 	.SC_LEVEL_STATEMACHINE_FinishedGame_Out(LEVEL_STATEMACHINE_FinishedGame_Out_cwire),
 	.SC_LEVEL_STATEMACHINE_CurrentLevel_In(LEVELCOUNTER_DataOut_cwire),
-	.SC_LEVEL_STATEMACHINE_LvlProgressCount_In(),
+	.SC_LEVEL_STATEMACHINE_LvlProgressCount_In(LEVELPROGRESSCOUNTER_DataOut_cwire),
 	.SC_LEVEL_STATEMACHINE_CLOCK_50(BB_SYSTEM_CLOCK_50),
 	.SC_LEVEL_STATEMACHINE_RESET_InHigh(BB_SYSTEM_RESET_InHigh)
 );
@@ -190,17 +217,156 @@ SC_LEVELCOUNTER SC_LEVELCOUNTER_u0(
 //----------------------------------------------------------------------
 SC_LEVELPROGRESSCOUNTER SC_LEVELPROGRESSCOUNTER_u0(
 	.SC_LEVELPROGRESSCOUNTER_Data_OutBus(LEVELPROGRESSCOUNTER_DataOut_cwire),
-	.SC_LEVELPROGRESSCOUNTER_CountSignal_in(),
+	.SC_LEVELPROGRESSCOUNTER_CountSignal_in(SPEEDCOMPARATOR_T0_Out_cwire),
 	.SC_LEVELPROGRESSCOUNTER_StartCountSignal_in(LEVEL_STATEMACHINE_StartCount_Out_cwire),
 	.SC_LEVELPROGRESSCOUNTER_FinishedGame_in(LEVEL_STATEMACHINE_FinishedGame_Out_cwire),
 	.SC_LEVELPROGRESSCOUNTER_CLOCK_50(BB_SYSTEM_CLOCK_50),
 	.SC_LEVELPROGRESSCOUNTER_RESET_InHigh(BB_SYSTEM_RESET_InHigh)
 );
 
+//----------------------------------------------------------------------
+//PRESCALER
+//----------------------------------------------------------------------
+
+SC_upSPEEDCOUNTER #(.upSPEEDCOUNTER_DATAWIDTH(PRESCALER_DATAWIDTH))
+	SC_upSPEEDCOUNTER_u0(
+		.SC_upSPEEDCOUNTER_data_OutBUS(upSPEEDCOUNTER_data_OutBUS_cwire),
+		.SC_upSPEEDCOUNTER_CLOCK_50(BB_SYSTEM_CLOCK_50),
+		.SC_upSPEEDCOUNTER_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+		.SC_upSPEEDCOUNTER_upcount_InLow(SPEEDCOMPARATOR_T0_Out_cwire)
+);
+
+CC_SPEEDCOMPARATOR #(.SPEEDCOMPARATOR_DATAWIDTH(PRESCALER_DATAWIDTH))
+	CC_SPEEDCOMPARATOR_u0(
+		.CC_SPEEDCOMPARATOR_T0_OutLow(SPEEDCOMPARATOR_T0_Out_cwire),
+		.CC_SPEEDCOMPARATOR_data_InBUS(upSPEEDCOUNTER_data_OutBUS_cwire),
+		.CC_SPEEDCOMPARATOR_StartCount_In(LEVEL_STATEMACHINE_StartCount_Out_cwire)
+);
+
+//----------------------------------------------------------------------
+//LEVEL_DATAHANDLER
+//----------------------------------------------------------------------
+
+CC_LEVEL_DATAHANDLER CC_LEVEL_DATAHANDLER_u0(
+	.CC_LEVEL_DATAHANDLER_LevelData_OutBus(LEVEL_DATAHANDLER_LevelData_OutBus_cwire),
+	.CC_LEVEL_DATAHANDLER_LvlProgress(LEVELPROGRESSCOUNTER_DataOut_cwire),
+	.CC_LEVEL_DATAHANDLER_CurrentLvl(LEVELCOUNTER_DataOut_cwire)
+
+);
+
+//----------------------------------------------------------------------
+//CAR_REGISTERS
+//----------------------------------------------------------------------
+
+SC_RegGENERAL_CAR  #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) 
+	SC_RegGENERAL_CAR_u0(
+		.SC_RegGENERAL_CAR_data_OutBUS(REG0toReg1_DataBus_out),
+		.SC_RegGENERAL_CAR_CLOCK_50(BB_SYSTEM_CLOCK_50),
+		.SC_RegGENERAL_CAR_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+		.SC_RegGENERAL_CAR_load_InLow(LEVEL_STATEMACHINE_StartCount_Out_cwire),
+		.SC_RegGENERAL_CAR_data_InBUS(LEVEL_DATAHANDLER_LevelData_OutBus_cwire)
+);
+
+SC_RegGENERAL_CAR  #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) 
+	SC_RegGENERAL_CAR_u1(
+		.SC_RegGENERAL_CAR_data_OutBUS(REG1toReg2_DataBus_out),
+		.SC_RegGENERAL_CAR_CLOCK_50(BB_SYSTEM_CLOCK_50),
+		.SC_RegGENERAL_CAR_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+		.SC_RegGENERAL_CAR_load_InLow(LEVEL_STATEMACHINE_StartCount_Out_cwire),
+		.SC_RegGENERAL_CAR_data_InBUS(REG0toReg1_DelayBus_out)
+);
 
 
+SC_RegGENERAL_CAR  #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) 
+	SC_RegGENERAL_CAR_u2(
+		.SC_RegGENERAL_CAR_data_OutBUS(REG2toReg3_DataBus_out),
+		.SC_RegGENERAL_CAR_CLOCK_50(BB_SYSTEM_CLOCK_50),
+		.SC_RegGENERAL_CAR_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+		.SC_RegGENERAL_CAR_load_InLow(LEVEL_STATEMACHINE_StartCount_Out_cwire),
+		.SC_RegGENERAL_CAR_data_InBUS(REG1toReg2_DelayBus_out)
+);
 
+SC_RegGENERAL_CAR  #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) 
+	SC_RegGENERAL_CAR_u3(
+		.SC_RegGENERAL_CAR_data_OutBUS(REG3toReg4_DataBus_out),
+		.SC_RegGENERAL_CAR_CLOCK_50(BB_SYSTEM_CLOCK_50),
+		.SC_RegGENERAL_CAR_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+		.SC_RegGENERAL_CAR_load_InLow(LEVEL_STATEMACHINE_StartCount_Out_cwire),
+		.SC_RegGENERAL_CAR_data_InBUS(REG2toReg3_DelayBus_out)
+);
+SC_RegGENERAL_CAR  #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) 
+	SC_RegGENERAL_CAR_u4(
+		.SC_RegGENERAL_CAR_data_OutBUS(REG4toReg5_DataBus_out),
+		.SC_RegGENERAL_CAR_CLOCK_50(BB_SYSTEM_CLOCK_50),
+		.SC_RegGENERAL_CAR_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+		.SC_RegGENERAL_CAR_load_InLow(LEVEL_STATEMACHINE_StartCount_Out_cwire),
+		.SC_RegGENERAL_CAR_data_InBUS(REG3toReg4_DelayBus_out)
+);
+SC_RegGENERAL_CAR  #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) 
+	SC_RegGENERAL_CAR_u5(
+		.SC_RegGENERAL_CAR_data_OutBUS(REG5toReg6_DataBus_out),
+		.SC_RegGENERAL_CAR_CLOCK_50(BB_SYSTEM_CLOCK_50),
+		.SC_RegGENERAL_CAR_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+		.SC_RegGENERAL_CAR_load_InLow(LEVEL_STATEMACHINE_StartCount_Out_cwire),
+		.SC_RegGENERAL_CAR_data_InBUS(REG4toReg5_DelayBus_out)
+);
 
+SC_RegGENERAL_CAR  #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) 
+	SC_RegGENERAL_CAR_u6(
+		.SC_RegGENERAL_CAR_data_OutBUS(REG6toReg7_DataBus_out),
+		.SC_RegGENERAL_CAR_CLOCK_50(BB_SYSTEM_CLOCK_50),
+		.SC_RegGENERAL_CAR_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+		.SC_RegGENERAL_CAR_load_InLow(LEVEL_STATEMACHINE_StartCount_Out_cwire),
+		.SC_RegGENERAL_CAR_data_InBUS(REG5toReg6_DelayBus_out)
+);
+SC_RegGENERAL_CAR  #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) 
+	SC_RegGENERAL_CAR_u7(
+		.SC_RegGENERAL_CAR_data_OutBUS(),
+		.SC_RegGENERAL_CAR_CLOCK_50(BB_SYSTEM_CLOCK_50),
+		.SC_RegGENERAL_CAR_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+		.SC_RegGENERAL_CAR_load_InLow(LEVEL_STATEMACHINE_StartCount_Out_cwire),
+		.SC_RegGENERAL_CAR_data_InBUS(REG6toReg7_DelayBus_out)
+);
+
+//----------------------------------------------------------------------
+//DATA_DELAY
+//----------------------------------------------------------------------
+
+CC_DATADELAY CC_DATADELAY_u0 (
+	.CC_DATADELAY_DelayedData_outBus(REG0toReg1_DelayBus_out),
+	.CC_DATADELAY_Data_inBus(REG0toReg1_DataBus_out),
+	.CC_DATADELAY_SendDataSignal_In(SPEEDCOMPARATOR_T0_Out_cwire)
+);
+CC_DATADELAY CC_DATADELAY_u1 (
+	.CC_DATADELAY_DelayedData_outBus(REG1toReg2_DelayBus_out),
+	.CC_DATADELAY_Data_inBus(REG1toReg2_DataBus_out),
+	.CC_DATADELAY_SendDataSignal_In(SPEEDCOMPARATOR_T0_Out_cwire)
+);
+CC_DATADELAY CC_DATADELAY_u2 (
+	.CC_DATADELAY_DelayedData_outBus(REG2toReg3_DelayBus_out),
+	.CC_DATADELAY_Data_inBus(REG2toReg3_DataBus_out),
+	.CC_DATADELAY_SendDataSignal_In(SPEEDCOMPARATOR_T0_Out_cwire)
+);
+CC_DATADELAY CC_DATADELAY_u3 (
+	.CC_DATADELAY_DelayedData_outBus(REG3toReg4_DelayBus_out),
+	.CC_DATADELAY_Data_inBus(REG3toReg4_DataBus_out),
+	.CC_DATADELAY_SendDataSignal_In(SPEEDCOMPARATOR_T0_Out_cwire)
+);
+CC_DATADELAY CC_DATADELAY_u4 (
+	.CC_DATADELAY_DelayedData_outBus(REG4toReg5_DelayBus_out),
+	.CC_DATADELAY_Data_inBus(REG4toReg5_DataBus_out),
+	.CC_DATADELAY_SendDataSignal_In(SPEEDCOMPARATOR_T0_Out_cwire)
+);
+CC_DATADELAY CC_DATADELAY_u5 (
+	.CC_DATADELAY_DelayedData_outBus(REG5toReg6_DelayBus_out),
+	.CC_DATADELAY_Data_inBus(REG5toReg6_DataBus_out),
+	.CC_DATADELAY_SendDataSignal_In(SPEEDCOMPARATOR_T0_Out_cwire)
+);
+CC_DATADELAY CC_DATADELAY_u6 (
+	.CC_DATADELAY_DelayedData_outBus(REG6toReg7_DelayBus_out),
+	.CC_DATADELAY_Data_inBus(REG6toReg7_DataBus_out),
+	.CC_DATADELAY_SendDataSignal_In(SPEEDCOMPARATOR_T0_Out_cwire)
+);
 //######################################################################
 //#	TO LED MATRIZ: VISUALIZATION
 //######################################################################
