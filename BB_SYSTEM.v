@@ -42,6 +42,8 @@ module BB_SYSTEM (
  parameter PRESCALER_DATAWIDTH 							= 23;
  parameter DISPLAY_DATAWIDTH								= 12;
  parameter MAIN_STATEMACHINE_STATE_DATAWIDTH			= 2;
+ parameter LEVELCOUNTER_DATAWIDTH						= 3;
+
 
  parameter DATA_FIXED_INITREGPOINT_7 = 8'b00010000;
  parameter DATA_FIXED_INITREGPOINT_6 = 8'b00111000;
@@ -94,6 +96,11 @@ wire 	[2:0] add;
 
 wire [MAIN_STATEMACHINE_STATE_DATAWIDTH-1:0] MAIN_STATEMACHINE_CurrentState_cwire;
 
+
+//LEVEL_COUNTER
+
+wire [LEVELCOUNTER_DATAWIDTH-1:0]	LEVELCOUNTER_DataOut_cwire;
+
 //=======================================================
 //  Structural coding
 //=======================================================
@@ -127,6 +134,11 @@ SC_DEBOUNCE1 SC_DEBOUNCE1_u2 (
 //#	!!! ACA VAN TUS COMPONENTES
 //######################################################################
 
+
+//----------------------------------------------------------------------
+// MAINSTATEMACHINE
+//----------------------------------------------------------------------
+
 SC_MAIN_STATEMACHINE SC_MAIN_STATEMACHINE_u0 (
 // port map - connection between master ports and signals/registers   
 	.SC_MAIN_STATEMACHINE_CurrentState_Out(MAIN_STATEMACHINE_CurrentState_cwire),
@@ -136,6 +148,17 @@ SC_MAIN_STATEMACHINE SC_MAIN_STATEMACHINE_u0 (
 	.SC_MAIN_STATEMACHINE_EndGameSignal_InLow()
 );
 
+//----------------------------------------------------------------------
+// LEVELCOUNTER
+//----------------------------------------------------------------------
+
+SC_LEVELCOUNTER SC_LEVELCOUNTER_u0(
+	.SC_LEVELCOUNTER_Data_OutBus(LEVELCOUNTER_DataOut_cwire),
+	.SC_LEVELCOUNTER_CurrentState_Inbus(MAIN_STATEMACHINE_CurrentState_cwire),
+	.SC_LEVELCOUNTER_CountSignal_InLow(),
+	.SC_LEVELCOUNTER_CLOCK_50(BB_SYSTEM_CLOCK_50),
+	.SC_LEVELCOUNTER_RESET_InHigh(BB_SYSTEM_RESET_InHigh)
+);
 //######################################################################
 //#	TO LED MATRIZ: VISUALIZATION
 //######################################################################

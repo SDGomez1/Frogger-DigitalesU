@@ -35,6 +35,9 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_DEBOUNCE1_u0/SC_DEBOUNCE1_button_O
 add wave  -divider SC_MAIN_STATEMACHINE_u0
 add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_MAIN_STATEMACHINE_u0/SC_MAIN_STATEMACHINE_CurrentState_Out
 
+add wave  -divider SC_LEVELCOUNTER_u0
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVELCOUNTER_u0/SC_LEVELCOUNTER_Data_OutBus
+
 restart
 run 1000000ns
 
