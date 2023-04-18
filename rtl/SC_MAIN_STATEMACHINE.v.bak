@@ -1,0 +1,59 @@
+/*######################################################################
+//#	G0B1T: HDL EXAMPLES. 2018.
+//######################################################################
+//# 
+//# This program is free software: you can redistribute it and/or modify
+//# it under the terms of the GNU General Public License as published by
+//# the Free Software Foundation, version 3 of the License.
+//#
+//# This program is distributed in the hope that it will be useful,
+//# but WITHOUT ANY WARRANTY; without even the implied warranty of
+//# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//# GNU General Public License for more details.
+//#
+//# You should have received a copy of the GNU General Public License
+//# along with this program.  If not, see <http://www.gnu.org/licenses/>
+//####################################################################*/
+//=======================================================
+//  MODULE Definition
+//=======================================================
+
+module SC_MAIN_STATEMACHINE(
+//////////// OUTPUTS //////////
+	SC_MAIN_STATEMACHINE_CurrentState_Out,
+
+//////////// INPUTS //////////
+
+	SC_MAIN_STATEMACHINE_CLOCK_50,
+	SC_MAIN_STATEMACHINE_RESET_InHigh,
+	SC_MAIN_STATEMACHINE_StartSignal_InHigh,
+	SC_MAIN_STATEMACHINE_EndGameSignal_InLow
+
+);
+
+//=======================================================
+//  PARAMETER declarations
+//=======================================================
+
+parameter STATE_DATAWIDTH										= 2;
+
+// states declaration
+localparam STATE_AWAITSTART_0									= 0;
+localparam STATE_STARTGAME_0									= 1;
+localparam STATE_ENDGAME_0										= 2;
+
+
+//=======================================================
+//  PORT declarations
+//=======================================================
+
+
+output reg		[STATE_DATAWIDTH-1:0] SC_MAIN_STATEMACHINE_CurrentState_Out;
+
+input				SC_MAIN_STATEMACHINE_CLOCK_50;
+input 			SC_MAIN_STATEMACHINE_RESET_InHigh;
+input				SC_MAIN_STATEMACHINE_StartSignal_InHigh;
+input				SC_MAIN_STATEMACHINE_EndGameSignal_InLow;
+
+
+

@@ -1,2 +1,0 @@
-Warning (10268): Verilog HDL information at max7219_ctrl.v(154): always construct contains both blocking and non-blocking assignments File: G:/Mi unidad/Universidad de los andes/Reintegro/3er semestre/Digitales/Lab/Frogger/PRJ0_BASE_1/rtl/max7219_ctrl.v Line: 154
-Info (10281): Verilog HDL Declaration information at max7219_ctrl.v(21): object "intensity" differs only in case from object "INTENSITY" in the same scope File: G:/Mi unidad/Universidad de los andes/Reintegro/3er semestre/Digitales/Lab/Frogger/PRJ0_BASE_1/rtl/max7219_ctrl.v Line: 21

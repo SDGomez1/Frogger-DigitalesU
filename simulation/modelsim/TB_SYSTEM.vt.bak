@@ -39,6 +39,9 @@ module TB_SYSTEM();
 	wire TB_SYSTEM_startButton_Out;
 	wire TB_SYSTEM_leftButton_Out;
 	wire TB_SYSTEM_rightButton_Out;
+	wire TB_SYSTEM_TEST0;
+	wire TB_SYSTEM_TEST1;
+	wire TB_SYSTEM_TEST2;
 
 	// reg (INPUTS)
 	reg TB_SYSTEM_CLOCK_50;
@@ -57,7 +60,10 @@ module TB_SYSTEM();
 		.BB_SYSTEM_startButton_Out(TB_SYSTEM_startButton_Out),
 		.BB_SYSTEM_leftButton_Out(TB_SYSTEM_leftButton_Out),
 		.BB_SYSTEM_rightButton_Out(TB_SYSTEM_rightButton_Out),
-
+		.BB_SYSTEM_TEST0(TB_SYSTEM_TEST0),
+		.BB_SYSTEM_TEST1(TB_SYSTEM_TEST1),
+		.BB_SYSTEM_TEST2(TB_SYSTEM_TEST2),
+		
 		.BB_SYSTEM_CLOCK_50(TB_SYSTEM_CLOCK_50),
 		.BB_SYSTEM_RESET_InHigh(TB_SYSTEM_RESET_InHigh),
 		.BB_SYSTEM_startButton_InLow(TB_SYSTEM_startButton_InLow),
@@ -80,22 +86,21 @@ initial begin
 // code executes for every event on sensitivity list   
 // insert code here --> begin     
 	random1 <= $random;
-	#0 			TB_SYSTEM_RESET_InHigh <= 1'b1; 
-					TB_SYSTEM_startButton_InLow <= 1'b0; 
-					TB_SYSTEM_leftButton_InLow <= 1'b0; 
-					TB_SYSTEM_rightButton_InLow <= 1'b0;	
+	#0 			TB_SYSTEM_RESET_InHigh <= 1'b1; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b1; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b1; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b1; TB_SYSTEM_rightButton_InLow <= 1'b0;
+
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b1;
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b1;
 	
-	#1000 	TB_SYSTEM_RESET_InHigh = 1'b1;
-				TB_SYSTEM_startButton_InLow = 1'b1;
-			   TB_SYSTEM_leftButton_InLow = 1'b1;
-				
-	#1000		TB_SYSTEM_RESET_InHigh = 1'b0;
-				
-	#50000  TB_SYSTEM_startButton_InLow = 1'b1;
-				TB_SYSTEM_leftButton_InLow = 1'b1;
-			  
-	#50000 	TB_SYSTEM_startButton_InLow = 1'b0;
-				TB_SYSTEM_leftButton_InLow = 1'b0;
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	#10000000 	TB_SYSTEM_RESET_InHigh <= 1'b0; TB_SYSTEM_startButton_InLow <= 1'b0; TB_SYSTEM_leftButton_InLow <= 1'b0; TB_SYSTEM_rightButton_InLow <= 1'b0;
+	
 	
 	//#(TCK*10000) $finish;	
 @eachvec;

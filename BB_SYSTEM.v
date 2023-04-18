@@ -38,10 +38,11 @@ module BB_SYSTEM (
 //=======================================================
 //  PARAMETER declarations
 //=======================================================
- parameter DATAWIDTH_BUS = 8;
- parameter PRESCALER_DATAWIDTH = 23;
- parameter DISPLAY_DATAWIDTH = 12;
- 
+ parameter DATAWIDTH_BUS 									= 8;
+ parameter PRESCALER_DATAWIDTH 							= 23;
+ parameter DISPLAY_DATAWIDTH								= 12;
+ parameter MAIN_STATEMACHINE_STATE_DATAWIDTH			= 2;
+
  parameter DATA_FIXED_INITREGPOINT_7 = 8'b00010000;
  parameter DATA_FIXED_INITREGPOINT_6 = 8'b00111000;
  parameter DATA_FIXED_INITREGPOINT_5 = 8'b01111100;
@@ -70,7 +71,7 @@ input		BB_SYSTEM_rightButton_InLow;
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-// BUTTONs
+// BUTTONS (DEBOUNCERS)s
 wire 	BB_SYSTEM_startButton_InLow_cwire;
 wire 	BB_SYSTEM_leftButton_InLow_cwire;
 wire 	BB_SYSTEM_rightButton_InLow_cwire;
@@ -87,6 +88,11 @@ wire [DATAWIDTH_BUS-1:0] regGAME_data0_wire;
 
 wire 	[7:0] data_max;
 wire 	[2:0] add;
+
+
+// MAIN_STATEMACHINE
+
+wire [MAIN_STATEMACHINE_STATE_DATAWIDTH-1:0] MAIN_STATEMACHINE_CurrentState_cwire;
 
 //=======================================================
 //  Structural coding
@@ -121,8 +127,14 @@ SC_DEBOUNCE1 SC_DEBOUNCE1_u2 (
 //#	!!! ACA VAN TUS COMPONENTES
 //######################################################################
 
-
-
+SC_MAIN_STATEMACHINE SC_MAIN_STATEMACHINE_u0 (
+// port map - connection between master ports and signals/registers   
+	.SC_MAIN_STATEMACHINE_CurrentState_Out(MAIN_STATEMACHINE_CurrentState_cwire),
+	.SC_MAIN_STATEMACHINE_CLOCK_50(BB_SYSTEM_CLOCK_50),
+	.SC_MAIN_STATEMACHINE_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+	.SC_MAIN_STATEMACHINE_StartSignal_InLow(BB_SYSTEM_startButton_InLow_cwire),
+	.SC_MAIN_STATEMACHINE_EndGameSignal_InLow()
+);
 
 //######################################################################
 //#	TO LED MATRIZ: VISUALIZATION
@@ -163,10 +175,7 @@ matrix_ctrl matrix_ctrl_unit_0(
 assign BB_SYSTEM_startButton_Out = BB_SYSTEM_startButton_InLow_cwire;
 assign BB_SYSTEM_leftButton_Out = BB_SYSTEM_leftButton_InLow_cwire;
 assign BB_SYSTEM_rightButton_Out = BB_SYSTEM_rightButton_InLow_cwire;
-//TO TEST
-assign BB_SYSTEM_TEST0 = BB_SYSTEM_startButton_InLow_cwire;
-assign BB_SYSTEM_TEST1 = BB_SYSTEM_startButton_InLow_cwire;
-assign BB_SYSTEM_TEST2 = BB_SYSTEM_startButton_InLow_cwire;
+
 
 
 
