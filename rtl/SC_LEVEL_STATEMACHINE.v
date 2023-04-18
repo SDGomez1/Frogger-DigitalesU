@@ -27,7 +27,7 @@ module SC_LEVEL_STATEMACHINE(
 //////////// INPUTS //////////
 	SC_LEVEL_STATEMACHINE_CurrentLevel_In,
 	SC_LEVEL_STATEMACHINE_LvlProgressCount_In,
-		,
+	SC_LEVEL_STATEMACHINE_CLOCK_50,
 	SC_LEVEL_STATEMACHINE_RESET_InHigh,
 	
 );
@@ -51,12 +51,12 @@ localparam STATE_ENDGAME										= 4;
 //  PORT declarations
 //=======================================================
 
-output reg		CC_LEVELHANDLER_LevelFinished_Out;
-output reg		CC_LEVELHANDLER_StartCount_Out;
-output reg		CC_LEVELHANDLER_FinishedGame_Out;
+output reg		SC_LEVEL_STATEMACHINE_FinishedGame_Out;
+output reg		SC_LEVEL_STATEMACHINE_StartCount_Out;
+output reg		SC_LEVEL_STATEMACHINE_LevelFinished_Out;
 
-input 			[CURRENT_LEVEDATAWIDTH-1:0]CC_LEVELHANDLER_CurrentLevel_In;
-input 			[4:0]CC_LEVELHANDLER_LvlProgressCount_In;
+input 			[CURRENT_LEVEDATAWIDTH-1:0]SC_LEVEL_STATEMACHINE_CurrentLevel_In;
+input 			[4:0]SC_LEVEL_STATEMACHINE_LvlProgressCount_In;
 input				SC_LEVEL_STATEMACHINE_CLOCK_50;
 input				SC_LEVEL_STATEMACHINE_RESET_InHigh;
 
@@ -79,36 +79,130 @@ begin
 
 	case (STATE_Register)
 	
-		STATE_NO_LEVEL:	if (SC_MAIN_STATEMACHINE_StartSignal_InLow == 1'b0) 
-									   STATE_Signal = STATE_STARTGAME_0;
-										
-									else 
-										STATE_Signal = STATE_AWAITSTART_0;
+		STATE_NO_LEVEL:	if (SC_LEVEL_STATEMACHINE_CurrentLevel_In == 1) 
+								   STATE_Signal = STATE_LEVEL_1;		
+								else 
+									STATE_Signal = STATE_NO_LEVEL;
 						
-		STATE_LEVEL_1:  	if (SC_MAIN_STATEMACHINE_EndGameSignal_InLow == 1'b0)
-										STATE_Signal = STATE_ENDGAME_0;
+		STATE_LEVEL_1:  	if (SC_LEVEL_STATEMACHINE_CurrentLevel_In == 2)
+										STATE_Signal = STATE_LEVEL_2;											
+								else 
+									STATE_Signal = STATE_LEVEL_1;
 										
-									else if (SC_MAIN_STATEMACHINE_RESET_InHigh == 1'b1)
-										STATE_Signal = STATE_AWAITSTART_0;
+		STATE_LEVEL_2:		if (SC_LEVEL_STATEMACHINE_CurrentLevel_In == 3)		
+									STATE_Signal = STATE_LEVEL_3;		
+								else
+									STATE_Signal = STATE_LEVEL_2;
 									
-									else 
-										STATE_Signal = STATE_STARTGAME_0;
-										
-		STATE_LEVEL_2:		if (SC_MAIN_STATEMACHINE_RESET_InHigh == 1'b1)		
-										STATE_Signal = STATE_AWAITSTART_0;
-										
-									else
-										STATE_Signal = STATE_ENDGAME_0;
-		STATE_LEVEL_3: 	
+		STATE_LEVEL_3: 	if (SC_LEVEL_STATEMACHINE_CurrentLevel_In == 4)		
+									STATE_Signal = STATE_ENDGAME;		
+								else
+									STATE_Signal = STATE_LEVEL_3;
 		
 		
-		STATE_ENDGAME:
+		STATE_ENDGAME:		if (SC_LEVEL_STATEMACHINE_RESET_InHigh == 1'b1)		
+									STATE_Signal = STATE_NO_LEVEL;		
+								else
+									STATE_Signal = STATE_ENDGAME;	
 
-		default: 				STATE_Signal = STATE_LEVEL_0;
+		default: 				STATE_Signal = STATE_NO_LEVEL;
 	
 	endcase
 
 end 
 
 
+// STATE REGISTER : SEQUENTIAL
+always @ ( posedge SC_LEVEL_STATEMACHINE_CLOCK_50 , posedge SC_LEVEL_STATEMACHINE_RESET_InHigh)
+begin
+	if (SC_LEVEL_STATEMACHINE_RESET_InHigh == 1'b1)
+		STATE_Register <= STATE_NO_LEVEL;
+	else
+		STATE_Register <= STATE_Signal;
+end
 
+//=======================================================
+//  Outputs
+//=======================================================
+// OUTPUT LOGIC : COMBINATIONAL
+always @ (*)
+begin
+	case (STATE_Register)
+//=========================================================
+// STATE_NO_LEVEL
+//=========================================================
+	STATE_NO_LEVEL :	
+		begin
+			SC_LEVEL_STATEMACHINE_LevelFinished_Out 	= 0;
+			SC_LEVEL_STATEMACHINE_StartCount_Out 		= 1;
+			SC_LEVEL_STATEMACHINE_FinishedGame_Out		= 1;
+		end
+//=========================================================
+// STATE_LEVEL_1
+//=========================================================
+	STATE_LEVEL_1 :	
+		begin
+			if(SC_LEVEL_STATEMACHINE_LvlProgressCount_In == 5'b01100)begin
+				SC_LEVEL_STATEMACHINE_StartCount_Out= 1;
+				SC_LEVEL_STATEMACHINE_LevelFinished_Out = 1;
+			end
+			else begin
+				SC_LEVEL_STATEMACHINE_StartCount_Out=0;
+				SC_LEVEL_STATEMACHINE_LevelFinished_Out = 0;
+			
+			end
+			
+		end
+
+//========================================================
+// STATE_LEVEL_2
+//=========================================================
+	STATE_LEVEL_2 :
+		begin
+				if(SC_LEVEL_STATEMACHINE_LvlProgressCount_In == 5'b01100)begin
+				SC_LEVEL_STATEMACHINE_StartCount_Out= 1;
+				SC_LEVEL_STATEMACHINE_LevelFinished_Out = 1;
+			end
+			else begin
+				SC_LEVEL_STATEMACHINE_StartCount_Out=0;
+				SC_LEVEL_STATEMACHINE_LevelFinished_Out = 0;
+			
+			end
+			
+		end
+
+//=======================================================
+// STATE_LEVEL_3
+//=========================================================
+	STATE_LEVEL_3 :
+		begin
+			if(SC_LEVEL_STATEMACHINE_LvlProgressCount_In == 5'b01100)begin
+				SC_LEVEL_STATEMACHINE_StartCount_Out= 1;
+				SC_LEVEL_STATEMACHINE_LevelFinished_Out = 1;
+			end
+			else begin
+				SC_LEVEL_STATEMACHINE_StartCount_Out=0;
+				SC_LEVEL_STATEMACHINE_LevelFinished_Out = 0;
+			
+			end
+			
+		end
+//=========================================================
+// DEFAULT
+//=========================================================
+	default :
+		begin
+			if(SC_LEVEL_STATEMACHINE_LvlProgressCount_In == 5'b01100)begin
+				SC_LEVEL_STATEMACHINE_StartCount_Out= 1;
+				SC_LEVEL_STATEMACHINE_LevelFinished_Out = 1;
+			end
+			else begin
+				SC_LEVEL_STATEMACHINE_StartCount_Out=0;
+				SC_LEVEL_STATEMACHINE_LevelFinished_Out = 0;
+			
+			end
+		end
+	endcase
+end
+
+endmodule 

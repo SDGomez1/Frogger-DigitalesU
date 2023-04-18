@@ -97,6 +97,12 @@ wire 	[2:0] add;
 wire [MAIN_STATEMACHINE_STATE_DATAWIDTH-1:0] MAIN_STATEMACHINE_CurrentState_cwire;
 
 
+// LEVEL_STATEMACHINE
+
+wire LEVEL_STATEMACHINE_LevelFinished_Out_cwire;
+wire LEVEL_STATEMACHINE_StartCount_Out_cwire;
+wire LEVEL_STATEMACHINE_FinishedGame_Out_cwire;
+
 //LEVEL_COUNTER
 
 wire [LEVELCOUNTER_DATAWIDTH-1:0]	LEVELCOUNTER_DataOut_cwire;
@@ -136,7 +142,7 @@ SC_DEBOUNCE1 SC_DEBOUNCE1_u2 (
 
 
 //----------------------------------------------------------------------
-// MAINSTATEMACHINE
+// MAIN_STATEMACHINE
 //----------------------------------------------------------------------
 
 SC_MAIN_STATEMACHINE SC_MAIN_STATEMACHINE_u0 (
@@ -149,13 +155,26 @@ SC_MAIN_STATEMACHINE SC_MAIN_STATEMACHINE_u0 (
 );
 
 //----------------------------------------------------------------------
-// LEVELCOUNTER
+// LEVEL_STATEMACHINE
+//----------------------------------------------------------------------
+
+SC_LEVEL_STATEMACHINE SC_LEVEL_STATEMACHINE_u0(
+	.SC_LEVEL_STATEMACHINE_LevelFinished_Out(LEVEL_STATEMACHINE_LevelFinished_Out_cwire),
+	.SC_LEVEL_STATEMACHINE_StartCount_Out(LEVEL_STATEMACHINE_StartCount_Out_cwire),
+	.SC_LEVEL_STATEMACHINE_FinishedGame_Out(LEVEL_STATEMACHINE_FinishedGame_Out_cwire),
+	.SC_LEVEL_STATEMACHINE_CurrentLevel_In(LEVELCOUNTER_DataOut_cwire),
+	.SC_LEVEL_STATEMACHINE_LvlProgressCount_In(),
+	.SC_LEVEL_STATEMACHINE_CLOCK_50(BB_SYSTEM_CLOCK_50),
+	.SC_LEVEL_STATEMACHINE_RESET_InHigh(BB_SYSTEM_RESET_InHigh)
+);
+//----------------------------------------------------------------------
+// LEVEL_COUNTER
 //----------------------------------------------------------------------
 
 SC_LEVELCOUNTER SC_LEVELCOUNTER_u0(
 	.SC_LEVELCOUNTER_Data_OutBus(LEVELCOUNTER_DataOut_cwire),
 	.SC_LEVELCOUNTER_CurrentState_Inbus(MAIN_STATEMACHINE_CurrentState_cwire),
-	.SC_LEVELCOUNTER_CountSignal_InLow(),
+	.SC_LEVELCOUNTER_CountSignal_InLow(LEVEL_STATEMACHINE_LevelFinished_Out_cwire),
 	.SC_LEVELCOUNTER_CLOCK_50(BB_SYSTEM_CLOCK_50),
 	.SC_LEVELCOUNTER_RESET_InHigh(BB_SYSTEM_RESET_InHigh)
 );
