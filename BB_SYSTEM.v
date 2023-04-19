@@ -39,7 +39,7 @@ module BB_SYSTEM (
 //  PARAMETER declarations
 //=======================================================
  parameter DATAWIDTH_BUS 									= 8;
- parameter PRESCALER_DATAWIDTH 							= 23;
+ parameter PRESCALER_DATAWIDTH 							= 24;
  parameter DISPLAY_DATAWIDTH								= 12;
  parameter MAIN_STATEMACHINE_STATE_DATAWIDTH			= 2;
  parameter LEVELCOUNTER_DATAWIDTH						= 3; 

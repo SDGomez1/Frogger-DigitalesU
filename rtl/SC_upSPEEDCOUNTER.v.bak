@@ -18,7 +18,7 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-module SC_upSPEEDCOUNTER #(parameter upSPEEDCOUNTER_DATAWIDTH=24)(
+module SC_upSPEEDCOUNTER #(parameter upSPEEDCOUNTER_DATAWIDTH=23)(
 	//////////// OUTPUTS //////////
 	SC_upSPEEDCOUNTER_data_OutBUS,
 	//////////// INPUTS //////////

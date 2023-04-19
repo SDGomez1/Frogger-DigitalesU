@@ -11,9 +11,9 @@ add wave -noupdate /TB_SYSTEM/TB_SYSTEM_CLOCK_50
 #add wave -noupdate /TB_SYSTEM/TB_SYSTEM_leftButton_InLow
 #add wave -noupdate /TB_SYSTEM/TB_SYSTEM_rightButton_InLow
 #
-#add wave -noupdate /TB_SYSTEM/TB_SYSTEM_max7219DIN_Out
-#add wave -noupdate /TB_SYSTEM/TB_SYSTEM_max7219NCS_Out
-#add wave -noupdate /TB_SYSTEM/TB_SYSTEM_max7219CLK_Out
+add wave -noupdate /TB_SYSTEM/TB_SYSTEM_max7219DIN_Out
+add wave -noupdate /TB_SYSTEM/TB_SYSTEM_max7219NCS_Out
+add wave -noupdate /TB_SYSTEM/TB_SYSTEM_max7219CLK_Out
 
 add wave  -divider SC_DEBOUNCE1_u0
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_DEBOUNCE1_u0/SC_DEBOUNCE1_button_In
@@ -75,7 +75,7 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u7/SC_RegGENERAL_CA
 
 
 restart
-run 10000000ns
+run 500ms
 
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {319999492 ps} 0}

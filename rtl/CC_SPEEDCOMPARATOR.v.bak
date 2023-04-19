@@ -18,13 +18,12 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-module SC_upSPEEDCOUNTER #(parameter upSPEEDCOUNTER_DATAWIDTH=24)(
-	//////////// OUTPUTS //////////
-	SC_upSPEEDCOUNTER_data_OutBUS,
-	//////////// INPUTS //////////
-	SC_upSPEEDCOUNTER_CLOCK_50,
-	SC_upSPEEDCOUNTER_RESET_InHigh,
-	SC_upSPEEDCOUNTER_upcount_InLow
+module CC_SPEEDCOMPARATOR #(parameter SPEEDCOMPARATOR_DATAWIDTH=23)(
+//////////// OUTPUTS //////////
+	CC_SPEEDCOMPARATOR_T0_OutLow,
+//////////// INPUTS //////////
+	CC_SPEEDCOMPARATOR_data_InBUS,
+	CC_SPEEDCOMPARATOR_StartCount_In
 );
 //=======================================================
 //  PARAMETER declarations
@@ -33,39 +32,29 @@ module SC_upSPEEDCOUNTER #(parameter upSPEEDCOUNTER_DATAWIDTH=24)(
 //=======================================================
 //  PORT declarations
 //=======================================================
-output		[upSPEEDCOUNTER_DATAWIDTH-1:0]	SC_upSPEEDCOUNTER_data_OutBUS;
-input		SC_upSPEEDCOUNTER_CLOCK_50;
-input		SC_upSPEEDCOUNTER_RESET_InHigh;
-input		SC_upSPEEDCOUNTER_upcount_InLow;
-
+output	reg CC_SPEEDCOMPARATOR_T0_OutLow;
+input 	[SPEEDCOMPARATOR_DATAWIDTH-1:0] CC_SPEEDCOMPARATOR_data_InBUS;
+input 	CC_SPEEDCOMPARATOR_StartCount_In;
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-reg [upSPEEDCOUNTER_DATAWIDTH-1:0] upSPEEDCOUNTER_Register;
-reg [upSPEEDCOUNTER_DATAWIDTH-1:0] upSPEEDCOUNTER_Signal;
 //=======================================================
 //  Structural coding
 //=======================================================
-//INPUT LOGIC: COMBINATIONAL
 always @(*)
 begin
-	if (SC_upSPEEDCOUNTER_upcount_InLow == 1'b0)
-		upSPEEDCOUNTER_Signal = upSPEEDCOUNTER_Register + 1'b1;
-	else
-		upSPEEDCOUNTER_Signal = 1'b0;
-	end	
-//STATE REGISTER: SEQUENTIAL
-always @(posedge SC_upSPEEDCOUNTER_CLOCK_50, posedge SC_upSPEEDCOUNTER_RESET_InHigh)
-begin
-	if (SC_upSPEEDCOUNTER_RESET_InHigh  == 1'b1)
-		upSPEEDCOUNTER_Register <= 0;
-	else
-		upSPEEDCOUNTER_Register <= upSPEEDCOUNTER_Signal;
+	case (CC_SPEEDCOMPARATOR_StartCount_In)
+	
+	0:	begin
+			if( CC_SPEEDCOMPARATOR_data_InBUS == 23'b00000000000111111111111)
+			CC_SPEEDCOMPARATOR_T0_OutLow = 1'b1;
+			else 
+			CC_SPEEDCOMPARATOR_T0_OutLow = 1'b0;
+		end
+	1: CC_SPEEDCOMPARATOR_T0_OutLow = 1'b1;	
+	
+	default: CC_SPEEDCOMPARATOR_T0_OutLow = 1'b1;	
+	endcase
 end
-//=======================================================
-//  Outputs
-//=======================================================
-//OUTPUT LOGIC: COMBINATIONAL
-assign SC_upSPEEDCOUNTER_data_OutBUS = upSPEEDCOUNTER_Register;
 
-endmodule 
+endmodule

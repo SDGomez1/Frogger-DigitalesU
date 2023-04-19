@@ -18,7 +18,7 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-module CC_SPEEDCOMPARATOR #(parameter SPEEDCOMPARATOR_DATAWIDTH=23)(
+module CC_SPEEDCOMPARATOR #(parameter SPEEDCOMPARATOR_DATAWIDTH=24)(
 //////////// OUTPUTS //////////
 	CC_SPEEDCOMPARATOR_T0_OutLow,
 //////////// INPUTS //////////
@@ -46,7 +46,7 @@ begin
 	case (CC_SPEEDCOMPARATOR_StartCount_In)
 	
 	0:	begin
-			if( CC_SPEEDCOMPARATOR_data_InBUS == 23'b00000000000111111111111)
+			if( CC_SPEEDCOMPARATOR_data_InBUS == 24'b111110111100010100100000)
 			CC_SPEEDCOMPARATOR_T0_OutLow = 1'b1;
 			else 
 			CC_SPEEDCOMPARATOR_T0_OutLow = 1'b0;
