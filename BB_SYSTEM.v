@@ -96,13 +96,18 @@ wire 	[2:0] add;
 // MAIN_STATEMACHINE
 
 wire [MAIN_STATEMACHINE_STATE_DATAWIDTH-1:0] MAIN_STATEMACHINE_CurrentState_cwire;
-
+wire MAIN_STATEMACHINE_LoadSignal_ou_cwire;
 
 // LEVEL_STATEMACHINE
 
 wire LEVEL_STATEMACHINE_LevelFinished_Out_cwire;
 wire LEVEL_STATEMACHINE_StartCount_Out_cwire;
 wire LEVEL_STATEMACHINE_FinishedGame_Out_cwire;
+
+
+//SC_PLAYER_STATEMACHINE
+
+wire [1:0]SC_PLAYER_STATEMACHINE_ShiftSelection_Out;
 
 //LEVEL_COUNTER
 
@@ -153,6 +158,17 @@ wire [DATAWIDTH_BUS-1:0]MUX3_1_REG4_DataBus_Out_cwire;
 wire [DATAWIDTH_BUS-1:0]MUX3_1_REG5_DataBus_Out_cwire;
 wire [DATAWIDTH_BUS-1:0]MUX3_1_REG6_DataBus_Out_cwire;
 wire [DATAWIDTH_BUS-1:0]MUX3_1_REG7_DataBus_Out_cwire;
+
+
+//RegShifter
+wire [DATAWIDTH_BUS-1:0]RegSHIFTER_data_OutBUS_cwire;
+
+
+//CC_PLAYER_CAR_COMPARATOR
+wire [DATAWIDTH_BUS-1:0]PLAYER_CAR_COMPARATOR_Data_OutBus_cwire;
+
+
+
 //=======================================================
 //  Structural coding
 //=======================================================
@@ -194,6 +210,7 @@ SC_DEBOUNCE1 SC_DEBOUNCE1_u2 (
 SC_MAIN_STATEMACHINE SC_MAIN_STATEMACHINE_u0 (
 // port map - connection between master ports and signals/registers   
 	.SC_MAIN_STATEMACHINE_CurrentState_Out(MAIN_STATEMACHINE_CurrentState_cwire),
+	.SC_MAIN_STATEMACHINE_LoadSignal_out(MAIN_STATEMACHINE_LoadSignal_ou_cwire),
 	.SC_MAIN_STATEMACHINE_CLOCK_50(BB_SYSTEM_CLOCK_50),
 	.SC_MAIN_STATEMACHINE_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
 	.SC_MAIN_STATEMACHINE_StartSignal_InLow(BB_SYSTEM_startButton_InLow_cwire),
@@ -213,6 +230,21 @@ SC_LEVEL_STATEMACHINE SC_LEVEL_STATEMACHINE_u0(
 	.SC_LEVEL_STATEMACHINE_CLOCK_50(BB_SYSTEM_CLOCK_50),
 	.SC_LEVEL_STATEMACHINE_RESET_InHigh(BB_SYSTEM_RESET_InHigh)
 );
+
+
+//----------------------------------------------------------------------
+// SC_PLAYER_STATEMACHINE
+//----------------------------------------------------------------------
+
+SC_PLAYER_STATEMACHINE SC_PLAYER_STATEMACHINE_u0(
+	.SC_PLAYER_STATEMACHINE_ShiftSelection_Out(SC_PLAYER_STATEMACHINE_ShiftSelection_Out),
+	.SC_PLAYER_STATEMACHINE_CLOCK_50(BB_SYSTEM_CLOCK_50),
+	.SC_PLAYER_STATEMACHINE_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+	.SC_PLAYER_STATEMACHINE_LeftButton_InLow(BB_SYSTEM_leftButton_InLow_cwire),
+	.SC_PLAYER_STATEMACHINE_RigthButton_InLow(BB_SYSTEM_rightButton_InLow_cwire)
+);
+
+
 //----------------------------------------------------------------------
 // LEVEL_COUNTER
 //----------------------------------------------------------------------
@@ -390,35 +422,35 @@ CC_DATADELAY CC_DATADELAY_u6 (
 CC_MUX3_1 CC_MUX3_1_u0(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG0_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
-	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
+	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_0),
 	.CC_MUX3_1_DataBus2_In(REG0toReg1_DataBus_out),
 	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
 );
 CC_MUX3_1 CC_MUX3_1_u1(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG1_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
-	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
+	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_1),
 	.CC_MUX3_1_DataBus2_In(REG1toReg2_DataBus_out),
 	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
 );
 CC_MUX3_1 CC_MUX3_1_u2(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG2_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
-	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
+	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_2),
 	.CC_MUX3_1_DataBus2_In(REG2toReg3_DataBus_out),
 	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
 );
 CC_MUX3_1 CC_MUX3_1_u3(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG3_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
-	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
+	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_3),
 	.CC_MUX3_1_DataBus2_In(REG3toReg4_DataBus_out),
 	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
 );
 CC_MUX3_1 CC_MUX3_1_u4(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG4_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
-	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
+	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_4),
 	.CC_MUX3_1_DataBus2_In(REG4toReg5_DataBus_out),
 	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
 );
@@ -432,21 +464,41 @@ CC_MUX3_1 CC_MUX3_1_u5(
 CC_MUX3_1 CC_MUX3_1_u6(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG6_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
-	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
+	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_6),
 	.CC_MUX3_1_DataBus2_In(REG6toReg7_DataBus_out),
 	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
 );
 CC_MUX3_1 CC_MUX3_1_u7(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG7_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
-	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
-	.CC_MUX3_1_DataBus2_In(REG8_DataBus_out),
+	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_7),
+	.CC_MUX3_1_DataBus2_In(PLAYER_CAR_COMPARATOR_Data_OutBus_cwire),
 	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
 );
 
 
+//----------------------------------------------------------------------
+// SHIFT_REGISTER
+//----------------------------------------------------------------------
+SC_RegSHIFTER SC_RegSHIFTER_u0(
+	.SC_RegSHIFTER_data_OutBUS(RegSHIFTER_data_OutBUS_cwire),
+	.SC_RegSHIFTER_CLOCK_50(BB_SYSTEM_CLOCK_50),
+	.SC_RegSHIFTER_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+	.SC_RegSHIFTER_load_InLow(MAIN_STATEMACHINE_LoadSignal_ou_cwire),
+	.SC_RegSHIFTER_shiftselection_In(SC_PLAYER_STATEMACHINE_ShiftSelection_Out),
+	.SC_RegSHIFTER_data_InBUS(8'b00100000)
+);
 
 
+//----------------------------------------------------------------------
+// CC_PLAYER_CAR_COMPARATOR
+//----------------------------------------------------------------------
+CC_PLAYER_CAR_COMPARATOR CC_PLAYER_CAR_COMPARATOR_u0(
+	.CC_PLAYER_CAR_COMPARATOR_Data_OutBus(PLAYER_CAR_COMPARATOR_Data_OutBus_cwire),
+	.CC_PLAYER_CAR_COMPARATOR_PlayerData_InBus(REG8_DataBus_out),
+	.CC_PLAYER_CAR_COMPARATOR_CarData_InBus(RegSHIFTER_data_OutBUS_cwire)
+
+);
 //######################################################################
 //#	TO LED MATRIZ: VISUALIZATION
 //######################################################################

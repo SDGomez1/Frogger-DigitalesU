@@ -1,6 +1,7 @@
 /*######################################################################
 //#	G0B1T: HDL EXAMPLES. 2018.
 //######################################################################
+//# Copyright (C) 2018. F.E.Segura-Quijano (FES) fsegura@uniandes.edu.co
 //# 
 //# This program is free software: you can redistribute it and/or modify
 //# it under the terms of the GNU General Public License as published by
@@ -17,86 +18,68 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-
-module SC_LEVELCOUNTER (
-//////////// OUTPUTS //////////
-	SC_LEVELCOUNTER_Data_OutBus,
-
-//////////// INPUTS //////////
-	SC_LEVELCOUNTER_CurrentState_Inbus,
-	SC_LEVELCOUNTER_CountSignal_InLow,
-	SC_LEVELCOUNTER_CLOCK_50,
-	SC_LEVELCOUNTER_RESET_InHigh
+module SC_RegSHIFTER #(parameter RegSHIFTER_DATAWIDTH=8)(
+	//////////// OUTPUTS //////////
+	SC_RegSHIFTER_data_OutBUS,
+	//////////// INPUTS //////////
+	SC_RegSHIFTER_CLOCK_50,
+	SC_RegSHIFTER_RESET_InHigh,
+	SC_RegSHIFTER_clear_InLow, 
+	SC_RegSHIFTER_load_InLow, 
+	SC_RegSHIFTER_shiftselection_In,
+	SC_RegSHIFTER_data_InBUS
 );
-
 //=======================================================
 //  PARAMETER declarations
 //=======================================================
 
-parameter CURRENTSTATE_DATAWIDTH								= 2;
-parameter LEVELCOUNTER_DATAWIDTH								= 3;
-
-localparam STATE_AWAITSTART_0									= 0;
-localparam STATE_STARTGAME_0									= 1;
-localparam STATE_ENDGAME_0										= 2;
-
 //=======================================================
 //  PORT declarations
 //=======================================================
-
-output		[LEVELCOUNTER_DATAWIDTH-1:0] SC_LEVELCOUNTER_Data_OutBus;
-
-input 		[CURRENTSTATE_DATAWIDTH-1:0] SC_LEVELCOUNTER_CurrentState_Inbus;
-input 		SC_LEVELCOUNTER_CountSignal_InLow;
-input			SC_LEVELCOUNTER_CLOCK_50;
-input			SC_LEVELCOUNTER_RESET_InHigh;
+output		[RegSHIFTER_DATAWIDTH-1:0]	SC_RegSHIFTER_data_OutBUS;
+input		SC_RegSHIFTER_CLOCK_50;
+input		SC_RegSHIFTER_RESET_InHigh;
+input		SC_RegSHIFTER_clear_InLow;
+input		SC_RegSHIFTER_load_InLow;	
+input		[1:0] SC_RegSHIFTER_shiftselection_In;
+input		[RegSHIFTER_DATAWIDTH-1:0]	SC_RegSHIFTER_data_InBUS;
 
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-
-reg [LEVELCOUNTER_DATAWIDTH-1:0] LEVELCOUNTER_Register;
-reg [LEVELCOUNTER_DATAWIDTH-1:0] LEVELCOUNTER_Signal;
-
+reg [RegSHIFTER_DATAWIDTH-1:0] RegSHIFTER_Register;
+reg [RegSHIFTER_DATAWIDTH-1:0] RegSHIFTER_Signal;
 //=======================================================
 //  Structural coding
 //=======================================================
 //INPUT LOGIC: COMBINATIONAL
-always @(SC_LEVELCOUNTER_CurrentState_Inbus, SC_LEVELCOUNTER_CountSignal_InLow,LEVELCOUNTER_Signal)
+always @(*)
 begin
-
-	if (SC_LEVELCOUNTER_CurrentState_Inbus == STATE_AWAITSTART_0) begin
-		LEVELCOUNTER_Signal = 0;
-	end
-	else if (SC_LEVELCOUNTER_CurrentState_Inbus == STATE_STARTGAME_0) begin
-		if (SC_LEVELCOUNTER_CountSignal_InLow == 1'b0) begin
-			LEVELCOUNTER_Signal = LEVELCOUNTER_Signal + 1'b1;
-		end
-		else begin
-			LEVELCOUNTER_Signal = LEVELCOUNTER_Signal;
-		end
-	end
-	else if (SC_LEVELCOUNTER_CurrentState_Inbus == STATE_ENDGAME_0) begin
-		LEVELCOUNTER_Signal = 4;
-	end
-	else begin
-		LEVELCOUNTER_Signal = 0;
-	end
-
-end	
-//STATE REGISTER: SEQUENTIAL
-always @(posedge SC_LEVELCOUNTER_CLOCK_50, posedge SC_LEVELCOUNTER_RESET_InHigh)
-begin
-	if (SC_LEVELCOUNTER_RESET_InHigh  == 1'b1)
-		LEVELCOUNTER_Register <= 0;
+	if (SC_RegSHIFTER_clear_InLow == 1'b0)
+		RegSHIFTER_Signal = 0;
+	else if (SC_RegSHIFTER_load_InLow == 1'b0)
+		RegSHIFTER_Signal = SC_RegSHIFTER_data_InBUS;
+	else if (SC_RegSHIFTER_shiftselection_In == 2'b01)
+		RegSHIFTER_Signal = RegSHIFTER_Register << 1'b1;   
+		//RegSHIFTER_Signal = {RegSHIFTER_Register[DATAWIDTH_BUS-2:0],0}
+	else if (SC_RegSHIFTER_shiftselection_In== 2'b10)
+		RegSHIFTER_Signal = RegSHIFTER_Register >> 1'b1;   
+		//RegSHIFTER_Signal = {0,RegSHIFTER_Register[DATAWIDTH_BUS-1:1]}
 	else
-		LEVELCOUNTER_Register <= LEVELCOUNTER_Signal;
+		RegSHIFTER_Signal = RegSHIFTER_Register;
+	end	
+//STATE REGISTER: SEQUENTIAL
+always @(posedge SC_RegSHIFTER_CLOCK_50, posedge SC_RegSHIFTER_RESET_InHigh)
+begin
+	if (SC_RegSHIFTER_RESET_InHigh == 1'b1)
+		RegSHIFTER_Register <= 0;
+	else
+		RegSHIFTER_Register <= RegSHIFTER_Signal;
 end
-
 //=======================================================
 //  Outputs
 //=======================================================
 //OUTPUT LOGIC: COMBINATIONAL
-assign SC_LEVELCOUNTER_Data_OutBus = LEVELCOUNTER_Register;
+assign SC_RegSHIFTER_data_OutBUS = RegSHIFTER_Register;
 
-endmodule 
+endmodule

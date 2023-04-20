@@ -8,12 +8,12 @@ delete wave *
 add wave -noupdate /TB_SYSTEM/TB_SYSTEM_CLOCK_50
 #add wave -noupdate /TB_SYSTEM/TB_SYSTEM_RESET_InHigh
 #add wave -noupdate /TB_SYSTEM/TB_SYSTEM_startButton_InLow
-#add wave -noupdate /TB_SYSTEM/TB_SYSTEM_leftButton_InLow
-#add wave -noupdate /TB_SYSTEM/TB_SYSTEM_rightButton_InLow
+add wave -noupdate /TB_SYSTEM/TB_SYSTEM_leftButton_InLow
+add wave -noupdate /TB_SYSTEM/TB_SYSTEM_rightButton_InLow
 #
-add wave -noupdate /TB_SYSTEM/TB_SYSTEM_max7219DIN_Out
-add wave -noupdate /TB_SYSTEM/TB_SYSTEM_max7219NCS_Out
-add wave -noupdate /TB_SYSTEM/TB_SYSTEM_max7219CLK_Out
+#add wave -noupdate /TB_SYSTEM/TB_SYSTEM_max7219DIN_Out
+#add wave -noupdate /TB_SYSTEM/TB_SYSTEM_max7219NCS_Out
+#add wave -noupdate /TB_SYSTEM/TB_SYSTEM_max7219CLK_Out
 
 add wave  -divider SC_DEBOUNCE1_u0
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_DEBOUNCE1_u0/SC_DEBOUNCE1_button_In
@@ -21,11 +21,11 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_DEBOUNCE1_u0/SC_DEBOUNCE1_button_O
 
 #add wave  -divider SC_DEBOUNCE1_u1
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_DEBOUNCE1_u1/SC_DEBOUNCE1_button_In
-#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_DEBOUNCE1_u1/SC_DEBOUNCE1_button_Out
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_DEBOUNCE1_u1/SC_DEBOUNCE1_button_Out
 #
-#add wave  -divider SC_DEBOUNCE1_u2
+#add wave  -divider SC_DEBOUNCE1_u2wd1
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_DEBOUNCE1_u2/SC_DEBOUNCE1_button_In
-#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_DEBOUNCE1_u2/SC_DEBOUNCE1_button_Out
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_DEBOUNCE1_u2/SC_DEBOUNCE1_button_Out
 #
 #add wave  -divider TEST
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/matrix_ctrl_unit_0/clk_driver
@@ -73,7 +73,7 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_SPEEDCOMPARATOR_u0/CC_SPEEDCOMPARA
 ##add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_DATADELAY_u6/CC_DATADELAY_DelayedData_outBus
 
 
-add wave  -divider CC_MUX3_1
+add wave  -divider MUX3_1
 add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u0/CC_MUX3_1_DataBus_Out
 add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u1/CC_MUX3_1_DataBus_Out
 add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u2/CC_MUX3_1_DataBus_Out
@@ -81,10 +81,23 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u3/CC_MUX3_1_DataBus_Out
 add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u4/CC_MUX3_1_DataBus_Out
 add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u5/CC_MUX3_1_DataBus_Out
 add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u6/CC_MUX3_1_DataBus_Out
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u7/CC_MUX3_1_DataBus_Out
+
+#add wave  -divider PLAYER_STATEMACHINE_u0
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_PLAYER_STATEMACHINE_u0/SC_PLAYER_STATEMACHINE_ShiftSelection_Out
+
+
+add wave  -divider RegSHIFTER
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_data_OutBUS
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_load_InLow
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_shiftselection_In
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_data_InBUS
+
+
 
 
 restart
-run 1000000ns
+run 10000000ns
 
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {319999492 ps} 0}

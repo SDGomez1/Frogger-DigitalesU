@@ -85,17 +85,24 @@ initial begin
 					TB_SYSTEM_leftButton_InLow <= 1'b0; 
 					TB_SYSTEM_rightButton_InLow <= 1'b0;	
 	
-	#1000 	TB_SYSTEM_RESET_InHigh = 1'b1;
+	#10000	TB_SYSTEM_RESET_InHigh = 1'b1;
+	#100000 	
 				TB_SYSTEM_startButton_InLow = 1'b1;
 			   TB_SYSTEM_leftButton_InLow = 1'b1;
 				
 	#1000		TB_SYSTEM_RESET_InHigh = 1'b0;
+				TB_SYSTEM_startButton_InLow = 1'b1;
 				
-	#50000  TB_SYSTEM_startButton_InLow = 1'b1;
-				TB_SYSTEM_leftButton_InLow = 1'b1;
+	#300000  TB_SYSTEM_leftButton_InLow = 1'b0;
+	#300000	TB_SYSTEM_leftButton_InLow = 1'b1;
+	#300000	TB_SYSTEM_leftButton_InLow = 1'b0;
+	
+	#300000  TB_SYSTEM_rightButton_InLow = 1'b1;
+	#300000	TB_SYSTEM_rightButton_InLow = 1'b0;
+	#300000	TB_SYSTEM_rightButton_InLow = 1'b1;
+
 			  
-	#50000 	TB_SYSTEM_startButton_InLow = 1'b0;
-				TB_SYSTEM_leftButton_InLow = 1'b0;
+	
 	
 	//#(TCK*10000) $finish;	
 @eachvec;

@@ -1,0 +1,30 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/shift_reg_start_done.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/max7219_ctrl.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_DEBOUNCE1.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_MAIN_STATEMACHINE.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVELCOUNTER.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVEL_STATEMACHINE.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVELPROGRESSCOUNTER.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_upSPEEDCOUNTER.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_SPEEDCOMPARATOR.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_LEVEL_DATAHANDLER.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_RegGENERAL_CAR.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_DATADELAY.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_MUX3_1.v}
+
+vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  TB_SYSTEM
+
+add wave *
+view structure
+view signals
+run -all

@@ -1,7 +1,6 @@
 /*######################################################################
 //#	G0B1T: HDL EXAMPLES. 2018.
 //######################################################################
-//# Copyright (C) 2018. F.E.Segura-Quijano (FES) fsegura@uniandes.edu.co
 //# 
 //# This program is free software: you can redistribute it and/or modify
 //# it under the terms of the GNU General Public License as published by
@@ -18,44 +17,49 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-module CC_SPEEDCOMPARATOR #(parameter SPEEDCOMPARATOR_DATAWIDTH=24)(
+
+module CC_PLAYER_CAR_COMPARATOR(
 //////////// OUTPUTS //////////
-	CC_SPEEDCOMPARATOR_T0_OutLow,
+		CC_PLAYER_CAR_COMPARATOR_Data_OutBus,
+
 //////////// INPUTS //////////
-	CC_SPEEDCOMPARATOR_data_InBUS,
-	CC_SPEEDCOMPARATOR_StartCount_In
+		CC_PLAYER_CAR_COMPARATOR_PlayerData_InBus,
+		CC_PLAYER_CAR_COMPARATOR_CarData_InBus
+
 );
+
 //=======================================================
 //  PARAMETER declarations
 //=======================================================
 
+parameter DATAWIDTH = 8;
 //=======================================================
 //  PORT declarations
 //=======================================================
-output	reg CC_SPEEDCOMPARATOR_T0_OutLow;
-input 	[SPEEDCOMPARATOR_DATAWIDTH-1:0] CC_SPEEDCOMPARATOR_data_InBUS;
-input 	CC_SPEEDCOMPARATOR_StartCount_In;
+
+output reg 	[DATAWIDTH-1:0]CC_PLAYER_CAR_COMPARATOR_Data_OutBus;
+
+input 		[DATAWIDTH-1:0]CC_PLAYER_CAR_COMPARATOR_PlayerData_InBus;
+input 		[DATAWIDTH-1:0]CC_PLAYER_CAR_COMPARATOR_CarData_InBus;
+
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
+
 //=======================================================
 //  Structural coding
 //=======================================================
-always @(*)
-begin
-	case (CC_SPEEDCOMPARATOR_StartCount_In)
-	
-	0:	begin
-			//if( CC_SPEEDCOMPARATOR_data_InBUS == 24'b111110111100010100100000)
-			if( CC_SPEEDCOMPARATOR_data_InBUS == 24'b00000000010000100100000)
-			CC_SPEEDCOMPARATOR_T0_OutLow = 1'b1;
-			else 
-			CC_SPEEDCOMPARATOR_T0_OutLow = 1'b0;
-		end
-	1: CC_SPEEDCOMPARATOR_T0_OutLow = 1'b1;	
-	
-	default: CC_SPEEDCOMPARATOR_T0_OutLow = 1'b1;	
-	endcase
+
+always @(*) begin
+
+	CC_PLAYER_CAR_COMPARATOR_Data_OutBus = CC_PLAYER_CAR_COMPARATOR_PlayerData_InBus | CC_PLAYER_CAR_COMPARATOR_CarData_InBus;
+
+
 end
 
 endmodule
+
+
+
+
+
