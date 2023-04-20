@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim
 vBB_SYSTEM
-Z1 !s110 1681937261
+Z1 !s110 1682005323
 !i10b 1
-!s100 ^<74DQGBfVJGQQnh:5Z`L0
-Iof62gjSG]RFE01z<W9`O>1
+!s100 D;<<b44b8n=^__CN4D<iG2
+IX@dmI76Ea1`l[6:n=@M971
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1681937217
+w1682005256
 8C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v
 FC:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v
 Z3 L0 21
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1681937261.000000
+Z5 !s108 1682005323.000000
 !s107 C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU|C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v|
 !i113 1
@@ -32,7 +32,7 @@ Z6 o-vlog01compat -work work
 Z7 tCvgOpt 0
 n@b@b_@s@y@s@t@e@m
 vCC_DATADELAY
-Z8 !s110 1681937262
+Z8 !s110 1682005324
 !i10b 1
 !s100 c8j4jT?6WOa?FJ6@g_VoL3
 IDAn^@Dl4P_bR[:9J3<8z31
@@ -46,7 +46,7 @@ R4
 r1
 !s85 0
 31
-Z10 !s108 1681937262.000000
+Z10 !s108 1682005324.000000
 !s107 C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_DATADELAY.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl|C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_DATADELAY.v|
 !i113 1
@@ -77,14 +77,37 @@ R6
 R11
 R7
 n@c@c_@l@e@v@e@l_@d@a@t@a@h@a@n@d@l@e@r
+vCC_MUX3_1
+R8
+!i10b 1
+!s100 0M@;c8_PnBbN:1R@CgPTz0
+I2nQgCH:R4CBzU:[lc2OY>3
+R2
+R0
+w1682004667
+8C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_MUX3_1.v
+FC:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_MUX3_1.v
+L0 20
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_MUX3_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl|C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_MUX3_1.v|
+!i113 1
+R6
+R11
+R7
+n@c@c_@m@u@x3_1
 vCC_SPEEDCOMPARATOR
 R8
 !i10b 1
-!s100 Zo]AAa`=FTBld[O>Ncj2d0
-I7W72zK06fL0E3do48U?[P1
+!s100 fAUo:>13>@gc3kc>KG_h42
+INmKdIFTW:6Ng?T=XkQMNX1
 R2
 R0
-w1681937204
+w1682004730
 8C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_SPEEDCOMPARATOR.v
 FC:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_SPEEDCOMPARATOR.v
 R3
@@ -146,7 +169,7 @@ R11
 R7
 n@s@c_@d@e@b@o@u@n@c@e1
 vSC_LEVEL_STATEMACHINE
-R1
+R8
 !i10b 1
 !s100 9feKjVm1IdnK1dlO=C=H43
 IKZC;L>WNUPM4:@l[iU0HB1
@@ -160,7 +183,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVEL_STATEMACHINE.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl|C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVEL_STATEMACHINE.v|
 !i113 1
@@ -192,7 +215,7 @@ R11
 R7
 n@s@c_@l@e@v@e@l@c@o@u@n@t@e@r
 vSC_LEVELPROGRESSCOUNTER
-R1
+R8
 !i10b 1
 !s100 6_LciJR69G^nGDX`6kKRm2
 IJ]9ZX2a>7PbWVQejDk>Yc1
@@ -206,7 +229,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVELPROGRESSCOUNTER.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl|C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVELPROGRESSCOUNTER.v|
 !i113 1
@@ -261,7 +284,7 @@ R11
 R7
 n@s@c_@reg@g@e@n@e@r@a@l_@c@a@r
 vSC_upSPEEDCOUNTER
-R1
+R8
 !i10b 1
 !s100 zgZLS=m28JY_UA8Ra_D=b0
 Iz99n`[EImK^JD;MX]4=831
@@ -275,7 +298,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_upSPEEDCOUNTER.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl|C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_upSPEEDCOUNTER.v|
 !i113 1
@@ -306,7 +329,7 @@ R6
 R11
 R7
 vTB_SYSTEM
-R8
+!s110 1682005325
 !i10b 1
 !s100 NHAU<]e[3RhzKQJiEX9h91
 I_4MQ0K@NlZT9bf[bXgI>i0

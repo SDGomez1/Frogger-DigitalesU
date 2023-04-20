@@ -52,15 +52,15 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_upSPEEDCOUNTER_u0/SC_upSPEEDCOUNTE
 add wave  -divider CC_SPEEDCOMPARATOR_u0
 add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_SPEEDCOMPARATOR_u0/CC_SPEEDCOMPARATOR_T0_OutLow
 
-add wave  -divider REGISTER
-add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u0/SC_RegGENERAL_CAR_data_OutBUS
-add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u1/SC_RegGENERAL_CAR_data_OutBUS
-add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u2/SC_RegGENERAL_CAR_data_OutBUS
-add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u3/SC_RegGENERAL_CAR_data_OutBUS
-add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u4/SC_RegGENERAL_CAR_data_OutBUS
-add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u5/SC_RegGENERAL_CAR_data_OutBUS
-add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u6/SC_RegGENERAL_CAR_data_OutBUS
-add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u7/SC_RegGENERAL_CAR_data_OutBUS
+#add wave  -divider REGISTER
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u0/SC_RegGENERAL_CAR_data_OutBUS
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u1/SC_RegGENERAL_CAR_data_OutBUS
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u2/SC_RegGENERAL_CAR_data_OutBUS
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u3/SC_RegGENERAL_CAR_data_OutBUS
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u4/SC_RegGENERAL_CAR_data_OutBUS
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u5/SC_RegGENERAL_CAR_data_OutBUS
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u6/SC_RegGENERAL_CAR_data_OutBUS
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u7/SC_RegGENERAL_CAR_data_OutBUS
 
 
 #add wave  -divider DATA_DELAY
@@ -73,9 +73,18 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u7/SC_RegGENERAL_CA
 ##add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_DATADELAY_u6/CC_DATADELAY_DelayedData_outBus
 
 
+add wave  -divider CC_MUX3_1
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u0/CC_MUX3_1_DataBus_Out
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u1/CC_MUX3_1_DataBus_Out
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u2/CC_MUX3_1_DataBus_Out
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u3/CC_MUX3_1_DataBus_Out
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u4/CC_MUX3_1_DataBus_Out
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u5/CC_MUX3_1_DataBus_Out
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u6/CC_MUX3_1_DataBus_Out
+
 
 restart
-run 500ms
+run 1000000ns
 
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {319999492 ps} 0}

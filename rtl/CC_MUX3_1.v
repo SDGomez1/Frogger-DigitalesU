@@ -1,7 +1,6 @@
 /*######################################################################
 //#	G0B1T: HDL EXAMPLES. 2018.
 //######################################################################
-//# Copyright (C) 2018. F.E.Segura-Quijano (FES) fsegura@uniandes.edu.co
 //# 
 //# This program is free software: you can redistribute it and/or modify
 //# it under the terms of the GNU General Public License as published by
@@ -18,44 +17,56 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-module CC_SPEEDCOMPARATOR #(parameter SPEEDCOMPARATOR_DATAWIDTH=24)(
+module CC_MUX3_1(
 //////////// OUTPUTS //////////
-	CC_SPEEDCOMPARATOR_T0_OutLow,
+	CC_MUX3_1_DataBus_Out,
 //////////// INPUTS //////////
-	CC_SPEEDCOMPARATOR_data_InBUS,
-	CC_SPEEDCOMPARATOR_StartCount_In
+	CC_MUX3_1_Selector_In,
+	CC_MUX3_1_DataBus1_In,
+	CC_MUX3_1_DataBus2_In,
+	CC_MUX3_1_DataBus3_In
 );
+
 //=======================================================
 //  PARAMETER declarations
 //=======================================================
-
+parameter DATAWIDTH_BUS 	= 8;
 //=======================================================
 //  PORT declarations
 //=======================================================
-output	reg CC_SPEEDCOMPARATOR_T0_OutLow;
-input 	[SPEEDCOMPARATOR_DATAWIDTH-1:0] CC_SPEEDCOMPARATOR_data_InBUS;
-input 	CC_SPEEDCOMPARATOR_StartCount_In;
+
+output reg 	[DATAWIDTH_BUS-1:0]CC_MUX3_1_DataBus_Out;
+
+input 		[1:0]CC_MUX3_1_Selector_In;
+input 		[DATAWIDTH_BUS-1:0]CC_MUX3_1_DataBus1_In;
+input 		[DATAWIDTH_BUS-1:0]CC_MUX3_1_DataBus2_In;
+input 		[DATAWIDTH_BUS-1:0]CC_MUX3_1_DataBus3_In;
+
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
+
+
 //=======================================================
 //  Structural coding
 //=======================================================
-always @(*)
-begin
-	case (CC_SPEEDCOMPARATOR_StartCount_In)
-	
-	0:	begin
-			//if( CC_SPEEDCOMPARATOR_data_InBUS == 24'b111110111100010100100000)
-			if( CC_SPEEDCOMPARATOR_data_InBUS == 24'b00000000000000100100000)
-			CC_SPEEDCOMPARATOR_T0_OutLow = 1'b1;
-			else 
-			CC_SPEEDCOMPARATOR_T0_OutLow = 1'b0;
-		end
-	1: CC_SPEEDCOMPARATOR_T0_OutLow = 1'b1;	
-	
-	default: CC_SPEEDCOMPARATOR_T0_OutLow = 1'b1;	
-	endcase
+
+always @(*)begin
+
+	if(CC_MUX3_1_Selector_In == 2'b00)
+		CC_MUX3_1_DataBus_Out = CC_MUX3_1_DataBus1_In;
+		
+	else if (CC_MUX3_1_Selector_In == 2'b01)
+		CC_MUX3_1_DataBus_Out = CC_MUX3_1_DataBus2_In;
+
+	else if (CC_MUX3_1_Selector_In == 2'b10)
+		CC_MUX3_1_DataBus_Out = CC_MUX3_1_DataBus3_In;
+
+	else
+		CC_MUX3_1_DataBus_Out = CC_MUX3_1_DataBus3_In;
+		
 end
 
-endmodule
+
+endmodule 
+

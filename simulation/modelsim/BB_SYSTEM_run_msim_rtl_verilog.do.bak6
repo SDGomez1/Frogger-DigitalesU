@@ -18,7 +18,6 @@ vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Fro
 vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_LEVEL_DATAHANDLER.v}
 vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_RegGENERAL_CAR.v}
 vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_DATADELAY.v}
-vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_MUX3_1.v}
 
 vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt}
 
