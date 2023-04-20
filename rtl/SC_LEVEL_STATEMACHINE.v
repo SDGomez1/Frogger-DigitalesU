@@ -145,10 +145,12 @@ begin
 			if(SC_LEVEL_STATEMACHINE_LvlProgressCount_In == 5'b01100 + 8)begin
 				SC_LEVEL_STATEMACHINE_StartCount_Out= 1;
 				SC_LEVEL_STATEMACHINE_LevelFinished_Out = 1;
+				SC_LEVEL_STATEMACHINE_FinishedGame_Out = 1;
 			end
 			else begin
 				SC_LEVEL_STATEMACHINE_StartCount_Out=0;
 				SC_LEVEL_STATEMACHINE_LevelFinished_Out = 0;
+				SC_LEVEL_STATEMACHINE_FinishedGame_Out = 1;
 			
 			end
 			
@@ -162,10 +164,12 @@ begin
 				if(SC_LEVEL_STATEMACHINE_LvlProgressCount_In == 5'b01100 + 8)begin
 				SC_LEVEL_STATEMACHINE_StartCount_Out= 1;
 				SC_LEVEL_STATEMACHINE_LevelFinished_Out = 1;
+				SC_LEVEL_STATEMACHINE_FinishedGame_Out = 1;
 			end
 			else begin
 				SC_LEVEL_STATEMACHINE_StartCount_Out=0;
 				SC_LEVEL_STATEMACHINE_LevelFinished_Out = 0;
+				SC_LEVEL_STATEMACHINE_FinishedGame_Out = 1;
 			
 			end
 			
@@ -179,10 +183,12 @@ begin
 			if(SC_LEVEL_STATEMACHINE_LvlProgressCount_In == 5'b01100 + 8)begin
 				SC_LEVEL_STATEMACHINE_StartCount_Out= 1;
 				SC_LEVEL_STATEMACHINE_LevelFinished_Out = 1;
+				SC_LEVEL_STATEMACHINE_FinishedGame_Out = 1;
 			end
 			else begin
 				SC_LEVEL_STATEMACHINE_StartCount_Out=0;
 				SC_LEVEL_STATEMACHINE_LevelFinished_Out = 0;
+				SC_LEVEL_STATEMACHINE_FinishedGame_Out = 1;
 			
 			end
 			

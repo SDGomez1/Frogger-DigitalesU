@@ -142,6 +142,17 @@ wire [DATAWIDTH_BUS-1:0]REG4toReg5_DelayBus_out;
 wire [DATAWIDTH_BUS-1:0]REG5toReg6_DelayBus_out;
 wire [DATAWIDTH_BUS-1:0]REG6toReg7_DelayBus_out;
 
+
+//MULTIPLEXOR 3_1
+
+wire [DATAWIDTH_BUS-1:0]MUX3_1_REG0_DataBus_Out_cwire;
+wire [DATAWIDTH_BUS-1:0]MUX3_1_REG1_DataBus_Out_cwire;
+wire [DATAWIDTH_BUS-1:0]MUX3_1_REG2_DataBus_Out_cwire;
+wire [DATAWIDTH_BUS-1:0]MUX3_1_REG3_DataBus_Out_cwire;
+wire [DATAWIDTH_BUS-1:0]MUX3_1_REG4_DataBus_Out_cwire;
+wire [DATAWIDTH_BUS-1:0]MUX3_1_REG5_DataBus_Out_cwire;
+wire [DATAWIDTH_BUS-1:0]MUX3_1_REG6_DataBus_Out_cwire;
+wire [DATAWIDTH_BUS-1:0]MUX3_1_REG7_DataBus_Out_cwire;
 //=======================================================
 //  Structural coding
 //=======================================================
@@ -376,62 +387,62 @@ CC_DATADELAY CC_DATADELAY_u6 (
 //MUX3_1
 //----------------------------------------------------------------------
 
-//CC_MUX3_1 CC_MUX3_1_u0(
-//	.CC_MUX3_1_DataBus_Out(regGAME_data0_wire),
-//	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
-//	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
-//	.CC_MUX3_1_DataBus2_In(REG0toReg1_DataBus_out),
-//	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
-//);
-//CC_MUX3_1 CC_MUX3_1_u1(
-//	.CC_MUX3_1_DataBus_Out(regGAME_data1_wire),
-//	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
-//	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
-//	.CC_MUX3_1_DataBus2_In(REG1toReg2_DataBus_out),
-//	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
-//);
-//CC_MUX3_1 CC_MUX3_1_u2(
-//	.CC_MUX3_1_DataBus_Out(regGAME_data2_wire),
-//	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
-//	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
-//	.CC_MUX3_1_DataBus2_In(REG2toReg3_DataBus_out),
-//	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
-//);
-//CC_MUX3_1 CC_MUX3_1_u3(
-//	.CC_MUX3_1_DataBus_Out(regGAME_data3_wire),
-//	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
-//	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
-//	.CC_MUX3_1_DataBus2_In(REG3toReg4_DataBus_out),
-//	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
-//);
-//CC_MUX3_1 CC_MUX3_1_u4(
-//	.CC_MUX3_1_DataBus_Out(regGAME_data4_wire),
-//	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
-//	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
-//	.CC_MUX3_1_DataBus2_In(REG4toReg5_DataBus_out),
-//	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
-//);
-//CC_MUX3_1 CC_MUX3_1_u5(
-//	.CC_MUX3_1_DataBus_Out(regGAME_data5_wire),
-//	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
-//	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
-//	.CC_MUX3_1_DataBus2_In(REG5toReg6_DataBus_out),
-//	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
-//);
-//CC_MUX3_1 CC_MUX3_1_u6(
-//	.CC_MUX3_1_DataBus_Out(regGAME_data6_wire),
-//	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
-//	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
-//	.CC_MUX3_1_DataBus2_In(REG6toReg7_DataBus_out),
-//	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
-//);
-//CC_MUX3_1 CC_MUX3_1_u7(
-//	.CC_MUX3_1_DataBus_Out(regGAME_data7_wire),
-//	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
-//	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
-//	.CC_MUX3_1_DataBus2_In(REG8_DataBus_out),
-//	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
-//);
+CC_MUX3_1 CC_MUX3_1_u0(
+	.CC_MUX3_1_DataBus_Out(MUX3_1_REG0_DataBus_Out_cwire),
+	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
+	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
+	.CC_MUX3_1_DataBus2_In(REG0toReg1_DataBus_out),
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+);
+CC_MUX3_1 CC_MUX3_1_u1(
+	.CC_MUX3_1_DataBus_Out(MUX3_1_REG1_DataBus_Out_cwire),
+	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
+	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
+	.CC_MUX3_1_DataBus2_In(REG1toReg2_DataBus_out),
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+);
+CC_MUX3_1 CC_MUX3_1_u2(
+	.CC_MUX3_1_DataBus_Out(MUX3_1_REG2_DataBus_Out_cwire),
+	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
+	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
+	.CC_MUX3_1_DataBus2_In(REG2toReg3_DataBus_out),
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+);
+CC_MUX3_1 CC_MUX3_1_u3(
+	.CC_MUX3_1_DataBus_Out(MUX3_1_REG3_DataBus_Out_cwire),
+	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
+	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
+	.CC_MUX3_1_DataBus2_In(REG3toReg4_DataBus_out),
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+);
+CC_MUX3_1 CC_MUX3_1_u4(
+	.CC_MUX3_1_DataBus_Out(MUX3_1_REG4_DataBus_Out_cwire),
+	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
+	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
+	.CC_MUX3_1_DataBus2_In(REG4toReg5_DataBus_out),
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+);
+CC_MUX3_1 CC_MUX3_1_u5(
+	.CC_MUX3_1_DataBus_Out(MUX3_1_REG5_DataBus_Out_cwire),
+	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
+	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
+	.CC_MUX3_1_DataBus2_In(REG5toReg6_DataBus_out),
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+);
+CC_MUX3_1 CC_MUX3_1_u6(
+	.CC_MUX3_1_DataBus_Out(MUX3_1_REG6_DataBus_Out_cwire),
+	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
+	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
+	.CC_MUX3_1_DataBus2_In(REG6toReg7_DataBus_out),
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+);
+CC_MUX3_1 CC_MUX3_1_u7(
+	.CC_MUX3_1_DataBus_Out(MUX3_1_REG7_DataBus_Out_cwire),
+	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
+	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
+	.CC_MUX3_1_DataBus2_In(REG8_DataBus_out),
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+);
 
 
 
@@ -439,14 +450,14 @@ CC_DATADELAY CC_DATADELAY_u6 (
 //######################################################################
 //#	TO LED MATRIZ: VISUALIZATION
 //######################################################################
-assign regGAME_data0_wire = DATA_FIXED_INITREGPOINT_0;
-assign regGAME_data1_wire = DATA_FIXED_INITREGPOINT_1;
-assign regGAME_data2_wire = DATA_FIXED_INITREGPOINT_2;
-assign regGAME_data3_wire = DATA_FIXED_INITREGPOINT_3;
-assign regGAME_data4_wire = DATA_FIXED_INITREGPOINT_4;
-assign regGAME_data5_wire = DATA_FIXED_INITREGPOINT_5;
-assign regGAME_data6_wire = DATA_FIXED_INITREGPOINT_6;
-assign regGAME_data7_wire = DATA_FIXED_INITREGPOINT_7;
+assign regGAME_data0_wire = MUX3_1_REG0_DataBus_Out_cwire;
+assign regGAME_data1_wire = MUX3_1_REG1_DataBus_Out_cwire;
+assign regGAME_data2_wire = MUX3_1_REG2_DataBus_Out_cwire;
+assign regGAME_data3_wire = MUX3_1_REG3_DataBus_Out_cwire;
+assign regGAME_data4_wire = MUX3_1_REG4_DataBus_Out_cwire;
+assign regGAME_data5_wire = MUX3_1_REG5_DataBus_Out_cwire;
+assign regGAME_data6_wire = MUX3_1_REG6_DataBus_Out_cwire;
+assign regGAME_data7_wire = MUX3_1_REG7_DataBus_Out_cwire;
 
 assign data_max =(add==3'b000)?{regGAME_data0_wire[7],regGAME_data1_wire[7],regGAME_data2_wire[7],regGAME_data3_wire[7],regGAME_data4_wire[7],regGAME_data5_wire[7],regGAME_data6_wire[7],regGAME_data7_wire[7]}:
 	       (add==3'b001)?{regGAME_data0_wire[6],regGAME_data1_wire[6],regGAME_data2_wire[6],regGAME_data3_wire[6],regGAME_data4_wire[6],regGAME_data5_wire[6],regGAME_data6_wire[6],regGAME_data7_wire[6]}:

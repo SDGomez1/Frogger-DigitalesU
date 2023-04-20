@@ -62,22 +62,27 @@ reg [LEVELCOUNTER_DATAWIDTH-1:0] LEVELCOUNTER_Signal;
 //  Structural coding
 //=======================================================
 //INPUT LOGIC: COMBINATIONAL
-always @(*)
+always @(SC_LEVELCOUNTER_CurrentState_Inbus, SC_LEVELCOUNTER_CountSignal_InLow,LEVELCOUNTER_Signal)
 begin
 
-	case(SC_LEVELCOUNTER_CurrentState_Inbus)
-	
-		STATE_AWAITSTART_0:	LEVELCOUNTER_Signal = 0;
-	
-	
-		STATE_STARTGAME_0: 	if (SC_LEVELCOUNTER_CountSignal_InLow == 1'b0)
-										LEVELCOUNTER_Signal = LEVELCOUNTER_Signal + 1'b1;
-				
-		STATE_ENDGAME_0: 		LEVELCOUNTER_Signal = 4;
+	if (SC_LEVELCOUNTER_CurrentState_Inbus == STATE_AWAITSTART_0) begin
+		LEVELCOUNTER_Signal = 0;
+	end
+	else if (SC_LEVELCOUNTER_CurrentState_Inbus == STATE_STARTGAME_0) begin
+		if (SC_LEVELCOUNTER_CountSignal_InLow == 1'b0) begin
+			LEVELCOUNTER_Signal = LEVELCOUNTER_Signal + 1'b1;
+		end
+		else begin
+			LEVELCOUNTER_Signal = LEVELCOUNTER_Signal;
+		end
+	end
+	else if (SC_LEVELCOUNTER_CurrentState_Inbus == STATE_ENDGAME_0) begin
+		LEVELCOUNTER_Signal = 4;
+	end
+	else begin
+		LEVELCOUNTER_Signal <= 0;
+	end
 
-		default:					LEVELCOUNTER_Signal = 0;
-	
-	endcase
 end	
 //STATE REGISTER: SEQUENTIAL
 always @(posedge SC_LEVELCOUNTER_CLOCK_50, posedge SC_LEVELCOUNTER_RESET_InHigh)

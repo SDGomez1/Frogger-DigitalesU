@@ -64,20 +64,21 @@ reg [LEVELPROGRESSCOUNTER_DATAWIDTH-1:0] LEVELPROGRESSCOUNTER_Signal;
 
 always @(*)
 begin
-	if (SC_LEVELPROGRESSCOUNTER_FinishedGame_in == 1'b1) begin
-	
-		if(SC_LEVELPROGRESSCOUNTER_StartCountSignal_in)
-			LEVELPROGRESSCOUNTER_Signal = 0;
-		
-		else begin		
-			if (SC_LEVELPROGRESSCOUNTER_CountSignal_in == 1'b0)
-				LEVELPROGRESSCOUNTER_Signal = LEVELPROGRESSCOUNTER_Signal + 1'b1;			
-		end
-	end
-	
-	else LEVELPROGRESSCOUNTER_Signal = 0;		
-	
-end 
+    if (SC_LEVELPROGRESSCOUNTER_FinishedGame_in == 1'b1) begin
+        if(SC_LEVELPROGRESSCOUNTER_StartCountSignal_in == 1'b1)
+            LEVELPROGRESSCOUNTER_Signal = 5'b0;
+        else begin        
+            if (SC_LEVELPROGRESSCOUNTER_CountSignal_in == 1'b0)
+                LEVELPROGRESSCOUNTER_Signal = LEVELPROGRESSCOUNTER_Signal + 1'b1;
+            else
+                LEVELPROGRESSCOUNTER_Signal = LEVELPROGRESSCOUNTER_Signal;
+        end
+    end
+    else
+        LEVELPROGRESSCOUNTER_Signal = 5'b0;
+end
+
+
 
 
 
