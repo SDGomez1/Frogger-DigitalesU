@@ -18,15 +18,14 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-module SC_RegSHIFTER #(parameter RegSHIFTER_DATAWIDTH=8)(
+module SC_RegGENERAL_CAR #(parameter RegGENERAL_DATAWIDTH=4)(
 	//////////// OUTPUTS //////////
-	SC_RegSHIFTER_data_OutBUS,
+	SC_RegGENERAL_CAR_data_OutBUS,
 	//////////// INPUTS //////////
-	SC_RegSHIFTER_CLOCK_50,
-	SC_RegSHIFTER_RESET_InHigh,
-	SC_RegSHIFTER_load_InLow, 
-	SC_RegSHIFTER_shiftselection_In,
-	SC_RegSHIFTER_data_InBUS	
+	SC_RegGENERAL_CAR_CLOCK_50,
+	SC_RegGENERAL_CAR_RESET_InHigh, 
+	SC_RegGENERAL_CAR_load_InLow, 
+	SC_RegGENERAL_CAR_data_InBUS
 );
 //=======================================================
 //  PARAMETER declarations
@@ -35,57 +34,40 @@ module SC_RegSHIFTER #(parameter RegSHIFTER_DATAWIDTH=8)(
 //=======================================================
 //  PORT declarations
 //=======================================================
-output		[RegSHIFTER_DATAWIDTH-1:0]	SC_RegSHIFTER_data_OutBUS;
-input			SC_RegSHIFTER_CLOCK_50;
-input			SC_RegSHIFTER_RESET_InHigh;
-input			SC_RegSHIFTER_load_InLow;	
-input			[1:0] SC_RegSHIFTER_shiftselection_In;
-input			[RegSHIFTER_DATAWIDTH-1:0]	SC_RegSHIFTER_data_InBUS;
+output		[RegGENERAL_DATAWIDTH-1:0]	SC_RegGENERAL_CAR_data_OutBUS;
+input			SC_RegGENERAL_CAR_CLOCK_50;
+input			SC_RegGENERAL_CAR_RESET_InHigh;
+input			SC_RegGENERAL_CAR_load_InLow;	
+input			[RegGENERAL_DATAWIDTH-1:0]	SC_RegGENERAL_CAR_data_InBUS;
 
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-reg [RegSHIFTER_DATAWIDTH-1:0] RegSHIFTER_Register;
-reg [RegSHIFTER_DATAWIDTH-1:0] RegSHIFTER_Signal;
+reg [RegGENERAL_DATAWIDTH-1:0] RegGENERAL_Register;
+reg [RegGENERAL_DATAWIDTH-1:0] RegGENERAL_Signal;
 //=======================================================
 //  Structural coding
 //=======================================================
 //INPUT LOGIC: COMBINATIONAL
 always @(*)
 begin
-
-	if (SC_RegSHIFTER_load_InLow == 1'b0)
-		RegSHIFTER_Signal = SC_RegSHIFTER_data_InBUS;
-		
-	else if (SC_RegSHIFTER_shiftselection_In == 2'b01) begin
-		if(RegSHIFTER_Register == 8'b10000000)
-			RegSHIFTER_Signal = RegSHIFTER_Register;  
-		else 
-			RegSHIFTER_Signal = RegSHIFTER_Register << 1'b1;  		
+	if (SC_RegGENERAL_CAR_load_InLow == 1'b0)
+		RegGENERAL_Signal = SC_RegGENERAL_CAR_data_InBUS;
+	else
+		RegGENERAL_Signal = RegGENERAL_Register;
 	end	
-		
-	else if (SC_RegSHIFTER_shiftselection_In== 2'b10) begin 
-		if(RegSHIFTER_Register == 8'b00010000)
-			RegSHIFTER_Signal = RegSHIFTER_Register;  
-		else 
-		RegSHIFTER_Signal = RegSHIFTER_Register >> 1'b1;   
-	end
-	else
-		RegSHIFTER_Signal = RegSHIFTER_Register;
-end	
-	
 //STATE REGISTER: SEQUENTIAL
-always @(posedge SC_RegSHIFTER_CLOCK_50, posedge SC_RegSHIFTER_RESET_InHigh)
+always @(posedge SC_RegGENERAL_CAR_CLOCK_50, posedge SC_RegGENERAL_CAR_RESET_InHigh)
 begin
-	if (SC_RegSHIFTER_RESET_InHigh == 1'b1)
-		RegSHIFTER_Register <= 0;
+	if (SC_RegGENERAL_CAR_RESET_InHigh == 1'b1)
+		RegGENERAL_Register <= 0;
 	else
-		RegSHIFTER_Register <= RegSHIFTER_Signal;
+		RegGENERAL_Register <= RegGENERAL_Signal;
 end
 //=======================================================
 //  Outputs
 //=======================================================
 //OUTPUT LOGIC: COMBINATIONAL
-assign SC_RegSHIFTER_data_OutBUS = RegSHIFTER_Register;
+assign SC_RegGENERAL_CAR_data_OutBUS = RegGENERAL_Register;
 
 endmodule

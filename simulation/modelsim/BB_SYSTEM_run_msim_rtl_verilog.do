@@ -20,8 +20,10 @@ vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/r
 vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v}
 vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v}
 vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v}
-vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER.v}
 vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v}
+vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v}
+vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v}
+vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v}
 
 vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim {D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt}
 

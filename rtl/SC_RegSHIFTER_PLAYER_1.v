@@ -18,14 +18,15 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-module SC_RegGENERAL #(parameter RegGENERAL_DATAWIDTH=4)(
+module SC_RegSHIFTER_PLAYER_1 #(parameter RegSHIFTER_DATAWIDTH=8)(
 	//////////// OUTPUTS //////////
-	SC_RegGENERAL_data_OutBUS,
+	SC_RegSHIFTER_PLAYER_1_data_OutBUS,
 	//////////// INPUTS //////////
-	SC_RegGENERAL_CLOCK_50,
-	SC_RegGENERAL_RESET_InHigh, 
-	SC_RegGENERAL_load_InLow, 
-	SC_RegGENERAL_data_InBUS
+	SC_RegSHIFTER_PLAYER_1_CLOCK_50,
+	SC_RegSHIFTER_PLAYER_1_RESET_InHigh,
+	SC_RegSHIFTER_PLAYER_1_load_InLow, 
+	SC_RegSHIFTER_PLAYER_1_shiftselection_In,
+	SC_RegSHIFTER_PLAYER_1_data_InBUS	
 );
 //=======================================================
 //  PARAMETER declarations
@@ -34,40 +35,57 @@ module SC_RegGENERAL #(parameter RegGENERAL_DATAWIDTH=4)(
 //=======================================================
 //  PORT declarations
 //=======================================================
-output		[RegGENERAL_DATAWIDTH-1:0]	SC_RegGENERAL_data_OutBUS;
-input			SC_RegGENERAL_CLOCK_50;
-input			SC_RegGENERAL_RESET_InHigh;
-input			SC_RegGENERAL_load_InLow;	
-input			[RegGENERAL_DATAWIDTH-1:0]	SC_RegGENERAL_data_InBUS;
+output		[RegSHIFTER_DATAWIDTH-1:0]	SC_RegSHIFTER_PLAYER_1_data_OutBUS;
+input			SC_RegSHIFTER_PLAYER_1_CLOCK_50;
+input			SC_RegSHIFTER_PLAYER_1_RESET_InHigh;
+input			SC_RegSHIFTER_PLAYER_1_load_InLow;	
+input			[1:0] SC_RegSHIFTER_PLAYER_1_shiftselection_In;
+input			[RegSHIFTER_DATAWIDTH-1:0]	SC_RegSHIFTER_PLAYER_1_data_InBUS;
 
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-reg [RegGENERAL_DATAWIDTH-1:0] RegGENERAL_Register;
-reg [RegGENERAL_DATAWIDTH-1:0] RegGENERAL_Signal;
+reg [RegSHIFTER_DATAWIDTH-1:0] RegSHIFTER_Register;
+reg [RegSHIFTER_DATAWIDTH-1:0] RegSHIFTER_Signal;
 //=======================================================
 //  Structural coding
 //=======================================================
 //INPUT LOGIC: COMBINATIONAL
 always @(*)
 begin
-	if (SC_RegGENERAL_load_InLow == 1'b0)
-		RegGENERAL_Signal = SC_RegGENERAL_data_InBUS;
-	else
-		RegGENERAL_Signal = RegGENERAL_Register;
+
+	if (SC_RegSHIFTER_PLAYER_1_load_InLow == 1'b0)
+		RegSHIFTER_Signal = SC_RegSHIFTER_PLAYER_1_data_InBUS;
+		
+	else if (SC_RegSHIFTER_PLAYER_1_shiftselection_In == 2'b01) begin
+		if(RegSHIFTER_Register == 8'b10000000)
+			RegSHIFTER_Signal = RegSHIFTER_Register;  
+		else 
+			RegSHIFTER_Signal = RegSHIFTER_Register << 1'b1;  		
 	end	
-//STATE REGISTER: SEQUENTIAL
-always @(posedge SC_RegGENERAL_CLOCK_50, posedge SC_RegGENERAL_RESET_InHigh)
-begin
-	if (SC_RegGENERAL_RESET_InHigh == 1'b1)
-		RegGENERAL_Register <= 0;
+		
+	else if (SC_RegSHIFTER_PLAYER_1_shiftselection_In== 2'b10) begin 
+		if(RegSHIFTER_Register == 8'b00010000)
+			RegSHIFTER_Signal = RegSHIFTER_Register;  
+		else 
+		RegSHIFTER_Signal = RegSHIFTER_Register >> 1'b1;   
+	end
 	else
-		RegGENERAL_Register <= RegGENERAL_Signal;
+		RegSHIFTER_Signal = RegSHIFTER_Register;
+end	
+	
+//STATE REGISTER: SEQUENTIAL
+always @(posedge SC_RegSHIFTER_PLAYER_1_CLOCK_50, posedge SC_RegSHIFTER_PLAYER_1_RESET_InHigh)
+begin
+	if (SC_RegSHIFTER_PLAYER_1_RESET_InHigh == 1'b1)
+		RegSHIFTER_Register <= 0;
+	else
+		RegSHIFTER_Register <= RegSHIFTER_Signal;
 end
 //=======================================================
 //  Outputs
 //=======================================================
 //OUTPUT LOGIC: COMBINATIONAL
-assign SC_RegGENERAL_data_OutBUS = RegGENERAL_Register;
+assign SC_RegSHIFTER_PLAYER_1_data_OutBUS = RegSHIFTER_Register;
 
 endmodule
