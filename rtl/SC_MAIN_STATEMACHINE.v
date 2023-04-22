@@ -42,6 +42,7 @@ parameter STATE_DATAWIDTH										= 2;
 localparam STATE_AWAITSTART_0									= 0;
 localparam STATE_STARTGAME_0									= 1;
 localparam STATE_ENDGAME_0										= 2;
+localparam STATE_AWAITSTART_1									= 3;
 
 
 //=======================================================
@@ -76,10 +77,13 @@ begin
 	case (STATE_Register)
 	
 		STATE_AWAITSTART_0: 	if (SC_MAIN_STATEMACHINE_StartSignal_InLow == 1'b0) 
-									   STATE_Signal = STATE_STARTGAME_0;
+									   STATE_Signal = STATE_AWAITSTART_1;
 										
 									else 
 										STATE_Signal = STATE_AWAITSTART_0;
+										
+										
+		STATE_AWAITSTART_1:	STATE_Signal = STATE_STARTGAME_0;
 						
 		STATE_STARTGAME_0:  	if (SC_MAIN_STATEMACHINE_EndGameSignal_InLow == 1'b0)
 										STATE_Signal = STATE_ENDGAME_0;
@@ -144,7 +148,14 @@ begin
 			SC_MAIN_STATEMACHINE_LoadSignal_out = 1'b0;
 			
 		end
-
+//=========================================================
+// STATE_AWAITSTART_1
+//=========================================================
+	STATE_AWAITSTART_1 :	
+		begin
+			SC_MAIN_STATEMACHINE_CurrentState_Out = 2'b11;
+			SC_MAIN_STATEMACHINE_LoadSignal_out = 1'b0;
+		end
 //=========================================================
 // DEFAULT
 //=========================================================

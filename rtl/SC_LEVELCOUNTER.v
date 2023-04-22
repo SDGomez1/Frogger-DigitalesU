@@ -39,6 +39,7 @@ parameter LEVELCOUNTER_DATAWIDTH								= 3;
 localparam STATE_AWAITSTART_0									= 0;
 localparam STATE_STARTGAME_0									= 1;
 localparam STATE_ENDGAME_0										= 2;
+localparam STATE_AWAITSTART_1									= 3;
 
 //=======================================================
 //  PORT declarations
@@ -62,18 +63,21 @@ reg [LEVELCOUNTER_DATAWIDTH-1:0] LEVELCOUNTER_Signal;
 //  Structural coding
 //=======================================================
 //INPUT LOGIC: COMBINATIONAL
-always @(SC_LEVELCOUNTER_CurrentState_Inbus, SC_LEVELCOUNTER_CountSignal_InLow,LEVELCOUNTER_Signal)
+always @(*)
 begin
 
 	if (SC_LEVELCOUNTER_CurrentState_Inbus == STATE_AWAITSTART_0) begin
 		LEVELCOUNTER_Signal = 0;
 	end
+	else if (SC_LEVELCOUNTER_CurrentState_Inbus == STATE_AWAITSTART_1)
+		LEVELCOUNTER_Signal = 1;
+	
 	else if (SC_LEVELCOUNTER_CurrentState_Inbus == STATE_STARTGAME_0) begin
 		if (SC_LEVELCOUNTER_CountSignal_InLow == 1'b0) begin
-			LEVELCOUNTER_Signal = LEVELCOUNTER_Signal + 1'b1;
+			LEVELCOUNTER_Signal = LEVELCOUNTER_Register + 1'b1;
 		end
 		else begin
-			LEVELCOUNTER_Signal = LEVELCOUNTER_Signal;
+			LEVELCOUNTER_Signal = LEVELCOUNTER_Register;
 		end
 	end
 	else if (SC_LEVELCOUNTER_CurrentState_Inbus == STATE_ENDGAME_0) begin

@@ -24,7 +24,7 @@ module SC_LEVELPROGRESSCOUNTER (
 	
 //////////// INPUTS //////////
 	SC_LEVELPROGRESSCOUNTER_CountSignal_in,
-	SC_LEVELPROGRESSCOUNTER_StartCountSignal_in,
+	SC_LEVELPROGRESSCOUNTER_LevelFinished_in,
 	SC_LEVELPROGRESSCOUNTER_FinishedGame_in,
 	SC_LEVELPROGRESSCOUNTER_CLOCK_50,
 	SC_LEVELPROGRESSCOUNTER_RESET_InHigh
@@ -43,10 +43,10 @@ parameter LEVELPROGRESSCOUNTER_DATAWIDTH					= 5;
 output		[LEVELPROGRESSCOUNTER_DATAWIDTH-1:0] SC_LEVELPROGRESSCOUNTER_Data_OutBus;
 
 input 		SC_LEVELPROGRESSCOUNTER_CountSignal_in;
-input 		SC_LEVELPROGRESSCOUNTER_StartCountSignal_in;
 input			SC_LEVELPROGRESSCOUNTER_FinishedGame_in;
 input			SC_LEVELPROGRESSCOUNTER_CLOCK_50;
 input 		SC_LEVELPROGRESSCOUNTER_RESET_InHigh;
+input 		SC_LEVELPROGRESSCOUNTER_LevelFinished_in;
 
 //=======================================================
 //  REG/WIRE declarations
@@ -65,14 +65,14 @@ reg [LEVELPROGRESSCOUNTER_DATAWIDTH-1:0] LEVELPROGRESSCOUNTER_Signal;
 always @(*)
 begin
     if (SC_LEVELPROGRESSCOUNTER_FinishedGame_in == 1'b1) begin
-        if(SC_LEVELPROGRESSCOUNTER_StartCountSignal_in == 1'b1)
-            LEVELPROGRESSCOUNTER_Signal = 5'b0;
-        else begin        
-            if (SC_LEVELPROGRESSCOUNTER_CountSignal_in == 1'b0)
-                LEVELPROGRESSCOUNTER_Signal = LEVELPROGRESSCOUNTER_Signal + 1'b1;
-            else
-                LEVELPROGRESSCOUNTER_Signal = LEVELPROGRESSCOUNTER_Signal;
-        end
+        
+         if (SC_LEVELPROGRESSCOUNTER_CountSignal_in == 1'b0)
+                LEVELPROGRESSCOUNTER_Signal = LEVELPROGRESSCOUNTER_Register + 1'b1;
+			else if (SC_LEVELPROGRESSCOUNTER_LevelFinished_in == 1'b0 )
+					 LEVELPROGRESSCOUNTER_Signal = 5'b0;
+         else
+                LEVELPROGRESSCOUNTER_Signal = LEVELPROGRESSCOUNTER_Register;
+        
     end
     else
         LEVELPROGRESSCOUNTER_Signal = 5'b0;

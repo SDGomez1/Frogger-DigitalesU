@@ -24,7 +24,8 @@ module SC_upSPEEDCOUNTER #(parameter upSPEEDCOUNTER_DATAWIDTH=24)(
 	//////////// INPUTS //////////
 	SC_upSPEEDCOUNTER_CLOCK_50,
 	SC_upSPEEDCOUNTER_RESET_InHigh,
-	SC_upSPEEDCOUNTER_upcount_InLow
+	SC_upSPEEDCOUNTER_upcount_InLow,
+	SC_upSPEEDCOUNTER_T0_InLow
 );
 //=======================================================
 //  PARAMETER declarations
@@ -33,10 +34,11 @@ module SC_upSPEEDCOUNTER #(parameter upSPEEDCOUNTER_DATAWIDTH=24)(
 //=======================================================
 //  PORT declarations
 //=======================================================
-output		[upSPEEDCOUNTER_DATAWIDTH-1:0]	SC_upSPEEDCOUNTER_data_OutBUS;
+output	[upSPEEDCOUNTER_DATAWIDTH-1:0]	SC_upSPEEDCOUNTER_data_OutBUS;
 input		SC_upSPEEDCOUNTER_CLOCK_50;
 input		SC_upSPEEDCOUNTER_RESET_InHigh;
 input		SC_upSPEEDCOUNTER_upcount_InLow;
+input 	SC_upSPEEDCOUNTER_T0_InLow;
 
 //=======================================================
 //  REG/WIRE declarations
@@ -51,8 +53,10 @@ always @(*)
 begin
 	if (SC_upSPEEDCOUNTER_upcount_InLow == 1'b0)
 		upSPEEDCOUNTER_Signal = upSPEEDCOUNTER_Register + 1'b1;
+	else if (SC_upSPEEDCOUNTER_T0_InLow == 1'b0)
+		upSPEEDCOUNTER_Signal <= 0;
 	else
-		upSPEEDCOUNTER_Signal = 1'b0;
+		upSPEEDCOUNTER_Signal = upSPEEDCOUNTER_Register;
 	end	
 //STATE REGISTER: SEQUENTIAL
 always @(posedge SC_upSPEEDCOUNTER_CLOCK_50, posedge SC_upSPEEDCOUNTER_RESET_InHigh)

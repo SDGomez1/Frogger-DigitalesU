@@ -31,14 +31,17 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_DEBOUNCE1_u2/SC_DEBOUNCE1_button_O
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/matrix_ctrl_unit_0/clk_driver
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/matrix_ctrl_unit_0/Trig_SignalNEG
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/matrix_ctrl_unit_0/Trig_SignalPOS
+#
+#add wave  -divider SC_MAIN_STATEMACHINE_u0
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_MAIN_STATEMACHINE_u0/SC_MAIN_STATEMACHINE_CurrentState_Out
+#
+#add wave  -divider SC_LEVEL_STATEMACHINE_u0
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_LevelFinished_Out
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_FinishedGame_Out
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_upCount_out
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_ProgressUpCount_out
 
-add wave  -divider SC_MAIN_STATEMACHINE_u0
-add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_MAIN_STATEMACHINE_u0/SC_MAIN_STATEMACHINE_CurrentState_Out
 
-add wave  -divider SC_LEVEL_STATEMACHINE_u0
-add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_LevelFinished_Out
-add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_StartCount_Out
-add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_FinishedGame_Out
 
 add wave  -divider SC_LEVELCOUNTER_u0
 add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVELCOUNTER_u0/SC_LEVELCOUNTER_Data_OutBus
@@ -51,6 +54,8 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_upSPEEDCOUNTER_u0/SC_upSPEEDCOUNTE
 
 add wave  -divider CC_SPEEDCOMPARATOR_u0
 add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_SPEEDCOMPARATOR_u0/CC_SPEEDCOMPARATOR_T0_OutLow
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_SPEEDCOMPARATOR_u0/CC_SPEEDCOMPARATOR_data_InBUS
+
 
 #add wave  -divider REGISTER
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegGENERAL_CAR_u0/SC_RegGENERAL_CAR_data_OutBUS
@@ -85,10 +90,10 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u7/CC_MUX3_1_DataBus_Out
 
 #add wave  -divider PLAYER_STATEMACHINE_u0
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_PLAYER_STATEMACHINE_u0/SC_PLAYER_STATEMACHINE_ShiftSelection_Out
-
-
-add wave  -divider RegSHIFTER
-add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_data_OutBUS
+#
+#
+#add wave  -divider RegSHIFTER
+#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_data_OutBUS
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_load_InLow
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_shiftselection_In
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_data_InBUS

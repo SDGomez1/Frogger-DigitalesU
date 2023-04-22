@@ -56,7 +56,7 @@ reg [DATAWIDTH_BUS-1:0] DELAYED_DATA;
 //=======================================================
 
 
-always @(CC_DATADELAY_SendDataSignal_In) begin
+always @(*) begin
 
   DELAYED_DATA <= CC_DATADELAY_Data_inBus;
 end
@@ -66,7 +66,7 @@ end
 //  Outputs
 //=======================================================
 
-always @(CC_DATADELAY_SendDataSignal_In) begin
+always @(*) begin
 
   CC_DATADELAY_DelayedData_outBus <= DELAYED_DATA;
 end
