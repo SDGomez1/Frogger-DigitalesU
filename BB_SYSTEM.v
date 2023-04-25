@@ -55,6 +55,15 @@ module BB_SYSTEM (
  parameter DATA_FIXED_INITREGPOINT_1 = 8'b00000000;
  parameter DATA_FIXED_INITREGPOINT_0 = 8'b00010000;
  
+ parameter DATA_FIXED_ENDSCREEN_7 = 8'b00000000;
+ parameter DATA_FIXED_ENDSCREEN_6 = 8'b00000000;
+ parameter DATA_FIXED_ENDSCREEN_5 = 8'b01111100;
+ parameter DATA_FIXED_ENDSCREEN_4 = 8'b01000000;
+ parameter DATA_FIXED_ENDSCREEN_3 = 8'b01111100;
+ parameter DATA_FIXED_ENDSCREEN_2 = 8'b01000000;
+ parameter DATA_FIXED_ENDSCREEN_1 = 8'b01111100;
+ parameter DATA_FIXED_ENDSCREEN_0 = 8'b00000000;
+ 
  //=======================================================
 //  PORT declarations
 //=======================================================
@@ -505,56 +514,56 @@ CC_MUX3_1 CC_MUX3_1_u0(
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_0),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG0_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_0)
 );
 CC_MUX3_1 CC_MUX3_1_u1(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG1_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_1),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG1_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_1)
 );
 CC_MUX3_1 CC_MUX3_1_u2(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG2_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_2),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG2_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_2)
 );
 CC_MUX3_1 CC_MUX3_1_u3(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG3_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_3),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG3_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_3)
 );
 CC_MUX3_1 CC_MUX3_1_u4(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG4_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_4),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG4_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_4)
 );
 CC_MUX3_1 CC_MUX3_1_u5(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG5_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG5_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_5)
 );
 CC_MUX3_1 CC_MUX3_1_u6(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG6_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_6),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG6_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_6)
 );
 CC_MUX3_1 CC_MUX3_1_u7(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG7_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_7),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG7_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_INITREGPOINT_2)
+	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_7)
 );
 
 

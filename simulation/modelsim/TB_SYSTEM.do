@@ -102,7 +102,7 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u7/CC_MUX3_1_DataBus_Out
 
 
 restart
-run 10000000ns
+run 50000000ns
 
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {319999492 ps} 0}
