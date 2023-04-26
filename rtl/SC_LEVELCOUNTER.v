@@ -81,7 +81,7 @@ begin
 		end
 	end
 	else if (SC_LEVELCOUNTER_CurrentState_Inbus == STATE_ENDGAME_0) begin
-		LEVELCOUNTER_Signal = 4;
+		LEVELCOUNTER_Signal = 7;
 	end
 	else begin
 		LEVELCOUNTER_Signal = 0;

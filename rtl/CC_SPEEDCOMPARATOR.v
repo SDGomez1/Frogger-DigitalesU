@@ -22,18 +22,25 @@ module CC_SPEEDCOMPARATOR #(parameter SPEEDCOMPARATOR_DATAWIDTH=23)(
 //////////// OUTPUTS //////////
 	CC_SPEEDCOMPARATOR_T0_OutLow,
 //////////// INPUTS //////////
-	CC_SPEEDCOMPARATOR_data_InBUS
+	CC_SPEEDCOMPARATOR_data_InBUS,
+	CC_SPEEDCOMPARATOR_CurrentLevel_In
 	
 );
 //=======================================================
 //  PARAMETER declarations
 //=======================================================
 
+localparam CURRENT_LEVEDATAWIDTH								= 3;
+
+
 //=======================================================
 //  PORT declarations
 //=======================================================
 output	reg CC_SPEEDCOMPARATOR_T0_OutLow;
+
 input 	[SPEEDCOMPARATOR_DATAWIDTH-1:0] CC_SPEEDCOMPARATOR_data_InBUS;
+input 	[CURRENT_LEVEDATAWIDTH-1:0]CC_SPEEDCOMPARATOR_CurrentLevel_In;
+
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
@@ -42,12 +49,28 @@ input 	[SPEEDCOMPARATOR_DATAWIDTH-1:0] CC_SPEEDCOMPARATOR_data_InBUS;
 //=======================================================
 always @(*)
 begin
-
-	//if( CC_SPEEDCOMPARATOR_data_InBUS == 23'b11111111111111111111111)
-	if( CC_SPEEDCOMPARATOR_data_InBUS == 23'b00000000010000100100000)
-		CC_SPEEDCOMPARATOR_T0_OutLow = 1'b0;
-	else 
-		CC_SPEEDCOMPARATOR_T0_OutLow = 1'b1;
+	case(CC_SPEEDCOMPARATOR_CurrentLevel_In)
+	
+		//if( CC_SPEEDCOMPARATOR_data_InBUS == 23'b11111111111111111111111)
+	2:	if( CC_SPEEDCOMPARATOR_data_InBUS == 23'b00000000010000100100000)
+			CC_SPEEDCOMPARATOR_T0_OutLow = 1'b0;
+		else 
+			CC_SPEEDCOMPARATOR_T0_OutLow = 1'b1;
+	4: if( CC_SPEEDCOMPARATOR_data_InBUS == 23'b00000000001000100100000)
+			CC_SPEEDCOMPARATOR_T0_OutLow = 1'b0;
+		else 
+			CC_SPEEDCOMPARATOR_T0_OutLow = 1'b1;
+	6: if( CC_SPEEDCOMPARATOR_data_InBUS == 23'b00000000000100100100000)
+			CC_SPEEDCOMPARATOR_T0_OutLow = 1'b0;
+		else 
+			CC_SPEEDCOMPARATOR_T0_OutLow = 1'b1;
+			
+	default: //if( CC_SPEEDCOMPARATOR_data_InBUS == 23'b11111111111111111111111)
+				if( CC_SPEEDCOMPARATOR_data_InBUS == 23'b00000000010000100100000)
+					CC_SPEEDCOMPARATOR_T0_OutLow = 1'b0;
+				else 
+					CC_SPEEDCOMPARATOR_T0_OutLow = 1'b1;
+	endcase
 			
 	
 end

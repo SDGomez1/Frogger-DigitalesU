@@ -21,6 +21,7 @@
 module CC_PLAYER_CAR_COMPARATOR(
 //////////// OUTPUTS //////////
 		CC_PLAYER_CAR_COMPARATOR_Data_OutBus,
+		CC_PLAYER_CAR_COMPARATOR_PlayerLose_InLow,
 
 //////////// INPUTS //////////
 		CC_PLAYER_CAR_COMPARATOR_PlayerData_InBus,
@@ -38,6 +39,7 @@ parameter DATAWIDTH = 8;
 //=======================================================
 
 output reg 	[DATAWIDTH-1:0]CC_PLAYER_CAR_COMPARATOR_Data_OutBus;
+output reg 	CC_PLAYER_CAR_COMPARATOR_PlayerLose_InLow;
 
 input 		[DATAWIDTH-1:0]CC_PLAYER_CAR_COMPARATOR_PlayerData_InBus;
 input 		[DATAWIDTH-1:0]CC_PLAYER_CAR_COMPARATOR_CarData_InBus;
@@ -52,7 +54,16 @@ input 		[DATAWIDTH-1:0]CC_PLAYER_CAR_COMPARATOR_CarData_InBus;
 
 always @(*) begin
 
-	CC_PLAYER_CAR_COMPARATOR_Data_OutBus = CC_PLAYER_CAR_COMPARATOR_PlayerData_InBus | CC_PLAYER_CAR_COMPARATOR_CarData_InBus;
+	
+	if(CC_PLAYER_CAR_COMPARATOR_PlayerData_InBus & CC_PLAYER_CAR_COMPARATOR_CarData_InBus)begin 
+		CC_PLAYER_CAR_COMPARATOR_PlayerLose_InLow = 1'b0;
+		CC_PLAYER_CAR_COMPARATOR_Data_OutBus = 0;
+	end
+
+	else begin
+		CC_PLAYER_CAR_COMPARATOR_Data_OutBus = CC_PLAYER_CAR_COMPARATOR_PlayerData_InBus | CC_PLAYER_CAR_COMPARATOR_CarData_InBus;
+		CC_PLAYER_CAR_COMPARATOR_PlayerLose_InLow = 1'b1;
+	end
 
 
 end

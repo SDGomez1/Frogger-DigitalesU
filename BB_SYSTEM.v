@@ -124,7 +124,6 @@ wire LEVEL_STATEMACHINE_ProgressUpCount_out_cwire;
 
 wire [1:0]SC_PLAYER_STATEMACHINE_ShiftSelection_Out;
 
-
 //----------------------------------------------------------------------
 // LEVEL_COUNTER WIRES
 //----------------------------------------------------------------------
@@ -194,7 +193,7 @@ wire [DATAWIDTH_BUS-1:0]RegSHIFTER_data_OutBUS_cwire;
 //CC_PLAYER_CAR_COMPARATOR wire
 //----------------------------------------------------------------------
 wire [DATAWIDTH_BUS-1:0]PLAYER_CAR_COMPARATOR_Data_OutBus_cwire;
-
+wire PLAYER_CAR_COMPARATOR_PlayerLose_InLow_cwire;
 
 //----------------------------------------------------------------------
 // CAR_PLAYER2_REGISTERS WIRES
@@ -328,6 +327,8 @@ SC_LEVEL_STATEMACHINE SC_LEVEL_STATEMACHINE_u0(
 
 SC_PLAYER_STATEMACHINE SC_PLAYER_STATEMACHINE_u0(
 	.SC_PLAYER_STATEMACHINE_ShiftSelection_Out(SC_PLAYER_STATEMACHINE_ShiftSelection_Out),
+	.SC_PLAYER_STATEMACHINE_PlayerLose_InLow(PLAYER_CAR_COMPARATOR_PlayerLose_InLow_cwire),
+	.SC_PLAYER_STATEMACHINE_FinishedLevel_InLow(LEVEL_STATEMACHINE_FinishedGame_Out_cwire),
 	.SC_PLAYER_STATEMACHINE_CLOCK_50(BB_SYSTEM_CLOCK_50),
 	.SC_PLAYER_STATEMACHINE_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
 	.SC_PLAYER_STATEMACHINE_LeftButton_InLow(BB_SYSTEM_leftButton_InLow_cwire),
@@ -375,7 +376,8 @@ SC_upSPEEDCOUNTER #(.upSPEEDCOUNTER_DATAWIDTH(PRESCALER_DATAWIDTH))
 CC_SPEEDCOMPARATOR #(.SPEEDCOMPARATOR_DATAWIDTH(PRESCALER_DATAWIDTH))
 	CC_SPEEDCOMPARATOR_u0(
 		.CC_SPEEDCOMPARATOR_T0_OutLow(SPEEDCOMPARATOR_T0_Out_cwire),
-		.CC_SPEEDCOMPARATOR_data_InBUS(upSPEEDCOUNTER_data_OutBUS_cwire)
+		.CC_SPEEDCOMPARATOR_data_InBUS(upSPEEDCOUNTER_data_OutBUS_cwire),
+		.CC_SPEEDCOMPARATOR_CurrentLevel_In(LEVELCOUNTER_DataOut_cwire)
 );
 
 //----------------------------------------------------------------------
@@ -584,7 +586,9 @@ SC_RegSHIFTER_PLAYER_1 SC_RegSHIFTER_PLAYER_1_U0(
 // CC_PLAYER_CAR_COMPARATOR
 //----------------------------------------------------------------------
 CC_PLAYER_CAR_COMPARATOR CC_PLAYER_CAR_COMPARATOR_u0(
+
 	.CC_PLAYER_CAR_COMPARATOR_Data_OutBus(PLAYER_CAR_COMPARATOR_Data_OutBus_cwire),
+	.CC_PLAYER_CAR_COMPARATOR_PlayerLose_InLow(PLAYER_CAR_COMPARATOR_PlayerLose_InLow_cwire),
 	.CC_PLAYER_CAR_COMPARATOR_PlayerData_InBus(REG8_DataBus_out),
 	.CC_PLAYER_CAR_COMPARATOR_CarData_InBus(RegSHIFTER_data_OutBUS_cwire)
 
@@ -738,6 +742,7 @@ SC_RegSHIFTER_PLAYER_2 SC_RegSHIFTER_PLAYER_2_U0(
 //----------------------------------------------------------------------
 CC_PLAYER_CAR_COMPARATOR CC_PLAYER_CAR_COMPARATOR_u1(
 	.CC_PLAYER_CAR_COMPARATOR_Data_OutBus(PLAYER2_CAR_COMPARATOR_Data_OutBus_cwire),
+	.CC_PLAYER_CAR_COMPARATOR_PlayerLose_InLow(),
 	.CC_PLAYER_CAR_COMPARATOR_PlayerData_InBus(PLAYER2_REG8_DataBus_out),
 	.CC_PLAYER_CAR_COMPARATOR_CarData_InBus(RegSHIFTER_PLAYER_2_data_OutBUS_cwire)
 
@@ -755,21 +760,17 @@ assign REGTOMUX_REG5_DataBus_Out_cwire = REG5toReg6_DataBus_out 						| 	PLAYER2
 assign REGTOMUX_REG6_DataBus_Out_cwire = REG6toReg7_DataBus_out						| 	PLAYER2_REG6toReg7_DataBus_out; 
 assign REGTOMUX_REG7_DataBus_Out_cwire = PLAYER_CAR_COMPARATOR_Data_OutBus_cwire | 	PLAYER2_CAR_COMPARATOR_Data_OutBus_cwire 	; 
 
-
-
-
-
 //######################################################################
 //#	TO LED MATRIZ: VISUALIZATION
 //######################################################################
-assign regGAME_data0_wire = MUX3_1_REG0_DataBus_Out_cwire;
-assign regGAME_data1_wire = MUX3_1_REG1_DataBus_Out_cwire;
-assign regGAME_data2_wire = MUX3_1_REG2_DataBus_Out_cwire;
-assign regGAME_data3_wire = MUX3_1_REG3_DataBus_Out_cwire;
-assign regGAME_data4_wire = MUX3_1_REG4_DataBus_Out_cwire;
-assign regGAME_data5_wire = MUX3_1_REG5_DataBus_Out_cwire;
-assign regGAME_data6_wire = MUX3_1_REG6_DataBus_Out_cwire;
-assign regGAME_data7_wire = MUX3_1_REG7_DataBus_Out_cwire;
+assign regGAME_data0_wire = MUX3_1_REG7_DataBus_Out_cwire;
+assign regGAME_data1_wire = MUX3_1_REG6_DataBus_Out_cwire;
+assign regGAME_data2_wire = MUX3_1_REG5_DataBus_Out_cwire;
+assign regGAME_data3_wire = MUX3_1_REG4_DataBus_Out_cwire;
+assign regGAME_data4_wire = MUX3_1_REG3_DataBus_Out_cwire;
+assign regGAME_data5_wire = MUX3_1_REG2_DataBus_Out_cwire;
+assign regGAME_data6_wire = MUX3_1_REG1_DataBus_Out_cwire;
+assign regGAME_data7_wire = MUX3_1_REG0_DataBus_Out_cwire;
 
 assign data_max =(add==3'b000)?{regGAME_data0_wire[7],regGAME_data1_wire[7],regGAME_data2_wire[7],regGAME_data3_wire[7],regGAME_data4_wire[7],regGAME_data5_wire[7],regGAME_data6_wire[7],regGAME_data7_wire[7]}:
 	       (add==3'b001)?{regGAME_data0_wire[6],regGAME_data1_wire[6],regGAME_data2_wire[6],regGAME_data3_wire[6],regGAME_data4_wire[6],regGAME_data5_wire[6],regGAME_data6_wire[6],regGAME_data7_wire[6]}:

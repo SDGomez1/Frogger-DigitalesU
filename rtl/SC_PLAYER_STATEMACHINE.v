@@ -25,7 +25,9 @@ module SC_PLAYER_STATEMACHINE(
 	SC_PLAYER_STATEMACHINE_CLOCK_50,
 	SC_PLAYER_STATEMACHINE_RESET_InHigh,
 	SC_PLAYER_STATEMACHINE_LeftButton_InLow,
-	SC_PLAYER_STATEMACHINE_RigthButton_InLow
+	SC_PLAYER_STATEMACHINE_RigthButton_InLow,
+	SC_PLAYER_STATEMACHINE_PlayerLose_InLow,
+	SC_PLAYER_STATEMACHINE_FinishedLevel_InLow
 );
 
 //=======================================================
@@ -38,6 +40,7 @@ localparam STATE_MOVINGLEFT_0									= 1;
 localparam STATE_MOVINGLEFT_1									= 2;
 localparam STATE_MOVINGRIGHT_0								= 3;
 localparam STATE_MOVINGRIGHT_1								= 4;
+localparam STATE_PLAYERLOSE									= 5;
 
 
 
@@ -51,7 +54,8 @@ input 		SC_PLAYER_STATEMACHINE_CLOCK_50;
 input			SC_PLAYER_STATEMACHINE_RESET_InHigh;
 input			SC_PLAYER_STATEMACHINE_LeftButton_InLow;
 input 		SC_PLAYER_STATEMACHINE_RigthButton_InLow;
-
+input 		SC_PLAYER_STATEMACHINE_PlayerLose_InLow;
+input 		SC_PLAYER_STATEMACHINE_FinishedLevel_InLow;
 
 //=======================================================
 //  REG/WIRE declarations
@@ -76,17 +80,22 @@ begin
 										
 										else if (SC_PLAYER_STATEMACHINE_RigthButton_InLow == 1'b0)
 											STATE_Signal = STATE_MOVINGRIGHT_0;
-										
+											
+										else if (SC_PLAYER_STATEMACHINE_PlayerLose_InLow == 1'b0)
+											STATE_Signal = STATE_PLAYERLOSE;
 										else 
 											STATE_Signal = STATE_STANDINGSTILL;
 											
 		STATE_MOVINGLEFT_0:		STATE_Signal = STATE_MOVINGLEFT_1;									
 						
-		STATE_MOVINGLEFT_1:  		if (SC_PLAYER_STATEMACHINE_LeftButton_InLow == 1'b1)
-											STATE_Signal = STATE_STANDINGSTILL;
+		STATE_MOVINGLEFT_1:  	if (SC_PLAYER_STATEMACHINE_LeftButton_InLow == 1'b1)
+										STATE_Signal = STATE_STANDINGSTILL;
 										
 										else if (SC_PLAYER_STATEMACHINE_RigthButton_InLow == 1'b0)
 											STATE_Signal = STATE_MOVINGRIGHT_0;
+											
+										else if (SC_PLAYER_STATEMACHINE_PlayerLose_InLow == 1'b0)
+										STATE_Signal = STATE_PLAYERLOSE;
 									
 										else 
 											STATE_Signal = STATE_MOVINGLEFT_1;
@@ -98,10 +107,17 @@ begin
 										
 										else if (SC_PLAYER_STATEMACHINE_LeftButton_InLow == 1'b0)
 											STATE_Signal = STATE_MOVINGLEFT_0;
-									
+											
+										else if (SC_PLAYER_STATEMACHINE_PlayerLose_InLow == 1'b0)
+											STATE_Signal = STATE_PLAYERLOSE;
+											
 										else 
 											STATE_Signal = STATE_MOVINGRIGHT_1;
-	
+											
+		STATE_PLAYERLOSE: 		if(SC_PLAYER_STATEMACHINE_FinishedLevel_InLow == 1'b0)
+											STATE_Signal = STATE_STANDINGSTILL;
+										else
+											STATE_Signal = STATE_PLAYERLOSE;
 		default: 					STATE_Signal = STATE_STANDINGSTILL;
 	
 	endcase
@@ -166,6 +182,14 @@ begin
 			
 		end
 
+//=========================================================
+// STATE_PLAYERLOSE
+//=========================================================
+	STATE_PLAYERLOSE :
+		begin
+			SC_PLAYER_STATEMACHINE_ShiftSelection_Out = 2'b00;
+			
+		end
 //=========================================================
 // DEFAULT
 //=========================================================

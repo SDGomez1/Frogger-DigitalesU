@@ -35,11 +35,11 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_DEBOUNCE1_u2/SC_DEBOUNCE1_button_O
 #add wave  -divider SC_MAIN_STATEMACHINE_u0
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_MAIN_STATEMACHINE_u0/SC_MAIN_STATEMACHINE_CurrentState_Out
 #
-#add wave  -divider SC_LEVEL_STATEMACHINE_u0
-#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_LevelFinished_Out
-#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_FinishedGame_Out
-#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_upCount_out
-#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_ProgressUpCount_out
+add wave  -divider SC_LEVEL_STATEMACHINE_u0
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_LevelFinished_Out
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_FinishedGame_Out
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_upCount_out
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVEL_STATEMACHINE_u0/SC_LEVEL_STATEMACHINE_ProgressUpCount_out
 
 
 
@@ -92,17 +92,20 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u7/CC_MUX3_1_DataBus_Out
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_PLAYER_STATEMACHINE_u0/SC_PLAYER_STATEMACHINE_ShiftSelection_Out
 #
 #
-#add wave  -divider RegSHIFTER
+add wave  -divider RegSHIFTER_PLAYER_1_U0
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_data_OutBUS
-#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_load_InLow
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_PLAYER_1_U0/SC_RegSHIFTER_PLAYER_1_shiftselection_In
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_shiftselection_In
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_data_InBUS
 
+add wave  -divider CC_PLAYER_CAR_COMPARATOR_u0
+
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_PLAYER_CAR_COMPARATOR_u0/CC_PLAYER_CAR_COMPARATOR_PlayerLose_InLow
 
 
 
 restart
-run 50000000ns
+run 30000000ns
 
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {319999492 ps} 0}
