@@ -215,7 +215,7 @@ begin
 //=========================================================
 	STATE_LEVEL_0TO_1 :
 		begin
-			if(SC_LEVEL_STATEMACHINE_LvlProgressCount_In == 15)begin
+			if(SC_LEVEL_STATEMACHINE_LvlProgressCount_In == 18)begin
 				SC_LEVEL_STATEMACHINE_LevelFinished_Out 	= 0;
 				SC_LEVEL_STATEMACHINE_FinishedGame_Out 	= 1;
 				SC_LEVEL_STATEMACHINE_upCount_out 			= 1;
@@ -257,7 +257,7 @@ begin
 //=========================================================
 	STATE_LEVEL_1TO_2 :
 		begin
-			if(SC_LEVEL_STATEMACHINE_LvlProgressCount_In == 15)begin
+			if(SC_LEVEL_STATEMACHINE_LvlProgressCount_In == 18)begin
 				SC_LEVEL_STATEMACHINE_LevelFinished_Out 	= 0;
 				SC_LEVEL_STATEMACHINE_FinishedGame_Out 	= 1;
 				SC_LEVEL_STATEMACHINE_upCount_out 			= 1;
@@ -299,7 +299,7 @@ begin
 //=========================================================
 	STATE_LEVEL_2TO_3 :
 		begin
-			if(SC_LEVEL_STATEMACHINE_LvlProgressCount_In == 15)begin
+			if(SC_LEVEL_STATEMACHINE_LvlProgressCount_In == 18)begin
 				SC_LEVEL_STATEMACHINE_LevelFinished_Out 	= 0;
 				SC_LEVEL_STATEMACHINE_FinishedGame_Out 	= 1;
 				SC_LEVEL_STATEMACHINE_upCount_out 			= 1;

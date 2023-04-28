@@ -46,6 +46,14 @@
 				{
 					"name" : "BB_SYSTEM_rightButton_InLow",
 					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_downButton_InLow",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_upButton_InLow",
+					"strict" : false
 				}
 			]
 		}

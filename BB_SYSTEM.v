@@ -27,13 +27,17 @@ module BB_SYSTEM (
 	BB_SYSTEM_startButton_Out, 
 	BB_SYSTEM_leftButton_Out,
 	BB_SYSTEM_rightButton_Out,
-
+	BB_SYSTEM_upButton_Out,
+	BB_SYSTEM_downButton_Out,
+	
 //////////// INPUTS //////////
 	BB_SYSTEM_CLOCK_50,
 	BB_SYSTEM_RESET_InHigh,
 	BB_SYSTEM_startButton_InLow, 
 	BB_SYSTEM_leftButton_InLow,
-	BB_SYSTEM_rightButton_InLow
+	BB_SYSTEM_rightButton_InLow,
+	BB_SYSTEM_upButton_InLow,
+	BB_SYSTEM_downButton_InLow
 );
 //=======================================================
 //  PARAMETER declarations
@@ -74,12 +78,16 @@ output		BB_SYSTEM_max7219CLK_Out;
 output 		BB_SYSTEM_startButton_Out;
 output 		BB_SYSTEM_leftButton_Out;
 output 		BB_SYSTEM_rightButton_Out;
+output 		BB_SYSTEM_upButton_Out;
+output 		BB_SYSTEM_downButton_Out;
 
-input		BB_SYSTEM_CLOCK_50;
-input		BB_SYSTEM_RESET_InHigh;
-input		BB_SYSTEM_startButton_InLow;
-input		BB_SYSTEM_leftButton_InLow;
-input		BB_SYSTEM_rightButton_InLow;
+input			BB_SYSTEM_CLOCK_50;
+input			BB_SYSTEM_RESET_InHigh;
+input			BB_SYSTEM_startButton_InLow;
+input			BB_SYSTEM_leftButton_InLow;
+input			BB_SYSTEM_rightButton_InLow;
+input 		BB_SYSTEM_upButton_InLow;
+input 		BB_SYSTEM_downButton_InLow;
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
@@ -87,6 +95,8 @@ input		BB_SYSTEM_rightButton_InLow;
 wire 	BB_SYSTEM_startButton_InLow_cwire;
 wire 	BB_SYSTEM_leftButton_InLow_cwire;
 wire 	BB_SYSTEM_rightButton_InLow_cwire;
+wire	BB_SYSTEM_upButton_InLow_cwire;
+wire 	BB_SYSTEM_downButton_InLow_cwire;
 
 // GAME
 wire [DATAWIDTH_BUS-1:0] regGAME_data7_wire;
@@ -122,7 +132,16 @@ wire LEVEL_STATEMACHINE_ProgressUpCount_out_cwire;
 // SC_PLAYER_STATEMACHINE WIRES
 //----------------------------------------------------------------------
 
-wire [1:0]SC_PLAYER_STATEMACHINE_ShiftSelection_Out;
+wire [1:0]PLAYER_STATEMACHINE_ShiftSelection_Out_cwire;
+wire PLAYER_STATEMACHINE_LoadData_Out_cwire;
+wire [DATAWIDTH_BUS-1:0] PLAYER_STATEMACHINE_PlayerData_Out_cwire;
+wire PLAYER_STATEMACHINE_PlayerLose_Out_cwire;
+
+
+wire [1:0]PLAYER_STATEMACHINE_PLAYER_2_ShiftSelection_Out_cwire;
+wire PLAYER_STATEMACHINE_PLAYER_2_LoadData_Out_cwire;
+wire [DATAWIDTH_BUS-1:0] PLAYER_STATEMACHINE_PLAYER_2_PlayerData_Out_cwire;
+wire PLAYER_STATEMACHINE_PLAYER_2_PlayerLose_Out_cwire;
 
 //----------------------------------------------------------------------
 // LEVEL_COUNTER WIRES
@@ -193,7 +212,7 @@ wire [DATAWIDTH_BUS-1:0]RegSHIFTER_data_OutBUS_cwire;
 //CC_PLAYER_CAR_COMPARATOR wire
 //----------------------------------------------------------------------
 wire [DATAWIDTH_BUS-1:0]PLAYER_CAR_COMPARATOR_Data_OutBus_cwire;
-wire PLAYER_CAR_COMPARATOR_PlayerLose_InLow_cwire;
+wire PLAYER_CAR_COMPARATOR_PlayerLose_Out_cwire;
 
 //----------------------------------------------------------------------
 // CAR_PLAYER2_REGISTERS WIRES
@@ -220,16 +239,23 @@ wire [DATAWIDTH_BUS-1:0]PLAYER2_REG5toReg6_DelayBus_out;
 wire [DATAWIDTH_BUS-1:0]PLAYER2_REG6toReg7_DelayBus_out;
 
 //----------------------------------------------------------------------
-// SC_RegSHIFTER_PLAYER_1 wires
+// SC_RegSHIFTER_PLAYER_2 wires
 //----------------------------------------------------------------------
 wire [DATAWIDTH_BUS-1:0]RegSHIFTER_PLAYER_2_data_OutBUS_cwire;
 
 
 //----------------------------------------------------------------------
-//CC_PLAYER_CAR_COMPARATOR wire
+//CC_PLAYER_CAR_PLAYER_2_COMPARATOR wire
 //----------------------------------------------------------------------
-wire [DATAWIDTH_BUS-1:0]PLAYER2_CAR_COMPARATOR_Data_OutBus_cwire;
+wire [DATAWIDTH_BUS-1:0]CAR_COMPARATOR_PLAYER_2_Data_OutBus_cwire;
+wire PLAYER_CAR_COMPARATOR_PLAYER_2_PlayerLose_Out_cwire;
 
+//----------------------------------------------------------------------
+// SC_POINTSCOUNTER WIRES
+//----------------------------------------------------------------------
+
+wire [5:0] POINTSCOUNTER_Data_OutBus_cwire;
+wire [5:0] POINTSCOUNTER_PLAYER_2_Data_OutBus_cwire;
 
 //----------------------------------------------------------------------
 // REGTOMUX
@@ -256,6 +282,22 @@ wire [DATAWIDTH_BUS-1:0]MUX3_1_REG4_DataBus_Out_cwire;
 wire [DATAWIDTH_BUS-1:0]MUX3_1_REG5_DataBus_Out_cwire;
 wire [DATAWIDTH_BUS-1:0]MUX3_1_REG6_DataBus_Out_cwire;
 wire [DATAWIDTH_BUS-1:0]MUX3_1_REG7_DataBus_Out_cwire;
+
+
+//----------------------------------------------------------------------
+// WINNERCOMPARATOR WIRES
+//----------------------------------------------------------------------
+
+wire [DATAWIDTH_BUS-1:0]WINNERCOMPARATOR_Data0_outBus_cwire;
+wire [DATAWIDTH_BUS-1:0]WINNERCOMPARATOR_Data1_outBus_cwire;
+wire [DATAWIDTH_BUS-1:0]WINNERCOMPARATOR_Data2_outBus_cwire;
+wire [DATAWIDTH_BUS-1:0]WINNERCOMPARATOR_Data3_outBus_cwire;
+wire [DATAWIDTH_BUS-1:0]WINNERCOMPARATOR_Data4_outBus_cwire;
+wire [DATAWIDTH_BUS-1:0]WINNERCOMPARATOR_Data5_outBus_cwire;
+wire [DATAWIDTH_BUS-1:0]WINNERCOMPARATOR_Data6_outBus_cwire;
+wire [DATAWIDTH_BUS-1:0]WINNERCOMPARATOR_Data7_outBus_cwire;
+
+
 //=======================================================
 //  Structural coding
 //=======================================================
@@ -285,6 +327,22 @@ SC_DEBOUNCE1 SC_DEBOUNCE1_u2 (
 	.SC_DEBOUNCE1_button_In(~BB_SYSTEM_rightButton_InLow)
 );
 
+SC_DEBOUNCE1 SC_DEBOUNCE1_u3 (
+// port map - connection between master ports and signals/registers   
+	.SC_DEBOUNCE1_button_Out(BB_SYSTEM_upButton_InLow_cwire),
+	.SC_DEBOUNCE1_CLOCK_50(BB_SYSTEM_CLOCK_50),
+	.SC_DEBOUNCE1_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+	.SC_DEBOUNCE1_button_In(~BB_SYSTEM_upButton_InLow)
+);
+
+SC_DEBOUNCE1 SC_DEBOUNCE1_u4 (
+// port map - connection between master ports and signals/registers   
+	.SC_DEBOUNCE1_button_Out(BB_SYSTEM_downButton_InLow_cwire),
+	.SC_DEBOUNCE1_CLOCK_50(BB_SYSTEM_CLOCK_50),
+	.SC_DEBOUNCE1_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+	.SC_DEBOUNCE1_button_In(~BB_SYSTEM_downButton_InLow)
+);
+
 //######################################################################
 //#	!!! ACA VAN TUS COMPONENTES
 //######################################################################
@@ -297,7 +355,6 @@ SC_DEBOUNCE1 SC_DEBOUNCE1_u2 (
 SC_MAIN_STATEMACHINE SC_MAIN_STATEMACHINE_u0 (
 // port map - connection between master ports and signals/registers   
 	.SC_MAIN_STATEMACHINE_CurrentState_Out(MAIN_STATEMACHINE_CurrentState_cwire),
-	.SC_MAIN_STATEMACHINE_LoadSignal_out(MAIN_STATEMACHINE_LoadSignal_out_cwire),
 	.SC_MAIN_STATEMACHINE_CLOCK_50(BB_SYSTEM_CLOCK_50),
 	.SC_MAIN_STATEMACHINE_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
 	.SC_MAIN_STATEMACHINE_StartSignal_InLow(BB_SYSTEM_startButton_InLow_cwire),
@@ -326,16 +383,30 @@ SC_LEVEL_STATEMACHINE SC_LEVEL_STATEMACHINE_u0(
 //----------------------------------------------------------------------
 
 SC_PLAYER_STATEMACHINE SC_PLAYER_STATEMACHINE_u0(
-	.SC_PLAYER_STATEMACHINE_ShiftSelection_Out(SC_PLAYER_STATEMACHINE_ShiftSelection_Out),
-	.SC_PLAYER_STATEMACHINE_PlayerLose_InLow(PLAYER_CAR_COMPARATOR_PlayerLose_InLow_cwire),
-	.SC_PLAYER_STATEMACHINE_FinishedLevel_InLow(LEVEL_STATEMACHINE_FinishedGame_Out_cwire),
+	.SC_PLAYER_STATEMACHINE_ShiftSelection_Out(PLAYER_STATEMACHINE_ShiftSelection_Out_cwire),
+	.SC_PLAYER_STATEMACHINE_LoadData_Out(PLAYER_STATEMACHINE_LoadData_Out_cwire),
+	.SC_PLAYER_STATEMACHINE_PlayerData_Out(PLAYER_STATEMACHINE_PlayerData_Out_cwire),
+	.SC_PLAYER_STATEMACHINE_PlayerLose_Out(PLAYER_STATEMACHINE_PlayerLose_Out_cwire),
+	.SC_PLAYER_STATEMACHINE_PlayerLose_InLow(PLAYER_CAR_COMPARATOR_PlayerLose_Out_cwire),
+	.SC_PLAYER_STATEMACHINE_FinishedLevel_InLow(LEVEL_STATEMACHINE_LevelFinished_Out_cwire),
 	.SC_PLAYER_STATEMACHINE_CLOCK_50(BB_SYSTEM_CLOCK_50),
 	.SC_PLAYER_STATEMACHINE_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
 	.SC_PLAYER_STATEMACHINE_LeftButton_InLow(BB_SYSTEM_leftButton_InLow_cwire),
 	.SC_PLAYER_STATEMACHINE_RigthButton_InLow(BB_SYSTEM_rightButton_InLow_cwire)
 );
 
-
+SC_PLAYER_STATEMACHINE SC_PLAYER_STATEMACHINE_u1(
+	.SC_PLAYER_STATEMACHINE_ShiftSelection_Out(PLAYER_STATEMACHINE_PLAYER_2_ShiftSelection_Out_cwire),
+	.SC_PLAYER_STATEMACHINE_LoadData_Out(PLAYER_STATEMACHINE_PLAYER_2_LoadData_Out_cwire),
+	.SC_PLAYER_STATEMACHINE_PlayerData_Out(PLAYER_STATEMACHINE_PLAYER_2_PlayerData_Out_cwire),
+	.SC_PLAYER_STATEMACHINE_PlayerLose_Out(PLAYER_STATEMACHINE_PLAYER_2_PlayerLose_Out_cwire),
+	.SC_PLAYER_STATEMACHINE_PlayerLose_InLow(PLAYER_CAR_COMPARATOR_PLAYER_2_PlayerLose_Out_cwire),
+	.SC_PLAYER_STATEMACHINE_FinishedLevel_InLow(LEVEL_STATEMACHINE_LevelFinished_Out_cwire),
+	.SC_PLAYER_STATEMACHINE_CLOCK_50(BB_SYSTEM_CLOCK_50),
+	.SC_PLAYER_STATEMACHINE_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+	.SC_PLAYER_STATEMACHINE_LeftButton_InLow(BB_SYSTEM_upButton_InLow_cwire),
+	.SC_PLAYER_STATEMACHINE_RigthButton_InLow(BB_SYSTEM_downButton_InLow_cwire)
+);
 //----------------------------------------------------------------------
 // LEVEL_COUNTER
 //----------------------------------------------------------------------
@@ -516,56 +587,56 @@ CC_MUX3_1 CC_MUX3_1_u0(
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_0),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG0_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_0)
+	.CC_MUX3_1_DataBus3_In(WINNERCOMPARATOR_Data0_outBus_cwire)
 );
 CC_MUX3_1 CC_MUX3_1_u1(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG1_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_1),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG1_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_1)
+	.CC_MUX3_1_DataBus3_In(WINNERCOMPARATOR_Data1_outBus_cwire)
 );
 CC_MUX3_1 CC_MUX3_1_u2(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG2_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_2),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG2_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_2)
+	.CC_MUX3_1_DataBus3_In(WINNERCOMPARATOR_Data2_outBus_cwire)
 );
 CC_MUX3_1 CC_MUX3_1_u3(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG3_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_3),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG3_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_3)
+	.CC_MUX3_1_DataBus3_In(WINNERCOMPARATOR_Data3_outBus_cwire)
 );
 CC_MUX3_1 CC_MUX3_1_u4(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG4_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_4),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG4_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_4)
+	.CC_MUX3_1_DataBus3_In(WINNERCOMPARATOR_Data4_outBus_cwire)
 );
 CC_MUX3_1 CC_MUX3_1_u5(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG5_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_5),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG5_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_5)
+	.CC_MUX3_1_DataBus3_In(WINNERCOMPARATOR_Data5_outBus_cwire)
 );
 CC_MUX3_1 CC_MUX3_1_u6(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG6_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_6),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG6_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_6)
+	.CC_MUX3_1_DataBus3_In(WINNERCOMPARATOR_Data6_outBus_cwire)
 );
 CC_MUX3_1 CC_MUX3_1_u7(
 	.CC_MUX3_1_DataBus_Out(MUX3_1_REG7_DataBus_Out_cwire),
 	.CC_MUX3_1_Selector_In(MAIN_STATEMACHINE_CurrentState_cwire),
 	.CC_MUX3_1_DataBus1_In(DATA_FIXED_INITREGPOINT_7),
 	.CC_MUX3_1_DataBus2_In(REGTOMUX_REG7_DataBus_Out_cwire),
-	.CC_MUX3_1_DataBus3_In(DATA_FIXED_ENDSCREEN_7)
+	.CC_MUX3_1_DataBus3_In(WINNERCOMPARATOR_Data7_outBus_cwire)
 );
 
 
@@ -576,9 +647,9 @@ SC_RegSHIFTER_PLAYER_1 SC_RegSHIFTER_PLAYER_1_U0(
 	.SC_RegSHIFTER_PLAYER_1_data_OutBUS(RegSHIFTER_data_OutBUS_cwire),
 	.SC_RegSHIFTER_PLAYER_1_CLOCK_50(BB_SYSTEM_CLOCK_50),
 	.SC_RegSHIFTER_PLAYER_1_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
-	.SC_RegSHIFTER_PLAYER_1_load_InLow(MAIN_STATEMACHINE_LoadSignal_out_cwire),
-	.SC_RegSHIFTER_PLAYER_1_shiftselection_In(SC_PLAYER_STATEMACHINE_ShiftSelection_Out),
-	.SC_RegSHIFTER_PLAYER_1_data_InBUS(8'b00100000)
+	.SC_RegSHIFTER_PLAYER_1_load_InLow(PLAYER_STATEMACHINE_LoadData_Out_cwire),
+	.SC_RegSHIFTER_PLAYER_1_shiftselection_In(PLAYER_STATEMACHINE_ShiftSelection_Out_cwire),
+	.SC_RegSHIFTER_PLAYER_1_data_InBUS(PLAYER_STATEMACHINE_PlayerData_Out_cwire)
 );
 
 
@@ -588,12 +659,25 @@ SC_RegSHIFTER_PLAYER_1 SC_RegSHIFTER_PLAYER_1_U0(
 CC_PLAYER_CAR_COMPARATOR CC_PLAYER_CAR_COMPARATOR_u0(
 
 	.CC_PLAYER_CAR_COMPARATOR_Data_OutBus(PLAYER_CAR_COMPARATOR_Data_OutBus_cwire),
-	.CC_PLAYER_CAR_COMPARATOR_PlayerLose_InLow(PLAYER_CAR_COMPARATOR_PlayerLose_InLow_cwire),
+	.CC_PLAYER_CAR_COMPARATOR_PlayerLose_Out(PLAYER_CAR_COMPARATOR_PlayerLose_Out_cwire),
 	.CC_PLAYER_CAR_COMPARATOR_PlayerData_InBus(REG8_DataBus_out),
 	.CC_PLAYER_CAR_COMPARATOR_CarData_InBus(RegSHIFTER_data_OutBUS_cwire)
 
 );
 
+//----------------------------------------------------------------------
+// SC_POINTSCOUNTER
+//----------------------------------------------------------------------
+
+SC_POINTSCOUNTER SC_POINTSCOUNTER_u0(
+	.SC_POINTSCOUNTER_Data_OutBus(POINTSCOUNTER_Data_OutBus_cwire),
+	.SC_POINTSCOUNTER_LevelProgress_inLow(LEVELPROGRESSCOUNTER_DataOut_cwire),
+	.SC_POINTSCOUNTER_CLOCK_50(BB_SYSTEM_CLOCK_50),
+	.SC_POINTSCOUNTER_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+	.SC_POINTSCOUNTER_CurrentLvl_In(LEVELCOUNTER_DataOut_cwire),
+	.SC_POINTSCOUNTER_PlayerLose_inLow(PLAYER_STATEMACHINE_PlayerLose_Out_cwire),
+	.SC_POINTSCOUNTER_upCount_inLow(LEVEL_STATEMACHINE_ProgressUpCount_out_cwire)
+);
 //########################################################################
 // PLAYER2
 //########################################################################
@@ -731,9 +815,9 @@ SC_RegSHIFTER_PLAYER_2 SC_RegSHIFTER_PLAYER_2_U0(
 	.SC_RegSHIFTER_PLAYER_2_data_OutBUS(RegSHIFTER_PLAYER_2_data_OutBUS_cwire),
 	.SC_RegSHIFTER_PLAYER_2_CLOCK_50(BB_SYSTEM_CLOCK_50),
 	.SC_RegSHIFTER_PLAYER_2_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
-	.SC_RegSHIFTER_PLAYER_2_load_InLow(MAIN_STATEMACHINE_LoadSignal_out_cwire),
-	.SC_RegSHIFTER_PLAYER_2_shiftselection_In(SC_PLAYER_STATEMACHINE_ShiftSelection_Out),
-	.SC_RegSHIFTER_PLAYER_2_data_InBUS(8'b00000010)
+	.SC_RegSHIFTER_PLAYER_2_load_InLow(PLAYER_STATEMACHINE_PLAYER_2_LoadData_Out_cwire),
+	.SC_RegSHIFTER_PLAYER_2_shiftselection_In(PLAYER_STATEMACHINE_PLAYER_2_ShiftSelection_Out_cwire),
+	.SC_RegSHIFTER_PLAYER_2_data_InBUS(PLAYER_STATEMACHINE_PLAYER_2_PlayerData_Out_cwire)
 );
 
 
@@ -741,11 +825,45 @@ SC_RegSHIFTER_PLAYER_2 SC_RegSHIFTER_PLAYER_2_U0(
 // CC_PLAYER_CAR_COMPARATOR
 //----------------------------------------------------------------------
 CC_PLAYER_CAR_COMPARATOR CC_PLAYER_CAR_COMPARATOR_u1(
-	.CC_PLAYER_CAR_COMPARATOR_Data_OutBus(PLAYER2_CAR_COMPARATOR_Data_OutBus_cwire),
-	.CC_PLAYER_CAR_COMPARATOR_PlayerLose_InLow(),
+	.CC_PLAYER_CAR_COMPARATOR_Data_OutBus(CAR_COMPARATOR_PLAYER_2_Data_OutBus_cwire),
+	.CC_PLAYER_CAR_COMPARATOR_PlayerLose_Out(PLAYER_CAR_COMPARATOR_PLAYER_2_PlayerLose_Out_cwire),
 	.CC_PLAYER_CAR_COMPARATOR_PlayerData_InBus(PLAYER2_REG8_DataBus_out),
 	.CC_PLAYER_CAR_COMPARATOR_CarData_InBus(RegSHIFTER_PLAYER_2_data_OutBUS_cwire)
 
+);
+
+
+//----------------------------------------------------------------------
+// SC_POINTSCOUNTER_PLAYER_2
+//----------------------------------------------------------------------
+
+SC_POINTSCOUNTER SC_POINTSCOUNTER_u1(
+	.SC_POINTSCOUNTER_Data_OutBus(POINTSCOUNTER_PLAYER_2_Data_OutBus_cwire),
+	.SC_POINTSCOUNTER_LevelProgress_inLow(LEVELPROGRESSCOUNTER_DataOut_cwire),
+	.SC_POINTSCOUNTER_CLOCK_50(BB_SYSTEM_CLOCK_50),
+	.SC_POINTSCOUNTER_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
+	.SC_POINTSCOUNTER_CurrentLvl_In(LEVELCOUNTER_DataOut_cwire),
+	.SC_POINTSCOUNTER_PlayerLose_inLow(PLAYER_STATEMACHINE_PLAYER_2_PlayerLose_Out_cwire),
+	.SC_POINTSCOUNTER_upCount_inLow(LEVEL_STATEMACHINE_ProgressUpCount_out_cwire)	
+);
+
+
+//----------------------------------------------------------------------
+// CC_WINNERCOMPARATOR
+//----------------------------------------------------------------------
+
+
+CC_WINNERCOMPARATOR CC_WINNERCOMPARATOR_u0(
+	.CC_WINNERCOMPARATOR_Data0_outBus(WINNERCOMPARATOR_Data0_outBus_cwire),
+	.CC_WINNERCOMPARATOR_Data1_outBus(WINNERCOMPARATOR_Data1_outBus_cwire),
+	.CC_WINNERCOMPARATOR_Data2_outBus(WINNERCOMPARATOR_Data2_outBus_cwire),
+	.CC_WINNERCOMPARATOR_Data3_outBus(WINNERCOMPARATOR_Data3_outBus_cwire),
+	.CC_WINNERCOMPARATOR_Data4_outBus(WINNERCOMPARATOR_Data4_outBus_cwire),
+	.CC_WINNERCOMPARATOR_Data5_outBus(WINNERCOMPARATOR_Data5_outBus_cwire),
+	.CC_WINNERCOMPARATOR_Data6_outBus(WINNERCOMPARATOR_Data6_outBus_cwire),
+	.CC_WINNERCOMPARATOR_Data7_outBus(WINNERCOMPARATOR_Data7_outBus_cwire),
+	.CC_WINNERCOMPARATOR_DataPLAYER1_In(POINTSCOUNTER_Data_OutBus_cwire),
+	.CC_WINNERCOMPARATOR_DataPLAYER2_In(POINTSCOUNTER_PLAYER_2_Data_OutBus_cwire)
 );
 //######################################################################
 //#	TO FINAL MUX: VISUALIZATION
@@ -758,7 +876,7 @@ assign REGTOMUX_REG3_DataBus_Out_cwire = REG3toReg4_DataBus_out 						| 	PLAYER2
 assign REGTOMUX_REG4_DataBus_Out_cwire = REG4toReg5_DataBus_out						| 	PLAYER2_REG4toReg5_DataBus_out; 
 assign REGTOMUX_REG5_DataBus_Out_cwire = REG5toReg6_DataBus_out 						| 	PLAYER2_REG5toReg6_DataBus_out; 
 assign REGTOMUX_REG6_DataBus_Out_cwire = REG6toReg7_DataBus_out						| 	PLAYER2_REG6toReg7_DataBus_out; 
-assign REGTOMUX_REG7_DataBus_Out_cwire = PLAYER_CAR_COMPARATOR_Data_OutBus_cwire | 	PLAYER2_CAR_COMPARATOR_Data_OutBus_cwire 	; 
+assign REGTOMUX_REG7_DataBus_Out_cwire = PLAYER_CAR_COMPARATOR_Data_OutBus_cwire | 	CAR_COMPARATOR_PLAYER_2_Data_OutBus_cwire 	; 
 
 //######################################################################
 //#	TO LED MATRIZ: VISUALIZATION

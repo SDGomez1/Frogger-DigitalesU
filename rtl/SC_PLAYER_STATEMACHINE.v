@@ -20,7 +20,9 @@
 module SC_PLAYER_STATEMACHINE(
 //////////// OUTPUTS //////////
 	SC_PLAYER_STATEMACHINE_ShiftSelection_Out,
-
+	SC_PLAYER_STATEMACHINE_LoadData_Out,
+	SC_PLAYER_STATEMACHINE_PlayerData_Out,
+	SC_PLAYER_STATEMACHINE_PlayerLose_Out,
 	//////////// INPUTS //////////
 	SC_PLAYER_STATEMACHINE_CLOCK_50,
 	SC_PLAYER_STATEMACHINE_RESET_InHigh,
@@ -41,6 +43,7 @@ localparam STATE_MOVINGLEFT_1									= 2;
 localparam STATE_MOVINGRIGHT_0								= 3;
 localparam STATE_MOVINGRIGHT_1								= 4;
 localparam STATE_PLAYERLOSE									= 5;
+localparam STATE_LOADPLAYER									= 6;
 
 
 
@@ -49,6 +52,9 @@ localparam STATE_PLAYERLOSE									= 5;
 //=======================================================
 
 output reg 	[1:0]SC_PLAYER_STATEMACHINE_ShiftSelection_Out;
+output reg	SC_PLAYER_STATEMACHINE_LoadData_Out;
+output reg  [7:0]SC_PLAYER_STATEMACHINE_PlayerData_Out;
+output reg 	SC_PLAYER_STATEMACHINE_PlayerLose_Out;
 
 input 		SC_PLAYER_STATEMACHINE_CLOCK_50;
 input			SC_PLAYER_STATEMACHINE_RESET_InHigh;
@@ -115,10 +121,14 @@ begin
 											STATE_Signal = STATE_MOVINGRIGHT_1;
 											
 		STATE_PLAYERLOSE: 		if(SC_PLAYER_STATEMACHINE_FinishedLevel_InLow == 1'b0)
-											STATE_Signal = STATE_STANDINGSTILL;
+											STATE_Signal = STATE_LOADPLAYER;
 										else
 											STATE_Signal = STATE_PLAYERLOSE;
-		default: 					STATE_Signal = STATE_STANDINGSTILL;
+											
+		STATE_LOADPLAYER:			STATE_Signal=STATE_STANDINGSTILL;
+											
+											
+		default: 					STATE_Signal = STATE_LOADPLAYER;
 	
 	endcase
 
@@ -128,7 +138,7 @@ end
 always @ ( posedge SC_PLAYER_STATEMACHINE_CLOCK_50 , posedge SC_PLAYER_STATEMACHINE_RESET_InHigh)
 begin
 	if (SC_PLAYER_STATEMACHINE_RESET_InHigh == 1'b1)
-		STATE_Register <= STATE_STANDINGSTILL;
+		STATE_Register <= STATE_LOADPLAYER;
 	else
 		STATE_Register <= STATE_Signal;
 end
@@ -146,6 +156,9 @@ begin
 	STATE_STANDINGSTILL :	
 		begin
 			SC_PLAYER_STATEMACHINE_ShiftSelection_Out = 2'b00;
+			SC_PLAYER_STATEMACHINE_LoadData_Out 		= 1'b1;
+			SC_PLAYER_STATEMACHINE_PlayerData_Out 		= 0;
+			SC_PLAYER_STATEMACHINE_PlayerLose_Out		= 1;
 		end
 //=========================================================
 // STATE_MOVINGLEFT_0
@@ -153,6 +166,9 @@ begin
 	STATE_MOVINGLEFT_0 :	
 		begin
 			SC_PLAYER_STATEMACHINE_ShiftSelection_Out = 2'b01;
+			SC_PLAYER_STATEMACHINE_LoadData_Out 		=	1'b1;
+			SC_PLAYER_STATEMACHINE_PlayerData_Out 		=	0;
+			SC_PLAYER_STATEMACHINE_PlayerLose_Out		= 1;
 			
 		end
 //=========================================================
@@ -161,7 +177,9 @@ begin
 	STATE_MOVINGLEFT_1 :	
 		begin
 			SC_PLAYER_STATEMACHINE_ShiftSelection_Out = 2'b00;
-			
+			SC_PLAYER_STATEMACHINE_LoadData_Out 		=	1'b1;
+			SC_PLAYER_STATEMACHINE_PlayerData_Out 		=	0;
+			SC_PLAYER_STATEMACHINE_PlayerLose_Out		= 1;
 		end
 
 //=========================================================
@@ -170,7 +188,9 @@ begin
 	STATE_MOVINGRIGHT_0 :
 		begin
 			SC_PLAYER_STATEMACHINE_ShiftSelection_Out = 2'b10;
-			
+			SC_PLAYER_STATEMACHINE_LoadData_Out 		=	1'b1;
+			SC_PLAYER_STATEMACHINE_PlayerData_Out 		=	0;
+			SC_PLAYER_STATEMACHINE_PlayerLose_Out		= 1;
 		end
 		
 //=========================================================
@@ -179,7 +199,9 @@ begin
 	STATE_MOVINGRIGHT_1 :
 		begin
 			SC_PLAYER_STATEMACHINE_ShiftSelection_Out = 2'b00;
-			
+			SC_PLAYER_STATEMACHINE_LoadData_Out 		=	1'b1;
+			SC_PLAYER_STATEMACHINE_PlayerData_Out 		=	0;
+			SC_PLAYER_STATEMACHINE_PlayerLose_Out		= 1;
 		end
 
 //=========================================================
@@ -188,7 +210,20 @@ begin
 	STATE_PLAYERLOSE :
 		begin
 			SC_PLAYER_STATEMACHINE_ShiftSelection_Out = 2'b00;
-			
+			SC_PLAYER_STATEMACHINE_LoadData_Out 		=	1'b1;
+			SC_PLAYER_STATEMACHINE_PlayerData_Out 		=	0;
+			SC_PLAYER_STATEMACHINE_PlayerLose_Out		= 0;
+		end
+		
+//=========================================================
+// STATE_LOADPLAYER
+//=========================================================
+	STATE_LOADPLAYER :
+		begin
+			SC_PLAYER_STATEMACHINE_ShiftSelection_Out = 2'b00;
+			SC_PLAYER_STATEMACHINE_LoadData_Out 		=	1'b0;
+			SC_PLAYER_STATEMACHINE_PlayerData_Out 		=	8'b00000001;
+			SC_PLAYER_STATEMACHINE_PlayerLose_Out		= 1;
 		end
 //=========================================================
 // DEFAULT
@@ -196,6 +231,9 @@ begin
 	default :
 		begin
 			SC_PLAYER_STATEMACHINE_ShiftSelection_Out = 2'b00;
+			SC_PLAYER_STATEMACHINE_LoadData_Out 		=	1'b0;
+			SC_PLAYER_STATEMACHINE_PlayerData_Out 		=	8'b00000001;
+			SC_PLAYER_STATEMACHINE_PlayerLose_Out		= 1;
 		end
 	endcase
 end

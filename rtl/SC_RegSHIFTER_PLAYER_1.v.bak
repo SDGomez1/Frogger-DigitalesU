@@ -54,12 +54,8 @@ reg [RegSHIFTER_DATAWIDTH-1:0] RegSHIFTER_Signal;
 always @(*)
 begin
 
-	if (SC_RegSHIFTER_PLAYER_1_load_InLow == 1'b0)begin
-		if(SC_RegSHIFTER_PLAYER_1_data_InBUS == 8'b00000001)
-			RegSHIFTER_Signal = 8'b00010000;
-		else 
-			RegSHIFTER_Signal = 8'b00000000;
-	end
+	if (SC_RegSHIFTER_PLAYER_1_load_InLow == 1'b0)
+		RegSHIFTER_Signal = SC_RegSHIFTER_PLAYER_1_data_InBUS;
 		
 	else if (SC_RegSHIFTER_PLAYER_1_shiftselection_In == 2'b01) begin
 		if(RegSHIFTER_Register == 8'b10000000)

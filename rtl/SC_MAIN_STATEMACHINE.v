@@ -21,7 +21,6 @@
 module SC_MAIN_STATEMACHINE(
 //////////// OUTPUTS //////////
 	SC_MAIN_STATEMACHINE_CurrentState_Out,
-	SC_MAIN_STATEMACHINE_LoadSignal_out,
 
 //////////// INPUTS //////////
 
@@ -50,7 +49,6 @@ localparam STATE_AWAITSTART_1									= 3;
 //=======================================================
 
 output reg		[STATE_DATAWIDTH-1:0] SC_MAIN_STATEMACHINE_CurrentState_Out;
-output reg			SC_MAIN_STATEMACHINE_LoadSignal_out;
 
 input				SC_MAIN_STATEMACHINE_CLOCK_50;
 input 			SC_MAIN_STATEMACHINE_RESET_InHigh;
@@ -128,7 +126,6 @@ begin
 	STATE_AWAITSTART_0 :	
 		begin
 			SC_MAIN_STATEMACHINE_CurrentState_Out = 2'b00;
-			SC_MAIN_STATEMACHINE_LoadSignal_out = 1'b0;
 		end
 //=========================================================
 // STATE_STARTGAME_0
@@ -136,7 +133,6 @@ begin
 	STATE_STARTGAME_0 :	
 		begin
 			SC_MAIN_STATEMACHINE_CurrentState_Out = 2'b01;
-			SC_MAIN_STATEMACHINE_LoadSignal_out = 1'b1;
 		end
 
 //========================================================
@@ -145,7 +141,6 @@ begin
 	STATE_ENDGAME_0 :
 		begin
 			SC_MAIN_STATEMACHINE_CurrentState_Out = 2'b10;
-			SC_MAIN_STATEMACHINE_LoadSignal_out = 1'b0;
 			
 		end
 //=========================================================
@@ -154,7 +149,6 @@ begin
 	STATE_AWAITSTART_1 :	
 		begin
 			SC_MAIN_STATEMACHINE_CurrentState_Out = 2'b11;
-			SC_MAIN_STATEMACHINE_LoadSignal_out = 1'b0;
 		end
 //=========================================================
 // DEFAULT
@@ -162,7 +156,6 @@ begin
 	default :
 		begin
 			SC_MAIN_STATEMACHINE_CurrentState_Out = 2'b00;
-			SC_MAIN_STATEMACHINE_LoadSignal_out = 1'b1;
 		end
 	endcase
 end
