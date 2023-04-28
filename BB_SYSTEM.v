@@ -917,7 +917,8 @@ matrix_ctrl matrix_ctrl_unit_0(
 assign BB_SYSTEM_startButton_Out = BB_SYSTEM_startButton_InLow_cwire;
 assign BB_SYSTEM_leftButton_Out = BB_SYSTEM_leftButton_InLow_cwire;
 assign BB_SYSTEM_rightButton_Out = BB_SYSTEM_rightButton_InLow_cwire;
-
+assign BB_SYSTEM_upButton_Out		=	BB_SYSTEM_upButton_InLow_cwire;
+assign BB_SYSTEM_downButton_Out	= BB_SYSTEM_downButton_InLow_cwire;
 
 
 

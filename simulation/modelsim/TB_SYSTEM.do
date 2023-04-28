@@ -118,6 +118,9 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_MUX3_1_u7/CC_MUX3_1_DataBus_Out
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_POINTSCOUNTER_u0/SC_POINTSCOUNTER_PlayerLose_inLow
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_POINTSCOUNTER_u0/SC_POINTSCOUNTER_LevelProgress_inLow
 
+add wave  -divider CC_LEVEL_DATAHANDLER_PLAYER_2_u0
+add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/CC_LEVEL_DATAHANDLER_PLAYER_2_u0/CC_LEVEL_DATAHANDLER_PLAYER_2_LevelData_OutBus
+
 
 
 
