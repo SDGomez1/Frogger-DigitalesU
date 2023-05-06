@@ -28,6 +28,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "BB_SYSTEM_upButton_Out",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_downButton_Out",
+					"strict" : false
+				},
+				{
 					"name" : "BB_SYSTEM_CLOCK_50",
 					"strict" : false
 				},
@@ -48,11 +56,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "BB_SYSTEM_downButton_InLow",
+					"name" : "BB_SYSTEM_upButton_InLow",
 					"strict" : false
 				},
 				{
-					"name" : "BB_SYSTEM_upButton_InLow",
+					"name" : "BB_SYSTEM_downButton_InLow",
 					"strict" : false
 				}
 			]

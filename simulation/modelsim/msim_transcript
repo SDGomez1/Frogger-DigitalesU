@@ -1,4 +1,4 @@
-# Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# Reading D:/Quartus/modelsim_ase/tcl/vsim/pref.tcl
 # do BB_SYSTEM_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -7,52 +7,233 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap work rtl_work 
-# Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying D:/Quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/shift_reg_start_done.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:52:49 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/shift_reg_start_done.v 
+# Start time: 10:03:56 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v 
 # -- Compiling module shift_reg_start_done
 # 
 # Top level modules:
 # 	shift_reg_start_done
-# End time: 13:52:49 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:03:57 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/max7219_ctrl.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:52:49 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/max7219_ctrl.v 
+# Start time: 10:03:57 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v 
 # -- Compiling module matrix_ctrl
 # 
 # Top level modules:
 # 	matrix_ctrl
-# End time: 13:52:49 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:03:57 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_DEBOUNCE1.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:52:49 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_DEBOUNCE1.v 
+# Start time: 10:03:57 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v 
 # -- Compiling module SC_DEBOUNCE1
 # 
 # Top level modules:
 # 	SC_DEBOUNCE1
-# End time: 13:52:49 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:03:57 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales {D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:52:49 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v 
+# Start time: 10:03:57 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales" D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v 
 # -- Compiling module BB_SYSTEM
-# ** Error: (vlog-13069) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v(921): near "assign": syntax error, unexpected assign, expecting ';' or ','.
-# End time: 13:52:49 on Apr 28,2023, Elapsed time: 0:00:00
+# 
+# Top level modules:
+# 	BB_SYSTEM
+# End time: 10:03:57 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:57 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v 
+# -- Compiling module SC_MAIN_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_MAIN_STATEMACHINE
+# End time: 10:03:57 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:57 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v 
+# -- Compiling module SC_LEVELCOUNTER
+# 
+# Top level modules:
+# 	SC_LEVELCOUNTER
+# End time: 10:03:57 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:57 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v 
+# -- Compiling module SC_LEVEL_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_LEVEL_STATEMACHINE
+# End time: 10:03:57 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:57 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v 
+# -- Compiling module SC_LEVELPROGRESSCOUNTER
+# 
+# Top level modules:
+# 	SC_LEVELPROGRESSCOUNTER
+# End time: 10:03:57 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:57 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v 
+# -- Compiling module SC_upSPEEDCOUNTER
+# 
+# Top level modules:
+# 	SC_upSPEEDCOUNTER
+# End time: 10:03:58 on May 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:58 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v 
+# -- Compiling module CC_SPEEDCOMPARATOR
+# 
+# Top level modules:
+# 	CC_SPEEDCOMPARATOR
+# End time: 10:03:58 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:58 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v 
+# -- Compiling module CC_LEVEL_DATAHANDLER
+# 
+# Top level modules:
+# 	CC_LEVEL_DATAHANDLER
+# End time: 10:03:58 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:58 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v 
+# -- Compiling module SC_RegGENERAL
+# 
+# Top level modules:
+# 	SC_RegGENERAL
+# End time: 10:03:58 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:58 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v 
+# -- Compiling module CC_DATADELAY
+# 
+# Top level modules:
+# 	CC_DATADELAY
+# End time: 10:03:58 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:58 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v 
+# -- Compiling module CC_MUX3_1
+# 
+# Top level modules:
+# 	CC_MUX3_1
+# End time: 10:03:58 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:58 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v 
+# -- Compiling module SC_PLAYER_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_PLAYER_STATEMACHINE
+# End time: 10:03:58 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:58 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v 
+# -- Compiling module CC_PLAYER_CAR_COMPARATOR
+# 
+# Top level modules:
+# 	CC_PLAYER_CAR_COMPARATOR
+# End time: 10:03:58 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:58 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v 
+# -- Compiling module SC_RegSHIFTER_PLAYER_1
+# 
+# Top level modules:
+# 	SC_RegSHIFTER_PLAYER_1
+# End time: 10:03:58 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:58 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v 
+# -- Compiling module SC_RegSHIFTER_PLAYER_2
+# 
+# Top level modules:
+# 	SC_RegSHIFTER_PLAYER_2
+# End time: 10:03:58 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:58 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v 
+# -- Compiling module CC_LEVEL_DATAHANDLER_PLAYER_2
+# 
+# Top level modules:
+# 	CC_LEVEL_DATAHANDLER_PLAYER_2
+# End time: 10:03:58 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:59 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v 
+# -- Compiling module SC_POINTSCOUNTER
+# 
+# Top level modules:
+# 	SC_POINTSCOUNTER
+# End time: 10:03:59 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:59 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v 
+# -- Compiling module CC_WINNERCOMPARATOR
+# 
+# Top level modules:
+# 	CC_WINNERCOMPARATOR
+# End time: 10:03:59 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim {D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:03:59 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim" D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt 
+# -- Compiling module TB_SYSTEM
+# ** Error: D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt(96): (vlog-2110) Illegal reference to net "TB_SYSTEM_downButton_Out".
+# End time: 10:03:59 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 1, Warnings: 0
-# ** Error: C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./BB_SYSTEM_run_msim_rtl_verilog.do line 11
-# C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+# ** Error: D:/Quartus/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./BB_SYSTEM_run_msim_rtl_verilog.do line 30
+# D:/Quartus/modelsim_ase/win32aloem/vlog failed.
 #     while executing
-# "vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU {C:/Users/Sergio/Documents/Programacion/Frogger-Digita..."
+# "vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim {D:/Documentos/personal/frogger-digitales/simulatio..."
 do TB_SYSTEM.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -63,231 +244,231 @@ do TB_SYSTEM.do
 # vmap work rtl_work 
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/shift_reg_start_done.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:08 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/shift_reg_start_done.v 
+# Start time: 10:04:34 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v 
 # -- Compiling module shift_reg_start_done
 # 
 # Top level modules:
 # 	shift_reg_start_done
-# End time: 13:53:08 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:34 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/max7219_ctrl.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:08 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/max7219_ctrl.v 
+# Start time: 10:04:34 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v 
 # -- Compiling module matrix_ctrl
 # 
 # Top level modules:
 # 	matrix_ctrl
-# End time: 13:53:08 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:35 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_DEBOUNCE1.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:08 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_DEBOUNCE1.v 
+# Start time: 10:04:35 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v 
 # -- Compiling module SC_DEBOUNCE1
 # 
 # Top level modules:
 # 	SC_DEBOUNCE1
-# End time: 13:53:08 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:35 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales {D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:08 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v 
+# Start time: 10:04:35 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales" D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v 
 # -- Compiling module BB_SYSTEM
 # 
 # Top level modules:
 # 	BB_SYSTEM
-# End time: 13:53:08 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:35 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_MAIN_STATEMACHINE.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:08 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_MAIN_STATEMACHINE.v 
+# Start time: 10:04:35 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v 
 # -- Compiling module SC_MAIN_STATEMACHINE
 # 
 # Top level modules:
 # 	SC_MAIN_STATEMACHINE
-# End time: 13:53:08 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:35 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVELCOUNTER.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:08 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVELCOUNTER.v 
+# Start time: 10:04:35 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v 
 # -- Compiling module SC_LEVELCOUNTER
 # 
 # Top level modules:
 # 	SC_LEVELCOUNTER
-# End time: 13:53:08 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:35 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVEL_STATEMACHINE.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:08 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVEL_STATEMACHINE.v 
+# Start time: 10:04:35 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v 
 # -- Compiling module SC_LEVEL_STATEMACHINE
 # 
 # Top level modules:
 # 	SC_LEVEL_STATEMACHINE
-# End time: 13:53:08 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:35 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVELPROGRESSCOUNTER.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:09 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVELPROGRESSCOUNTER.v 
+# Start time: 10:04:35 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v 
 # -- Compiling module SC_LEVELPROGRESSCOUNTER
 # 
 # Top level modules:
 # 	SC_LEVELPROGRESSCOUNTER
-# End time: 13:53:09 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:35 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_upSPEEDCOUNTER.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:09 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_upSPEEDCOUNTER.v 
+# Start time: 10:04:35 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v 
 # -- Compiling module SC_upSPEEDCOUNTER
 # 
 # Top level modules:
 # 	SC_upSPEEDCOUNTER
-# End time: 13:53:09 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:35 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_SPEEDCOMPARATOR.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:09 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_SPEEDCOMPARATOR.v 
+# Start time: 10:04:35 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v 
 # -- Compiling module CC_SPEEDCOMPARATOR
 # 
 # Top level modules:
 # 	CC_SPEEDCOMPARATOR
-# End time: 13:53:09 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:35 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_LEVEL_DATAHANDLER.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:09 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_LEVEL_DATAHANDLER.v 
+# Start time: 10:04:35 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v 
 # -- Compiling module CC_LEVEL_DATAHANDLER
 # 
 # Top level modules:
 # 	CC_LEVEL_DATAHANDLER
-# End time: 13:53:09 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:36 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_RegGENERAL_CAR.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:09 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_RegGENERAL_CAR.v 
+# Start time: 10:04:36 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v 
 # -- Compiling module SC_RegGENERAL
 # 
 # Top level modules:
 # 	SC_RegGENERAL
-# End time: 13:53:09 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:36 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_DATADELAY.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:09 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_DATADELAY.v 
+# Start time: 10:04:36 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v 
 # -- Compiling module CC_DATADELAY
 # 
 # Top level modules:
 # 	CC_DATADELAY
-# End time: 13:53:09 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:36 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_MUX3_1.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:09 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_MUX3_1.v 
+# Start time: 10:04:36 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v 
 # -- Compiling module CC_MUX3_1
 # 
 # Top level modules:
 # 	CC_MUX3_1
-# End time: 13:53:09 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:36 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_PLAYER_STATEMACHINE.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:09 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_PLAYER_STATEMACHINE.v 
+# Start time: 10:04:36 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v 
 # -- Compiling module SC_PLAYER_STATEMACHINE
 # 
 # Top level modules:
 # 	SC_PLAYER_STATEMACHINE
-# End time: 13:53:09 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:36 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_PLAYER_CAR_COMPARATOR.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:09 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_PLAYER_CAR_COMPARATOR.v 
+# Start time: 10:04:36 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v 
 # -- Compiling module CC_PLAYER_CAR_COMPARATOR
 # 
 # Top level modules:
 # 	CC_PLAYER_CAR_COMPARATOR
-# End time: 13:53:09 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:36 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_RegSHIFTER_PLAYER_1.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:09 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_RegSHIFTER_PLAYER_1.v 
+# Start time: 10:04:36 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v 
 # -- Compiling module SC_RegSHIFTER_PLAYER_1
 # 
 # Top level modules:
 # 	SC_RegSHIFTER_PLAYER_1
-# End time: 13:53:10 on Apr 28,2023, Elapsed time: 0:00:01
+# End time: 10:04:36 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_RegSHIFTER_PLAYER_2.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:10 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_RegSHIFTER_PLAYER_2.v 
+# Start time: 10:04:36 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v 
 # -- Compiling module SC_RegSHIFTER_PLAYER_2
 # 
 # Top level modules:
 # 	SC_RegSHIFTER_PLAYER_2
-# End time: 13:53:10 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:36 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:10 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v 
+# Start time: 10:04:36 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v 
 # -- Compiling module CC_LEVEL_DATAHANDLER_PLAYER_2
 # 
 # Top level modules:
 # 	CC_LEVEL_DATAHANDLER_PLAYER_2
-# End time: 13:53:10 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:36 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_POINTSCOUNTER.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:10 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_POINTSCOUNTER.v 
+# Start time: 10:04:36 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v 
 # -- Compiling module SC_POINTSCOUNTER
 # 
 # Top level modules:
 # 	SC_POINTSCOUNTER
-# End time: 13:53:10 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:36 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_WINNERCOMPARATOR.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:10 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_WINNERCOMPARATOR.v 
+# Start time: 10:04:37 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v 
 # -- Compiling module CC_WINNERCOMPARATOR
 # 
 # Top level modules:
 # 	CC_WINNERCOMPARATOR
-# End time: 13:53:10 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:37 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim {D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:53:10 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt 
+# Start time: 10:04:37 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim" D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt 
 # -- Compiling module TB_SYSTEM
 # 
 # Top level modules:
 # 	TB_SYSTEM
-# End time: 13:53:10 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:04:37 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  TB_SYSTEM
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" TB_SYSTEM 
-# Start time: 13:53:11 on Apr 28,2023
+# Start time: 10:04:38 on May 06,2023
 # Loading work.TB_SYSTEM
 # Loading work.BB_SYSTEM
 # Loading work.SC_DEBOUNCE1
@@ -310,12 +491,6 @@ do TB_SYSTEM.do
 # Loading work.CC_WINNERCOMPARATOR
 # Loading work.matrix_ctrl
 # Loading work.shift_reg_start_done
-# ** Warning: (vsim-3017) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Too few port connections. Expected 15, found 11.
-#    Time: 0 ps  Iteration: 0  Instance: /TB_SYSTEM/BB_SYSTEM_u0 File: C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_upButton_Out'.
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_downButton_Out'.
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_upButton_InLow'.
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_downButton_InLow'.
 # 
 # add wave *
 # view structure
@@ -324,13 +499,12 @@ do TB_SYSTEM.do
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # Running testbench
-# ** Warning: (vsim-3017) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Too few port connections. Expected 15, found 11.
-#    Time: 0 ps  Iteration: 0  Instance: /TB_SYSTEM/BB_SYSTEM_u0 File: C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_upButton_Out'.
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_downButton_Out'.
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_upButton_InLow'.
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_downButton_InLow'.
-# Running testbench
+# ** Error: (vish-4014) No objects found matching '/TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_PLAYER_2_U0/SC_RegSHIFTER_PLAYER_1_shiftselection_In'.
+# Executing ONERROR command at macro ./TB_SYSTEM.do line 113
+# ** Error: (vish-4014) No objects found matching '/TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_shiftselection_In'.
+# Executing ONERROR command at macro ./TB_SYSTEM.do line 114
+# ** Error: (vish-4014) No objects found matching '/TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_data_InBUS'.
+# Executing ONERROR command at macro ./TB_SYSTEM.do line 115
 do TB_SYSTEM.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -341,233 +515,233 @@ do TB_SYSTEM.do
 # vmap work rtl_work 
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/shift_reg_start_done.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:06 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/shift_reg_start_done.v 
+# Start time: 10:05:36 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v 
 # -- Compiling module shift_reg_start_done
 # 
 # Top level modules:
 # 	shift_reg_start_done
-# End time: 13:56:06 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:37 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/max7219_ctrl.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:06 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/max7219_ctrl.v 
+# Start time: 10:05:37 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v 
 # -- Compiling module matrix_ctrl
 # 
 # Top level modules:
 # 	matrix_ctrl
-# End time: 13:56:06 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:37 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_DEBOUNCE1.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:06 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_DEBOUNCE1.v 
+# Start time: 10:05:37 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v 
 # -- Compiling module SC_DEBOUNCE1
 # 
 # Top level modules:
 # 	SC_DEBOUNCE1
-# End time: 13:56:06 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:37 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales {D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:06 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v 
+# Start time: 10:05:37 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales" D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v 
 # -- Compiling module BB_SYSTEM
 # 
 # Top level modules:
 # 	BB_SYSTEM
-# End time: 13:56:06 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:37 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_MAIN_STATEMACHINE.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:06 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_MAIN_STATEMACHINE.v 
+# Start time: 10:05:37 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v 
 # -- Compiling module SC_MAIN_STATEMACHINE
 # 
 # Top level modules:
 # 	SC_MAIN_STATEMACHINE
-# End time: 13:56:06 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:37 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVELCOUNTER.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:06 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVELCOUNTER.v 
+# Start time: 10:05:37 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v 
 # -- Compiling module SC_LEVELCOUNTER
 # 
 # Top level modules:
 # 	SC_LEVELCOUNTER
-# End time: 13:56:06 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:37 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVEL_STATEMACHINE.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:06 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVEL_STATEMACHINE.v 
+# Start time: 10:05:37 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v 
 # -- Compiling module SC_LEVEL_STATEMACHINE
 # 
 # Top level modules:
 # 	SC_LEVEL_STATEMACHINE
-# End time: 13:56:06 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:37 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVELPROGRESSCOUNTER.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:06 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_LEVELPROGRESSCOUNTER.v 
+# Start time: 10:05:37 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v 
 # -- Compiling module SC_LEVELPROGRESSCOUNTER
 # 
 # Top level modules:
 # 	SC_LEVELPROGRESSCOUNTER
-# End time: 13:56:07 on Apr 28,2023, Elapsed time: 0:00:01
+# End time: 10:05:37 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_upSPEEDCOUNTER.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:07 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_upSPEEDCOUNTER.v 
+# Start time: 10:05:37 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v 
 # -- Compiling module SC_upSPEEDCOUNTER
 # 
 # Top level modules:
 # 	SC_upSPEEDCOUNTER
-# End time: 13:56:07 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:37 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_SPEEDCOMPARATOR.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:07 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_SPEEDCOMPARATOR.v 
+# Start time: 10:05:37 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v 
 # -- Compiling module CC_SPEEDCOMPARATOR
 # 
 # Top level modules:
 # 	CC_SPEEDCOMPARATOR
-# End time: 13:56:07 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:37 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_LEVEL_DATAHANDLER.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:07 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_LEVEL_DATAHANDLER.v 
+# Start time: 10:05:37 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v 
 # -- Compiling module CC_LEVEL_DATAHANDLER
 # 
 # Top level modules:
 # 	CC_LEVEL_DATAHANDLER
-# End time: 13:56:07 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:37 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_RegGENERAL_CAR.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:07 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_RegGENERAL_CAR.v 
+# Start time: 10:05:37 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v 
 # -- Compiling module SC_RegGENERAL
 # 
 # Top level modules:
 # 	SC_RegGENERAL
-# End time: 13:56:07 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:38 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_DATADELAY.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:07 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_DATADELAY.v 
+# Start time: 10:05:38 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v 
 # -- Compiling module CC_DATADELAY
 # 
 # Top level modules:
 # 	CC_DATADELAY
-# End time: 13:56:07 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:38 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_MUX3_1.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:07 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_MUX3_1.v 
+# Start time: 10:05:38 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v 
 # -- Compiling module CC_MUX3_1
 # 
 # Top level modules:
 # 	CC_MUX3_1
-# End time: 13:56:07 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:38 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_PLAYER_STATEMACHINE.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:07 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_PLAYER_STATEMACHINE.v 
+# Start time: 10:05:38 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v 
 # -- Compiling module SC_PLAYER_STATEMACHINE
 # 
 # Top level modules:
 # 	SC_PLAYER_STATEMACHINE
-# End time: 13:56:07 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:38 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_PLAYER_CAR_COMPARATOR.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:07 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_PLAYER_CAR_COMPARATOR.v 
+# Start time: 10:05:38 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v 
 # -- Compiling module CC_PLAYER_CAR_COMPARATOR
 # 
 # Top level modules:
 # 	CC_PLAYER_CAR_COMPARATOR
-# End time: 13:56:07 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:38 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_RegSHIFTER_PLAYER_1.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:07 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_RegSHIFTER_PLAYER_1.v 
+# Start time: 10:05:38 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v 
 # -- Compiling module SC_RegSHIFTER_PLAYER_1
 # 
 # Top level modules:
 # 	SC_RegSHIFTER_PLAYER_1
-# End time: 13:56:08 on Apr 28,2023, Elapsed time: 0:00:01
+# End time: 10:05:38 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_RegSHIFTER_PLAYER_2.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:08 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_RegSHIFTER_PLAYER_2.v 
+# Start time: 10:05:38 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v 
 # -- Compiling module SC_RegSHIFTER_PLAYER_2
 # 
 # Top level modules:
 # 	SC_RegSHIFTER_PLAYER_2
-# End time: 13:56:08 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:38 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:08 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v 
+# Start time: 10:05:38 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v 
 # -- Compiling module CC_LEVEL_DATAHANDLER_PLAYER_2
 # 
 # Top level modules:
 # 	CC_LEVEL_DATAHANDLER_PLAYER_2
-# End time: 13:56:08 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:38 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_POINTSCOUNTER.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:08 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/SC_POINTSCOUNTER.v 
+# Start time: 10:05:38 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v 
 # -- Compiling module SC_POINTSCOUNTER
 # 
 # Top level modules:
 # 	SC_POINTSCOUNTER
-# End time: 13:56:08 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:38 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_WINNERCOMPARATOR.v}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:08 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/rtl/CC_WINNERCOMPARATOR.v 
+# Start time: 10:05:38 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v 
 # -- Compiling module CC_WINNERCOMPARATOR
 # 
 # Top level modules:
 # 	CC_WINNERCOMPARATOR
-# End time: 13:56:08 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:38 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim {C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt}
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim {D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:08 on Apr 28,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim" C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt 
+# Start time: 10:05:38 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim" D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt 
 # -- Compiling module TB_SYSTEM
 # 
 # Top level modules:
 # 	TB_SYSTEM
-# End time: 13:56:08 on Apr 28,2023, Elapsed time: 0:00:00
+# End time: 10:05:38 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  TB_SYSTEM
-# End time: 13:56:10 on Apr 28,2023, Elapsed time: 0:02:59
-# Errors: 0, Warnings: 10
+# End time: 10:05:40 on May 06,2023, Elapsed time: 0:01:02
+# Errors: 9, Warnings: 0
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" TB_SYSTEM 
-# Start time: 13:56:10 on Apr 28,2023
+# Start time: 10:05:40 on May 06,2023
 # Loading work.TB_SYSTEM
 # Loading work.BB_SYSTEM
 # Loading work.SC_DEBOUNCE1
@@ -590,12 +764,6 @@ do TB_SYSTEM.do
 # Loading work.CC_WINNERCOMPARATOR
 # Loading work.matrix_ctrl
 # Loading work.shift_reg_start_done
-# ** Warning: (vsim-3017) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Too few port connections. Expected 15, found 11.
-#    Time: 0 ps  Iteration: 0  Instance: /TB_SYSTEM/BB_SYSTEM_u0 File: C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_upButton_Out'.
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_downButton_Out'.
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_upButton_InLow'.
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_downButton_InLow'.
 # 
 # add wave *
 # view structure
@@ -604,12 +772,1350 @@ do TB_SYSTEM.do
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # Running testbench
-# ** Warning: (vsim-3017) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Too few port connections. Expected 15, found 11.
-#    Time: 0 ps  Iteration: 0  Instance: /TB_SYSTEM/BB_SYSTEM_u0 File: C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/BB_SYSTEM.v
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_upButton_Out'.
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_downButton_Out'.
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_upButton_InLow'.
-# ** Warning: (vsim-3722) C:/Users/Sergio/Documents/Programacion/Frogger-DigitalesU/simulation/modelsim/TB_SYSTEM.vt(52): [TFMPC] - Missing connection for port 'BB_SYSTEM_downButton_InLow'.
 # Running testbench
-# End time: 14:02:07 on Apr 28,2023, Elapsed time: 0:05:57
-# Errors: 0, Warnings: 10
+do TB_SYSTEM.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:30 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v 
+# -- Compiling module shift_reg_start_done
+# 
+# Top level modules:
+# 	shift_reg_start_done
+# End time: 10:07:32 on May 06,2023, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:32 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v 
+# -- Compiling module matrix_ctrl
+# 
+# Top level modules:
+# 	matrix_ctrl
+# End time: 10:07:32 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:32 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v 
+# -- Compiling module SC_DEBOUNCE1
+# 
+# Top level modules:
+# 	SC_DEBOUNCE1
+# End time: 10:07:32 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales {D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:33 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales" D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v 
+# -- Compiling module BB_SYSTEM
+# 
+# Top level modules:
+# 	BB_SYSTEM
+# End time: 10:07:33 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:33 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v 
+# -- Compiling module SC_MAIN_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_MAIN_STATEMACHINE
+# End time: 10:07:33 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:33 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v 
+# -- Compiling module SC_LEVELCOUNTER
+# 
+# Top level modules:
+# 	SC_LEVELCOUNTER
+# End time: 10:07:33 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:33 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v 
+# -- Compiling module SC_LEVEL_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_LEVEL_STATEMACHINE
+# End time: 10:07:33 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:33 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v 
+# -- Compiling module SC_LEVELPROGRESSCOUNTER
+# 
+# Top level modules:
+# 	SC_LEVELPROGRESSCOUNTER
+# End time: 10:07:33 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:33 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v 
+# -- Compiling module SC_upSPEEDCOUNTER
+# 
+# Top level modules:
+# 	SC_upSPEEDCOUNTER
+# End time: 10:07:33 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:33 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v 
+# -- Compiling module CC_SPEEDCOMPARATOR
+# 
+# Top level modules:
+# 	CC_SPEEDCOMPARATOR
+# End time: 10:07:33 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:33 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v 
+# -- Compiling module CC_LEVEL_DATAHANDLER
+# 
+# Top level modules:
+# 	CC_LEVEL_DATAHANDLER
+# End time: 10:07:33 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:34 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v 
+# -- Compiling module SC_RegGENERAL
+# 
+# Top level modules:
+# 	SC_RegGENERAL
+# End time: 10:07:34 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:34 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v 
+# -- Compiling module CC_DATADELAY
+# 
+# Top level modules:
+# 	CC_DATADELAY
+# End time: 10:07:34 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:34 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v 
+# -- Compiling module CC_MUX3_1
+# 
+# Top level modules:
+# 	CC_MUX3_1
+# End time: 10:07:34 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:34 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v 
+# -- Compiling module SC_PLAYER_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_PLAYER_STATEMACHINE
+# End time: 10:07:34 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:34 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v 
+# -- Compiling module CC_PLAYER_CAR_COMPARATOR
+# 
+# Top level modules:
+# 	CC_PLAYER_CAR_COMPARATOR
+# End time: 10:07:34 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:34 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v 
+# -- Compiling module SC_RegSHIFTER_PLAYER_1
+# 
+# Top level modules:
+# 	SC_RegSHIFTER_PLAYER_1
+# End time: 10:07:34 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:34 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v 
+# -- Compiling module SC_RegSHIFTER_PLAYER_2
+# 
+# Top level modules:
+# 	SC_RegSHIFTER_PLAYER_2
+# End time: 10:07:34 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:34 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v 
+# -- Compiling module CC_LEVEL_DATAHANDLER_PLAYER_2
+# 
+# Top level modules:
+# 	CC_LEVEL_DATAHANDLER_PLAYER_2
+# End time: 10:07:34 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:34 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v 
+# -- Compiling module SC_POINTSCOUNTER
+# 
+# Top level modules:
+# 	SC_POINTSCOUNTER
+# End time: 10:07:34 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:34 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v 
+# -- Compiling module CC_WINNERCOMPARATOR
+# 
+# Top level modules:
+# 	CC_WINNERCOMPARATOR
+# End time: 10:07:34 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim {D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:07:34 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim" D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt 
+# -- Compiling module TB_SYSTEM
+# 
+# Top level modules:
+# 	TB_SYSTEM
+# End time: 10:07:35 on May 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  TB_SYSTEM
+# End time: 10:07:36 on May 06,2023, Elapsed time: 0:01:56
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" TB_SYSTEM 
+# Start time: 10:07:36 on May 06,2023
+# Loading work.TB_SYSTEM
+# Loading work.BB_SYSTEM
+# Loading work.SC_DEBOUNCE1
+# Loading work.SC_MAIN_STATEMACHINE
+# Loading work.SC_LEVEL_STATEMACHINE
+# Loading work.SC_PLAYER_STATEMACHINE
+# Loading work.SC_LEVELCOUNTER
+# Loading work.SC_LEVELPROGRESSCOUNTER
+# Loading work.SC_upSPEEDCOUNTER
+# Loading work.CC_SPEEDCOMPARATOR
+# Loading work.CC_LEVEL_DATAHANDLER
+# Loading work.SC_RegGENERAL
+# Loading work.CC_DATADELAY
+# Loading work.CC_MUX3_1
+# Loading work.SC_RegSHIFTER_PLAYER_1
+# Loading work.CC_PLAYER_CAR_COMPARATOR
+# Loading work.SC_POINTSCOUNTER
+# Loading work.CC_LEVEL_DATAHANDLER_PLAYER_2
+# Loading work.SC_RegSHIFTER_PLAYER_2
+# Loading work.CC_WINNERCOMPARATOR
+# Loading work.matrix_ctrl
+# Loading work.shift_reg_start_done
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Running testbench
+# ** Error: (vish-4014) No objects found matching '/TB_SYSTEM/BB_SYSTEM_upButton_InLow'.
+# Executing ONERROR command at macro ./TB_SYSTEM.do line 13
+# ** Error: (vish-4014) No objects found matching '/TB_SYSTEM/BB_SYSTEM_downButton_InLow'.
+# Executing ONERROR command at macro ./TB_SYSTEM.do line 14
+# Running testbench
+do TB_SYSTEM.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:13 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v 
+# -- Compiling module shift_reg_start_done
+# 
+# Top level modules:
+# 	shift_reg_start_done
+# End time: 10:08:13 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:13 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v 
+# -- Compiling module matrix_ctrl
+# 
+# Top level modules:
+# 	matrix_ctrl
+# End time: 10:08:13 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:13 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v 
+# -- Compiling module SC_DEBOUNCE1
+# 
+# Top level modules:
+# 	SC_DEBOUNCE1
+# End time: 10:08:13 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales {D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:13 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales" D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v 
+# -- Compiling module BB_SYSTEM
+# 
+# Top level modules:
+# 	BB_SYSTEM
+# End time: 10:08:13 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:13 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v 
+# -- Compiling module SC_MAIN_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_MAIN_STATEMACHINE
+# End time: 10:08:13 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:13 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v 
+# -- Compiling module SC_LEVELCOUNTER
+# 
+# Top level modules:
+# 	SC_LEVELCOUNTER
+# End time: 10:08:13 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:13 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v 
+# -- Compiling module SC_LEVEL_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_LEVEL_STATEMACHINE
+# End time: 10:08:13 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:13 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v 
+# -- Compiling module SC_LEVELPROGRESSCOUNTER
+# 
+# Top level modules:
+# 	SC_LEVELPROGRESSCOUNTER
+# End time: 10:08:13 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:13 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v 
+# -- Compiling module SC_upSPEEDCOUNTER
+# 
+# Top level modules:
+# 	SC_upSPEEDCOUNTER
+# End time: 10:08:14 on May 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:14 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v 
+# -- Compiling module CC_SPEEDCOMPARATOR
+# 
+# Top level modules:
+# 	CC_SPEEDCOMPARATOR
+# End time: 10:08:14 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:14 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v 
+# -- Compiling module CC_LEVEL_DATAHANDLER
+# 
+# Top level modules:
+# 	CC_LEVEL_DATAHANDLER
+# End time: 10:08:14 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:14 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v 
+# -- Compiling module SC_RegGENERAL
+# 
+# Top level modules:
+# 	SC_RegGENERAL
+# End time: 10:08:14 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:14 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v 
+# -- Compiling module CC_DATADELAY
+# 
+# Top level modules:
+# 	CC_DATADELAY
+# End time: 10:08:14 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:14 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v 
+# -- Compiling module CC_MUX3_1
+# 
+# Top level modules:
+# 	CC_MUX3_1
+# End time: 10:08:14 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:14 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v 
+# -- Compiling module SC_PLAYER_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_PLAYER_STATEMACHINE
+# End time: 10:08:14 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:14 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v 
+# -- Compiling module CC_PLAYER_CAR_COMPARATOR
+# 
+# Top level modules:
+# 	CC_PLAYER_CAR_COMPARATOR
+# End time: 10:08:14 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:14 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v 
+# -- Compiling module SC_RegSHIFTER_PLAYER_1
+# 
+# Top level modules:
+# 	SC_RegSHIFTER_PLAYER_1
+# End time: 10:08:14 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:14 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v 
+# -- Compiling module SC_RegSHIFTER_PLAYER_2
+# 
+# Top level modules:
+# 	SC_RegSHIFTER_PLAYER_2
+# End time: 10:08:14 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:14 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v 
+# -- Compiling module CC_LEVEL_DATAHANDLER_PLAYER_2
+# 
+# Top level modules:
+# 	CC_LEVEL_DATAHANDLER_PLAYER_2
+# End time: 10:08:14 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:14 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v 
+# -- Compiling module SC_POINTSCOUNTER
+# 
+# Top level modules:
+# 	SC_POINTSCOUNTER
+# End time: 10:08:15 on May 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:15 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v 
+# -- Compiling module CC_WINNERCOMPARATOR
+# 
+# Top level modules:
+# 	CC_WINNERCOMPARATOR
+# End time: 10:08:15 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim {D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:15 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim" D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt 
+# -- Compiling module TB_SYSTEM
+# 
+# Top level modules:
+# 	TB_SYSTEM
+# End time: 10:08:15 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  TB_SYSTEM
+# End time: 10:08:15 on May 06,2023, Elapsed time: 0:00:39
+# Errors: 6, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" TB_SYSTEM 
+# Start time: 10:08:15 on May 06,2023
+# Loading work.TB_SYSTEM
+# Loading work.BB_SYSTEM
+# Loading work.SC_DEBOUNCE1
+# Loading work.SC_MAIN_STATEMACHINE
+# Loading work.SC_LEVEL_STATEMACHINE
+# Loading work.SC_PLAYER_STATEMACHINE
+# Loading work.SC_LEVELCOUNTER
+# Loading work.SC_LEVELPROGRESSCOUNTER
+# Loading work.SC_upSPEEDCOUNTER
+# Loading work.CC_SPEEDCOMPARATOR
+# Loading work.CC_LEVEL_DATAHANDLER
+# Loading work.SC_RegGENERAL
+# Loading work.CC_DATADELAY
+# Loading work.CC_MUX3_1
+# Loading work.SC_RegSHIFTER_PLAYER_1
+# Loading work.CC_PLAYER_CAR_COMPARATOR
+# Loading work.SC_POINTSCOUNTER
+# Loading work.CC_LEVEL_DATAHANDLER_PLAYER_2
+# Loading work.SC_RegSHIFTER_PLAYER_2
+# Loading work.CC_WINNERCOMPARATOR
+# Loading work.matrix_ctrl
+# Loading work.shift_reg_start_done
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Running testbench
+# Running testbench
+do TB_SYSTEM.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:08:59 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v 
+# -- Compiling module shift_reg_start_done
+# 
+# Top level modules:
+# 	shift_reg_start_done
+# End time: 10:09:00 on May 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:00 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v 
+# -- Compiling module matrix_ctrl
+# 
+# Top level modules:
+# 	matrix_ctrl
+# End time: 10:09:00 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:00 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v 
+# -- Compiling module SC_DEBOUNCE1
+# 
+# Top level modules:
+# 	SC_DEBOUNCE1
+# End time: 10:09:00 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales {D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:00 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales" D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v 
+# -- Compiling module BB_SYSTEM
+# 
+# Top level modules:
+# 	BB_SYSTEM
+# End time: 10:09:00 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:00 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v 
+# -- Compiling module SC_MAIN_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_MAIN_STATEMACHINE
+# End time: 10:09:00 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:00 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v 
+# -- Compiling module SC_LEVELCOUNTER
+# 
+# Top level modules:
+# 	SC_LEVELCOUNTER
+# End time: 10:09:00 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:00 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v 
+# -- Compiling module SC_LEVEL_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_LEVEL_STATEMACHINE
+# End time: 10:09:01 on May 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:01 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v 
+# -- Compiling module SC_LEVELPROGRESSCOUNTER
+# 
+# Top level modules:
+# 	SC_LEVELPROGRESSCOUNTER
+# End time: 10:09:01 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:01 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v 
+# -- Compiling module SC_upSPEEDCOUNTER
+# 
+# Top level modules:
+# 	SC_upSPEEDCOUNTER
+# End time: 10:09:01 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:01 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v 
+# -- Compiling module CC_SPEEDCOMPARATOR
+# 
+# Top level modules:
+# 	CC_SPEEDCOMPARATOR
+# End time: 10:09:01 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:01 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v 
+# -- Compiling module CC_LEVEL_DATAHANDLER
+# 
+# Top level modules:
+# 	CC_LEVEL_DATAHANDLER
+# End time: 10:09:01 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:01 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v 
+# -- Compiling module SC_RegGENERAL
+# 
+# Top level modules:
+# 	SC_RegGENERAL
+# End time: 10:09:01 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:01 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v 
+# -- Compiling module CC_DATADELAY
+# 
+# Top level modules:
+# 	CC_DATADELAY
+# End time: 10:09:01 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:01 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v 
+# -- Compiling module CC_MUX3_1
+# 
+# Top level modules:
+# 	CC_MUX3_1
+# End time: 10:09:01 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:01 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v 
+# -- Compiling module SC_PLAYER_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_PLAYER_STATEMACHINE
+# End time: 10:09:01 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:01 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v 
+# -- Compiling module CC_PLAYER_CAR_COMPARATOR
+# 
+# Top level modules:
+# 	CC_PLAYER_CAR_COMPARATOR
+# End time: 10:09:01 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:01 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v 
+# -- Compiling module SC_RegSHIFTER_PLAYER_1
+# 
+# Top level modules:
+# 	SC_RegSHIFTER_PLAYER_1
+# End time: 10:09:01 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:02 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v 
+# -- Compiling module SC_RegSHIFTER_PLAYER_2
+# 
+# Top level modules:
+# 	SC_RegSHIFTER_PLAYER_2
+# End time: 10:09:02 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:02 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v 
+# -- Compiling module CC_LEVEL_DATAHANDLER_PLAYER_2
+# 
+# Top level modules:
+# 	CC_LEVEL_DATAHANDLER_PLAYER_2
+# End time: 10:09:02 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:02 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v 
+# -- Compiling module SC_POINTSCOUNTER
+# 
+# Top level modules:
+# 	SC_POINTSCOUNTER
+# End time: 10:09:02 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:02 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v 
+# -- Compiling module CC_WINNERCOMPARATOR
+# 
+# Top level modules:
+# 	CC_WINNERCOMPARATOR
+# End time: 10:09:02 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim {D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:02 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim" D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt 
+# -- Compiling module TB_SYSTEM
+# 
+# Top level modules:
+# 	TB_SYSTEM
+# End time: 10:09:02 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  TB_SYSTEM
+# End time: 10:09:03 on May 06,2023, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" TB_SYSTEM 
+# Start time: 10:09:03 on May 06,2023
+# Loading work.TB_SYSTEM
+# Loading work.BB_SYSTEM
+# Loading work.SC_DEBOUNCE1
+# Loading work.SC_MAIN_STATEMACHINE
+# Loading work.SC_LEVEL_STATEMACHINE
+# Loading work.SC_PLAYER_STATEMACHINE
+# Loading work.SC_LEVELCOUNTER
+# Loading work.SC_LEVELPROGRESSCOUNTER
+# Loading work.SC_upSPEEDCOUNTER
+# Loading work.CC_SPEEDCOMPARATOR
+# Loading work.CC_LEVEL_DATAHANDLER
+# Loading work.SC_RegGENERAL
+# Loading work.CC_DATADELAY
+# Loading work.CC_MUX3_1
+# Loading work.SC_RegSHIFTER_PLAYER_1
+# Loading work.CC_PLAYER_CAR_COMPARATOR
+# Loading work.SC_POINTSCOUNTER
+# Loading work.CC_LEVEL_DATAHANDLER_PLAYER_2
+# Loading work.SC_RegSHIFTER_PLAYER_2
+# Loading work.CC_WINNERCOMPARATOR
+# Loading work.matrix_ctrl
+# Loading work.shift_reg_start_done
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Running testbench
+# Running testbench
+do TB_SYSTEM.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:27 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v 
+# -- Compiling module shift_reg_start_done
+# 
+# Top level modules:
+# 	shift_reg_start_done
+# End time: 10:10:28 on May 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:28 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v 
+# -- Compiling module matrix_ctrl
+# 
+# Top level modules:
+# 	matrix_ctrl
+# End time: 10:10:28 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:28 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v 
+# -- Compiling module SC_DEBOUNCE1
+# 
+# Top level modules:
+# 	SC_DEBOUNCE1
+# End time: 10:10:28 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales {D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:28 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales" D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v 
+# -- Compiling module BB_SYSTEM
+# 
+# Top level modules:
+# 	BB_SYSTEM
+# End time: 10:10:28 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:28 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v 
+# -- Compiling module SC_MAIN_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_MAIN_STATEMACHINE
+# End time: 10:10:28 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:28 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v 
+# -- Compiling module SC_LEVELCOUNTER
+# 
+# Top level modules:
+# 	SC_LEVELCOUNTER
+# End time: 10:10:28 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:28 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v 
+# -- Compiling module SC_LEVEL_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_LEVEL_STATEMACHINE
+# End time: 10:10:28 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:28 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v 
+# -- Compiling module SC_LEVELPROGRESSCOUNTER
+# 
+# Top level modules:
+# 	SC_LEVELPROGRESSCOUNTER
+# End time: 10:10:28 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:28 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v 
+# -- Compiling module SC_upSPEEDCOUNTER
+# 
+# Top level modules:
+# 	SC_upSPEEDCOUNTER
+# End time: 10:10:28 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:28 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v 
+# -- Compiling module CC_SPEEDCOMPARATOR
+# 
+# Top level modules:
+# 	CC_SPEEDCOMPARATOR
+# End time: 10:10:28 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:28 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v 
+# -- Compiling module CC_LEVEL_DATAHANDLER
+# 
+# Top level modules:
+# 	CC_LEVEL_DATAHANDLER
+# End time: 10:10:28 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:28 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v 
+# -- Compiling module SC_RegGENERAL
+# 
+# Top level modules:
+# 	SC_RegGENERAL
+# End time: 10:10:28 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:29 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v 
+# -- Compiling module CC_DATADELAY
+# 
+# Top level modules:
+# 	CC_DATADELAY
+# End time: 10:10:29 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:29 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v 
+# -- Compiling module CC_MUX3_1
+# 
+# Top level modules:
+# 	CC_MUX3_1
+# End time: 10:10:29 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:29 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v 
+# -- Compiling module SC_PLAYER_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_PLAYER_STATEMACHINE
+# End time: 10:10:29 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:29 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v 
+# -- Compiling module CC_PLAYER_CAR_COMPARATOR
+# 
+# Top level modules:
+# 	CC_PLAYER_CAR_COMPARATOR
+# End time: 10:10:29 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:29 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v 
+# -- Compiling module SC_RegSHIFTER_PLAYER_1
+# 
+# Top level modules:
+# 	SC_RegSHIFTER_PLAYER_1
+# End time: 10:10:29 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:29 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v 
+# -- Compiling module SC_RegSHIFTER_PLAYER_2
+# 
+# Top level modules:
+# 	SC_RegSHIFTER_PLAYER_2
+# End time: 10:10:29 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:29 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v 
+# -- Compiling module CC_LEVEL_DATAHANDLER_PLAYER_2
+# 
+# Top level modules:
+# 	CC_LEVEL_DATAHANDLER_PLAYER_2
+# End time: 10:10:29 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:29 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v 
+# -- Compiling module SC_POINTSCOUNTER
+# 
+# Top level modules:
+# 	SC_POINTSCOUNTER
+# End time: 10:10:29 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:29 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v 
+# -- Compiling module CC_WINNERCOMPARATOR
+# 
+# Top level modules:
+# 	CC_WINNERCOMPARATOR
+# End time: 10:10:29 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim {D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:10:29 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim" D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt 
+# -- Compiling module TB_SYSTEM
+# 
+# Top level modules:
+# 	TB_SYSTEM
+# End time: 10:10:29 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  TB_SYSTEM
+# End time: 10:10:31 on May 06,2023, Elapsed time: 0:01:28
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" TB_SYSTEM 
+# Start time: 10:10:31 on May 06,2023
+# Loading work.TB_SYSTEM
+# Loading work.BB_SYSTEM
+# Loading work.SC_DEBOUNCE1
+# Loading work.SC_MAIN_STATEMACHINE
+# Loading work.SC_LEVEL_STATEMACHINE
+# Loading work.SC_PLAYER_STATEMACHINE
+# Loading work.SC_LEVELCOUNTER
+# Loading work.SC_LEVELPROGRESSCOUNTER
+# Loading work.SC_upSPEEDCOUNTER
+# Loading work.CC_SPEEDCOMPARATOR
+# Loading work.CC_LEVEL_DATAHANDLER
+# Loading work.SC_RegGENERAL
+# Loading work.CC_DATADELAY
+# Loading work.CC_MUX3_1
+# Loading work.SC_RegSHIFTER_PLAYER_1
+# Loading work.CC_PLAYER_CAR_COMPARATOR
+# Loading work.SC_POINTSCOUNTER
+# Loading work.CC_LEVEL_DATAHANDLER_PLAYER_2
+# Loading work.SC_RegSHIFTER_PLAYER_2
+# Loading work.CC_WINNERCOMPARATOR
+# Loading work.matrix_ctrl
+# Loading work.shift_reg_start_done
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Running testbench
+# Running testbench
+do TB_SYSTEM.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:58 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/shift_reg_start_done.v 
+# -- Compiling module shift_reg_start_done
+# 
+# Top level modules:
+# 	shift_reg_start_done
+# End time: 10:11:58 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:58 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/max7219_ctrl.v 
+# -- Compiling module matrix_ctrl
+# 
+# Top level modules:
+# 	matrix_ctrl
+# End time: 10:11:58 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:58 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_DEBOUNCE1.v 
+# -- Compiling module SC_DEBOUNCE1
+# 
+# Top level modules:
+# 	SC_DEBOUNCE1
+# End time: 10:11:58 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales {D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:58 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales" D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v 
+# -- Compiling module BB_SYSTEM
+# 
+# Top level modules:
+# 	BB_SYSTEM
+# End time: 10:11:58 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:58 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v 
+# -- Compiling module SC_MAIN_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_MAIN_STATEMACHINE
+# End time: 10:11:58 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:59 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v 
+# -- Compiling module SC_LEVELCOUNTER
+# 
+# Top level modules:
+# 	SC_LEVELCOUNTER
+# End time: 10:11:59 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:59 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v 
+# -- Compiling module SC_LEVEL_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_LEVEL_STATEMACHINE
+# End time: 10:11:59 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:59 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v 
+# -- Compiling module SC_LEVELPROGRESSCOUNTER
+# 
+# Top level modules:
+# 	SC_LEVELPROGRESSCOUNTER
+# End time: 10:11:59 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:59 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v 
+# -- Compiling module SC_upSPEEDCOUNTER
+# 
+# Top level modules:
+# 	SC_upSPEEDCOUNTER
+# End time: 10:11:59 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:59 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v 
+# -- Compiling module CC_SPEEDCOMPARATOR
+# 
+# Top level modules:
+# 	CC_SPEEDCOMPARATOR
+# End time: 10:11:59 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:59 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER.v 
+# -- Compiling module CC_LEVEL_DATAHANDLER
+# 
+# Top level modules:
+# 	CC_LEVEL_DATAHANDLER
+# End time: 10:11:59 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:59 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegGENERAL_CAR.v 
+# -- Compiling module SC_RegGENERAL
+# 
+# Top level modules:
+# 	SC_RegGENERAL
+# End time: 10:11:59 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:59 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v 
+# -- Compiling module CC_DATADELAY
+# 
+# Top level modules:
+# 	CC_DATADELAY
+# End time: 10:11:59 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:59 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v 
+# -- Compiling module CC_MUX3_1
+# 
+# Top level modules:
+# 	CC_MUX3_1
+# End time: 10:11:59 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:59 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v 
+# -- Compiling module SC_PLAYER_STATEMACHINE
+# 
+# Top level modules:
+# 	SC_PLAYER_STATEMACHINE
+# End time: 10:11:59 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:11:59 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v 
+# -- Compiling module CC_PLAYER_CAR_COMPARATOR
+# 
+# Top level modules:
+# 	CC_PLAYER_CAR_COMPARATOR
+# End time: 10:12:00 on May 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:12:00 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v 
+# -- Compiling module SC_RegSHIFTER_PLAYER_1
+# 
+# Top level modules:
+# 	SC_RegSHIFTER_PLAYER_1
+# End time: 10:12:00 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:12:00 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v 
+# -- Compiling module SC_RegSHIFTER_PLAYER_2
+# 
+# Top level modules:
+# 	SC_RegSHIFTER_PLAYER_2
+# End time: 10:12:00 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:12:00 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v 
+# -- Compiling module CC_LEVEL_DATAHANDLER_PLAYER_2
+# 
+# Top level modules:
+# 	CC_LEVEL_DATAHANDLER_PLAYER_2
+# End time: 10:12:00 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:12:00 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v 
+# -- Compiling module SC_POINTSCOUNTER
+# 
+# Top level modules:
+# 	SC_POINTSCOUNTER
+# End time: 10:12:00 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/rtl {D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:12:00 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/rtl" D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v 
+# -- Compiling module CC_WINNERCOMPARATOR
+# 
+# Top level modules:
+# 	CC_WINNERCOMPARATOR
+# End time: 10:12:00 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim {D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:12:00 on May 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim" D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt 
+# -- Compiling module TB_SYSTEM
+# 
+# Top level modules:
+# 	TB_SYSTEM
+# End time: 10:12:00 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  TB_SYSTEM
+# End time: 10:12:01 on May 06,2023, Elapsed time: 0:01:30
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" TB_SYSTEM 
+# Start time: 10:12:01 on May 06,2023
+# Loading work.TB_SYSTEM
+# Loading work.BB_SYSTEM
+# Loading work.SC_DEBOUNCE1
+# Loading work.SC_MAIN_STATEMACHINE
+# Loading work.SC_LEVEL_STATEMACHINE
+# Loading work.SC_PLAYER_STATEMACHINE
+# Loading work.SC_LEVELCOUNTER
+# Loading work.SC_LEVELPROGRESSCOUNTER
+# Loading work.SC_upSPEEDCOUNTER
+# Loading work.CC_SPEEDCOMPARATOR
+# Loading work.CC_LEVEL_DATAHANDLER
+# Loading work.SC_RegGENERAL
+# Loading work.CC_DATADELAY
+# Loading work.CC_MUX3_1
+# Loading work.SC_RegSHIFTER_PLAYER_1
+# Loading work.CC_PLAYER_CAR_COMPARATOR
+# Loading work.SC_POINTSCOUNTER
+# Loading work.CC_LEVEL_DATAHANDLER_PLAYER_2
+# Loading work.SC_RegSHIFTER_PLAYER_2
+# Loading work.CC_WINNERCOMPARATOR
+# Loading work.matrix_ctrl
+# Loading work.shift_reg_start_done
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Running testbench
+# Running testbench
+# End time: 10:12:33 on May 06,2023, Elapsed time: 0:00:32
+# Errors: 0, Warnings: 0
