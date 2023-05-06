@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dD:/Documentos/personal/frogger-digitales/simulation/modelsim
 vBB_SYSTEM
-Z1 !s110 1683385918
+Z1 !s110 1683386194
 !i10b 1
 !s100 39>EVP32z7JGeR7A2HdZV1
 IVn1ZF^ZLH7cMmR=][QC7n2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1683383975
+Z3 w1683386022
 8D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v
 FD:/Documentos/personal/frogger-digitales/BB_SYSTEM.v
 Z4 L0 21
@@ -23,7 +23,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1683385918.000000
+Z6 !s108 1683386194.000000
 !s107 D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales|D:/Documentos/personal/frogger-digitales/BB_SYSTEM.v|
 !i113 1
@@ -32,7 +32,7 @@ Z7 o-vlog01compat -work work
 Z8 tCvgOpt 0
 n@b@b_@s@y@s@t@e@m
 vCC_DATADELAY
-Z9 !s110 1683385919
+Z9 !s110 1683386195
 !i10b 1
 !s100 gKRIg`W1gVdgKz72z1^EG3
 IPbB`DcUV@BKFk8>;OY=oN2
@@ -46,7 +46,7 @@ R5
 r1
 !s85 0
 31
-Z10 !s108 1683385919.000000
+Z10 !s108 1683386195.000000
 !s107 D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/CC_DATADELAY.v|
 !i113 1
@@ -78,7 +78,7 @@ R11
 R8
 n@c@c_@l@e@v@e@l_@d@a@t@a@h@a@n@d@l@e@r
 vCC_LEVEL_DATAHANDLER_PLAYER_2
-Z12 !s110 1683385920
+R9
 !i10b 1
 !s100 kC8`LGEF=^:F4HAI>fWQ63
 I05WZPYG2LF?kQSESel@[;0
@@ -92,7 +92,7 @@ R5
 r1
 !s85 0
 31
-Z13 !s108 1683385920.000000
+R10
 !s107 D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/CC_LEVEL_DATAHANDLER_PLAYER_2.v|
 !i113 1
@@ -110,7 +110,7 @@ R0
 w1682015846
 8D:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v
 FD:/Documentos/personal/frogger-digitales/rtl/CC_MUX3_1.v
-Z14 L0 20
+Z12 L0 20
 R5
 r1
 !s85 0
@@ -124,13 +124,13 @@ R11
 R8
 n@c@c_@m@u@x3_1
 vCC_PLAYER_CAR_COMPARATOR
-R12
+R9
 !i10b 1
 !s100 ]kEI7R0:U8mCGa[5[8eRc2
 I?Ej_PGUC>i;<X`6lUR<DH1
 R2
 R0
-w1682652572
+R3
 8D:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v
 FD:/Documentos/personal/frogger-digitales/rtl/CC_PLAYER_CAR_COMPARATOR.v
 R4
@@ -149,11 +149,11 @@ n@c@c_@p@l@a@y@e@r_@c@a@r_@c@o@m@p@a@r@a@t@o@r
 vCC_SPEEDCOMPARATOR
 R9
 !i10b 1
-!s100 ?ZGa]M^hP2h=RYg5jl9iH1
-IkZlVQ^8NU;L1;GYL;nQK>1
+!s100 lBfa[1bdX;TV;jl9MNQmO0
+I69JNY_ZJae?T[`NCfi=;d2
 R2
 R0
-w1683384355
+w1683386165
 8D:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v
 FD:/Documentos/personal/frogger-digitales/rtl/CC_SPEEDCOMPARATOR.v
 R4
@@ -170,13 +170,13 @@ R11
 R8
 n@c@c_@s@p@e@e@d@c@o@m@p@a@r@a@t@o@r
 vCC_WINNERCOMPARATOR
-R12
+Z13 !s110 1683386196
 !i10b 1
 !s100 97_1988Fckngb@bKeHl>n0
 I3]R=SDDjO2V6GUzhS7J590
 R2
 R0
-w1682662817
+R3
 8D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v
 FD:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v
 R4
@@ -184,7 +184,7 @@ R5
 r1
 !s85 0
 31
-R13
+Z14 !s108 1683386196.000000
 !s107 D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/CC_WINNERCOMPARATOR.v|
 !i113 1
@@ -238,13 +238,13 @@ R11
 R8
 n@s@c_@d@e@b@o@u@n@c@e1
 vSC_LEVEL_STATEMACHINE
-R9
+R1
 !i10b 1
 !s100 K]SE@zn_JPOjcSREgZRH[1
 IGAM4z]mUfo8N@bJzUZIY=0
 R2
 R0
-w1682659909
+R3
 8D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v
 FD:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v
 R4
@@ -252,7 +252,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/SC_LEVEL_STATEMACHINE.v|
 !i113 1
@@ -261,7 +261,7 @@ R11
 R8
 n@s@c_@l@e@v@e@l_@s@t@a@t@e@m@a@c@h@i@n@e
 vSC_LEVELCOUNTER
-R9
+R1
 !i10b 1
 !s100 nW2bKzi:3?;P5EnPK8A?21
 IZ0?8JJb]Ph9_zWQMSgK^g3
@@ -275,7 +275,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELCOUNTER.v|
 !i113 1
@@ -284,7 +284,7 @@ R11
 R8
 n@s@c_@l@e@v@e@l@c@o@u@n@t@e@r
 vSC_LEVELPROGRESSCOUNTER
-R9
+R1
 !i10b 1
 !s100 >3hZnV7lF3R75J_0PR?Hd1
 IF<8Q_ZDk7IC0Yl5[?PjBd0
@@ -298,7 +298,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/SC_LEVELPROGRESSCOUNTER.v|
 !i113 1
@@ -313,7 +313,7 @@ R1
 INLn3NlM_OkCoY02NzHWbC2
 R2
 R0
-w1682662763
+R3
 8D:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v
 FD:/Documentos/personal/frogger-digitales/rtl/SC_MAIN_STATEMACHINE.v
 R4
@@ -336,10 +336,10 @@ R9
 I=^KT]SRn_CLPYheo:<FI]2
 R2
 R0
-w1682650398
+R3
 8D:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v
 FD:/Documentos/personal/frogger-digitales/rtl/SC_PLAYER_STATEMACHINE.v
-R14
+R12
 R5
 r1
 !s85 0
@@ -353,13 +353,13 @@ R11
 R8
 n@s@c_@p@l@a@y@e@r_@s@t@a@t@e@m@a@c@h@i@n@e
 vSC_POINTSCOUNTER
-R12
+R13
 !i10b 1
 !s100 I5gj;IBRWkfVAJJL>O_HO2
 If;Gl012284@mb2QNY3jco1
 R2
 R0
-w1682660665
+R3
 8D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v
 FD:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v
 R4
@@ -367,7 +367,7 @@ R5
 r1
 !s85 0
 31
-R13
+R14
 !s107 D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/SC_POINTSCOUNTER.v|
 !i113 1
@@ -399,13 +399,13 @@ R11
 R8
 n@s@c_@reg@g@e@n@e@r@a@l
 vSC_RegSHIFTER_PLAYER_1
-R12
+R9
 !i10b 1
 !s100 >mah1c1`5:LR92edNJ2WQ3
 IOa[1Xl4UCHR?hlnhMVl_92
 R2
 R0
-w1682652313
+R3
 8D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v
 FD:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v
 R4
@@ -413,7 +413,7 @@ R5
 r1
 !s85 0
 31
-R13
+R10
 !s107 D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_1.v|
 !i113 1
@@ -422,7 +422,7 @@ R11
 R8
 n@s@c_@reg@s@h@i@f@t@e@r_@p@l@a@y@e@r_1
 vSC_RegSHIFTER_PLAYER_2
-R12
+R9
 !i10b 1
 !s100 d2fKbJBl;6mmc12Sln_?D3
 IdmTT9J<ki>zkSA5oc[Qj42
@@ -436,7 +436,7 @@ R5
 r1
 !s85 0
 31
-R13
+R10
 !s107 D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/SC_RegSHIFTER_PLAYER_2.v|
 !i113 1
@@ -459,7 +459,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/rtl|D:/Documentos/personal/frogger-digitales/rtl/SC_upSPEEDCOUNTER.v|
 !i113 1
@@ -490,13 +490,13 @@ R7
 R11
 R8
 vTB_SYSTEM
-R12
+R13
 !i10b 1
 !s100 9J1S>onV6PXJV5C^z;6DS0
 Ihnj9CVJidC9JLkgPW73Dn2
 R2
 R0
-w1683385914
+R3
 8D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt
 FD:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt
 L0 19
@@ -504,7 +504,7 @@ R5
 r1
 !s85 0
 31
-R13
+R14
 !s107 D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Documentos/personal/frogger-digitales/simulation/modelsim|D:/Documentos/personal/frogger-digitales/simulation/modelsim/TB_SYSTEM.vt|
 !i113 1

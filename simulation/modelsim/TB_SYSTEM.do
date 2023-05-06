@@ -139,7 +139,7 @@ add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/SC_RegSHIFTER_PLAYER_2_U0/SC_RegSHIFT
 
 
 restart
-run 30000000ns
+run 50000000ns
 
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {319999492 ps} 0}
